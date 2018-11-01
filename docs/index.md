@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+# How to do things in the Zooniverse
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+We totally understand if you need some help getting to grips with how the project building process works. The "Getting Started" section is there to explain the core concepts of our system.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Once you're further along, we've also got some documentation on more advanced features.
