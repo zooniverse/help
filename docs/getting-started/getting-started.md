@@ -21,53 +21,33 @@ A brief overview of all the steps you need to complete to set up your project.
 
 On the left-hand side of the project builder you will see a number of tabs which can be divided into three key sections; “Project”, “Workflows” and “Subject Sets”. These are terms you'll see a lot, and they have specific meanings in the Zooniverse.
 
-**Project** is pretty self-explanatory; Galaxy Zoo and Penguin Watch are examples of Zooniverse projects that could be built using the project builder.
+- **Project** is pretty self-explanatory; Galaxy Zoo and Penguin Watch are examples of Zooniverse projects that could be built using the project builder.
+- **Workflows** are sequences of tasks that volunteers are asked to do.
+- **Subject sets** are collections of data (typically images) that volunteers are asked to perform tasks on.
 
-**Workflows** are sequences of tasks that volunteers are asked to do.
-
-**Subject sets** are collections of data (typically images) that volunteers are asked to perform tasks on.
-
-For more Zooniverse definitions, check out the [Glossary page](/help/glossary).'
-        },
-        project: {
+For more Zooniverse definitions, check out the [Glossary page](glossary.md).
 
 ### Project
 
 The tabs listed below are where you enter descriptive information for your project.
 
 - **Project Details:** Here you can add information that generates a home page for your project. Start by naming and describing your project, add a logo and background image.
-
 - **About:** Here you can add all sorts of additional pages, including *Research, Team, Results, Education,* and *FAQ*
-
 - **Collaborators:** Add people to your team. You can specify their roles so that they have access to the tools they need (such as access to the project before it's public).
-
 - **Field Guide:** A field guide is a place to store general project-specific information that volunteers will need to understand in order to complete classifications and talk about what they're seeing.
-
 - **Tutorial:** This is where you create tutorials to show your users how to contribute to your project.
-
 - **Media:** Add images you need for your project pages (not the images you want people to classify!)
-
 - **Visibility:** Set your project's "state" - private or public, live or in development, and apply for review by the Zooniverse. You can also activate or deactivate specific workflows on this page.
-
 - **Talk:** Create and manage discussion boards for your project.
-
-- **Data Exports:** Access your raw and aggregated classification data, subject data, and comments from Talk.'
-        },
-        workflow: {
+- **Data Exports:** Access your raw and aggregated classification data, subject data, and comments from Talk.
 
 ### Workflows
 
-A workflow is the sequence of tasks volunteers are asked to perform. For example, you might want to ask volunteers to answer questions about your images, or to mark features in your data, or both. The workflow tab is where you define those tasks and set the order in which volunteers are asked to do them. Your project might have multiple workflows (if you want to set different tasks for different image sets). See the detailed [Workflow](#workflow-details) section for more information.'
-        },
-        subjects: {
+A workflow is the sequence of tasks volunteers are asked to perform. For example, you might want to ask volunteers to answer questions about your images, or to mark features in your data, or both. The workflow tab is where you define those tasks and set the order in which volunteers are asked to do them. Your project might have multiple workflows (if you want to set different tasks for different image sets). See the detailed [Workflow](#workflow-details) section for more information.
 
 ### Subjects
 
 A subject is a unit of data to be analyzed. A single subject can include more than one image. A “subject set” consists of both the "manifest" (a list of the subjects and their properties), and the images themselves. Subjects can be grouped into different sets if useful for your research. See the [Subject Details](#subject-sets) section for more on subjects.
-
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        },
-        projectDetails: {
 
 ## Project building in detail
 
@@ -103,10 +83,6 @@ Detailed instructions on how to use the pages described above.
 
 * **Checkbox: Private project:** On "private" projects, only users with specified project roles can see or classify on the project. We strongly recommend you keep your project private while you're still editing it. Share it with your team to get feedback by adding them in the Collaborators area (linked at the left-hand side of the Project Builder). Team members you add can see your project even if it's private. Once your project is public, anyone with the link can view and classify on it.
 
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        },
-        about: {
-
 ### About
 
 This section contains pages where you can enter further information for Research, Team, Results, Education and FAQ. All of these pages use [Markdown](http://markdownlivepreview.com/) to format text and display images.
@@ -119,9 +95,7 @@ This section contains pages where you can enter further information for Research
 
 * **Education:** On this page, you can provide resources for educators and students to use alongside your project, such as course syllabi, pedagogical tools, further reading, and instructions on how the project might be used in an educational context. This page will only display if you add content to it.
 
-* **FAQ:** Add details here about your research, how to classify, and what you plan to do with the classifications. This page can evolve as your project does so that your active community members have a resource to point new users to. This page will only display if you add content to it.'
-        },
-        collaborators: {
+* **FAQ:** Add details here about your research, how to classify, and what you plan to do with the classifications. This page can evolve as your project does so that your active community members have a resource to point new users to. This page will only display if you add content to it.
 
 ### Collaborators
 
@@ -141,31 +115,21 @@ Here you can add people to your team. You can specify their roles so that they h
 
 * **Translator:** Translators will have access to the project builder as well as the translation site, so they can translate all of your project text into a different language.
 
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        },
-        fieldGuide: {
-
 ### Field Guide
 
 A field guide is a place to store general project-specific information that volunteers will need to understand in order to complete classifications and talk about what they're seeing. It's available anywhere in your project, accessible via a tab on the right-hand side of the screen.
 
-Information can be grouped into different sections, and each section should have a title and an icon. Content for each section is rendered with [Markdown](http://markdownlivepreview.com/), so you can include any media you've uploaded for your project there.'
-        },
-        tutorial: {
+Information can be grouped into different sections, and each section should have a title and an icon. Content for each section is rendered with [Markdown](http://markdownlivepreview.com/), so you can include any media you've uploaded for your project there.
 
 ### Tutorial
 
 In this section, you can create a step-by-step tutorial to show your users how to use your project. You can upload images and enter text to create each step of the tutorial. You can add as many steps as you want, but keep your tutorial as short as possible so volunteers can start classifying as soon as possible.
 
-In some cases, you might have several different workflows, and will therefore need several different tutorials. In the Workflows tab, you can specify which tutorial shows for the workflow a volunteer is on.'
-        },
-        media: {
+In some cases, you might have several different workflows, and will therefore need several different tutorials. In the Workflows tab, you can specify which tutorial shows for the workflow a volunteer is on.
 
 ### Media
 
-You can upload your own media to your project (such as example images for your Help pages or Tutorial) so you can link to it without an external host. To start uploading, drop an image into the grey box (or click “Select files” to bring up your file browser and select a file). Once the image has uploaded, it will appear above the "Add an image" box. You can then copy the Markdown text beneath the image into your project, or add another image.'
-        },
-        visibility: {
+You can upload your own media to your project (such as example images for your Help pages or Tutorial) so you can link to it without an external host. To start uploading, drop an image into the grey box (or click “Select files” to bring up your file browser and select a file). Once the image has uploaded, it will appear above the "Add an image" box. You can then copy the Markdown text beneath the image into your project, or add another image.
 
 ### Visibility
 
@@ -177,23 +141,15 @@ This page is where you decide whether your project is public and whether it's re
 
 * **Workflow Settings:** You will see a list of all workflows created for the project. You can set the workflows to “Active”, choose what metric to measure for completeness statistics, and whether those statistics should be shown on your project’s Stats Page.For more information on the different project stages, see our [Project Builder policies](/help/lab-policies).
 
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        },
-        talk: {
-
 ### Talk
 
 “Talk” is the name for the discussion boards attached to your project. On your Talk, volunteers will be able to discuss your project and subjects with each other, as well as with you and your project’s researchers. **Maintaining a vibrant and active Talk is important for keeping your volunteers engaged with your project.** Conversations on Talk also can lead to additional research discoveries.
 
-You can use this page to set up the initial Talk boards for your project. We highly recommend first activating the default subject-discussion board, which hosts a single dedicated conversation for each subject. After that, you can add additional boards, where each board will host conversation about a general topic. Example boards might include: “Announcements,” “Project Discussion,” “Questions for the Research Team,” or “Technical Support.”'
-        },
-        dataExports: {
+You can use this page to set up the initial Talk boards for your project. We highly recommend first activating the default subject-discussion board, which hosts a single dedicated conversation for each subject. After that, you can add additional boards, where each board will host conversation about a general topic. Example boards might include: “Announcements,” “Project Discussion,” “Questions for the Research Team,” or “Technical Support.”
 
 ### Data Exports
 
-In this section you can request data exports for your Project Data (CSV format) and Talk Data (JSON format). Note that the Zooniverse will process at most 1 of each export within a 24-hour period and some exports may take a long time to process. We will email you when they are ready. For examples of how to work with the data exports see our [Data Digging code repository](https://github.com/zooniverse/Data-digging).'
-        },
-        workflowDetails: {
+In this section you can request data exports for your Project Data (CSV format) and Talk Data (JSON format). Note that the Zooniverse will process at most 1 of each export within a 24-hour period and some exports may take a long time to process. We will email you when they are ready. For examples of how to work with the data exports see our [Data Digging code repository](https://github.com/zooniverse/Data-digging).
 
 ### Workflow Details
 
@@ -209,21 +165,13 @@ Note that a workflow with fewer tasks is easier for volunteers to complete. We k
 
 * **Help Text:** Add text and images for a pop-up help window. This is shown next to the main text of the task in the main classification interface, when the volunteer clicks a button asking for help. You can use markdown in this text, and link to other images to help illustrate your description. The help text can be as long as you need, but you should try to keep it simple and avoid jargon. One thing that is useful in the help text is a concise description of why you are asking for this information.
 
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        },
-        createTasks: {
-
 ### Create Tasks
 
-Create tasks with the "Add a task" button. Delete tasks with the "Delete this task" button under the “Choices” box.'
-        },
-        taskContent: {
+Create tasks with the "Add a task" button. Delete tasks with the "Delete this task" button under the “Choices” box.
 
 ### Task Content
 
-Tasks can be Questions, Drawings or Transcription. All types have "Main Text" boxes where you can ask your questions or tell users what to draw, as well as provide additional support for completing the task in the "Help Text" box.'
-        },
-        questions: {
+Tasks can be Questions, Drawings or Transcription. All types have "Main Text" boxes where you can ask your questions or tell users what to draw, as well as provide additional support for completing the task in the "Help Text" box.
 
 #### Questions
 
@@ -233,9 +181,7 @@ Choices: This section contains all your answers. The key features of this sectio
 
 - **Multiple:** if you select this, the user can select more than one answer - use this for "select all that apply" type questions.
 
-- **Next Task:** The “Next task” selection (which appears below the text box for each answer) describes what task you want the volunteer to perform next after they give a particular answer. You can choose from among the tasks you’ve already defined. If you want to link a task to another you haven’t built yet, you can come back and do it later (don’t forget to save your changes).'
-        },
-        drawing: {
+- **Next Task:** The “Next task” selection (which appears below the text box for each answer) describes what task you want the volunteer to perform next after they give a particular answer. You can choose from among the tasks you’ve already defined. If you want to link a task to another you haven’t built yet, you can come back and do it later (don’t forget to save your changes).
 
 #### Drawing
 
@@ -261,10 +207,6 @@ This section contains all the different things people can mark. We call each sep
 
 - **grid table:** cells which can be made into a table for consecutive annotations.
 
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        },
-        transcription: {
-
 #### Transcription
 
 This section deals with projects which require user-generated text. Tasks can range from adding keywords or extracting metadata to full text transcriptions.
@@ -273,9 +215,7 @@ This section deals with projects which require user-generated text. Tasks can ra
 
 - **Full text transcription** is more cumbersome and diversity of opinion is less helpful. Teams are usually trying to capture exactly what is on a page, so it will help to set a relatively low retirement rate for each image (i.e. 3 or 5) and be very clear in the tutorial how you would like volunteers to transcribe. Should they preserve spelling and punctuation or modernize it?
 
-- Zooniverse does not currently offer aggregated classifications for text subjects. We can only report what each user transcribed for each subject. Before embarking on a transcription project be sure you have in-house expertise or access to expertise for combining multiple independent transcriptions into a single reading that you could use for research or to upload into a library or museum catalogue or content management system. For more information on Project Builder Data, please visit our [Data Digging code repository](https://github.com/zooniverse/Data-digging) as well as our [Data processing Talk board](https://www.zooniverse.org/talk/1322).'
-        },
-        linking: {
+- Zooniverse does not currently offer aggregated classifications for text subjects. We can only report what each user transcribed for each subject. Before embarking on a transcription project be sure you have in-house expertise or access to expertise for combining multiple independent transcriptions into a single reading that you could use for research or to upload into a library or museum catalogue or content management system. For more information on Project Builder Data, please visit our [Data Digging code repository](https://github.com/zooniverse/Data-digging) as well as our [Data processing Talk board](https://www.zooniverse.org/talk/1322).
 
 #### Linking the workflow together
 
@@ -283,9 +223,7 @@ Now that all the tasks have been created, we've got to string them together by s
 
 **Multi-Image options:** If your tasks require users to see multiple subjects per task (like on [Snapshot Serengeti](https://www.snapshotserengeti.org)), decide how users will see them. The Flipbook option means users have to press a button to switch between subjects, while separate frames mean that each subject will be visible for the duration of the classification task.
 
-**Subject retirement:** Decide how many people you want to complete each task. You can change this number at any point (particularly after beta review). We suggest starting out high, between 10 and 20.'
-        },
-        subjectSets: {
+**Subject retirement:** Decide how many people you want to complete each task. You can change this number at any point (particularly after beta review). We suggest starting out high, between 10 and 20.
 
 ### Subject Sets
 
@@ -293,13 +231,8 @@ On this page, you can add groups of data to be classified.
 
 To do so, drag and drop items onto the drop zone in the browser and then upload. You can give each set a name so that you can easily distinguish between them.
 
-Subject sets can be pretty powerful, and sometimes complex. You can have a single subject set that you add to over time, or have multiple subject sets, say, from different years or places. You can have different subject sets for different workflows, but you don't have to. You can even have multiple images in a given subject. For more details and advice on creating and structuring subject sets and associated manifests, check out https://www.zooniverse.org/help/example and scroll down to DETAILS - Subject sets and manifest details, a.k.a. “What is a manifest?”'
-        },
-        furtherHelp: {
+Subject sets can be pretty powerful, and sometimes complex. You can have a single subject set that you add to over time, or have multiple subject sets, say, from different years or places. You can have different subject sets for different workflows, but you don't have to. You can even have multiple images in a given subject. For more details and advice on creating and structuring subject sets and associated manifests, check out https://www.zooniverse.org/help/example and scroll down to DETAILS - Subject sets and manifest details, a.k.a. “What is a manifest?”
 
 ## Further Help
 
-If you'd like some further information, check out the [documentation behind building Kitteh Zoo](/help/example), that talks you through building this project in the Project Builder.\n\nIf this doesn't help, get in contact with the Zooniverse team via the [contact page](/about/contact).
-
-[Back to top](#how-to-create-a-project-with-our-project-builder)'
-        }
+If you'd like some further information, check out the [documentation behind building Kitteh Zoo](walkthrough.md), that talks you through building this project in the Project Builder.\n\nIf this doesn't help, get in contact with the Zooniverse team via the [contact page](/about/contact).
