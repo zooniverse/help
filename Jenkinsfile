@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline {
-  agent { dockefile true }
+  agent { dockerfile true }
 
   options {
     quietPeriod(120)
