@@ -14,7 +14,7 @@ Each of these project states is discussed below.
 **1. Public Project**
 Do you have your own crowd of volunteers, or only want members of your collaboration to classify your data? You can make your project public simply by sharing your project’s URL with those you want to take part.
 
-_If you're planning a big public launch, or you think your project might attract significant attention, you should [let us know](/about/contact) so we can support you properly. Please note, there is a limit of 10,000 subjects per user - [contact us](/about/contact) if you'd like to host more._
+_If you're planning a big public launch, or you think your project might attract significant attention, you should [let us know](https://zooniverse.org/about/contact) so we can support you properly. Please note, there is a limit of 10,000 subjects per user - [contact us](https://zooniverse.org/about/contact) if you'd like to host more._
 &nbsp;
 
 **2. Review Project**
@@ -32,9 +32,9 @@ Once your project has been successfully reviewed and you have a final version of
 
 Your project will then undergo a final review process. This may include requesting information from you about your plan for using the results, and examining the results from the review phase. We may also carry out a peer review of your project. This review process can take a variable amount of time, from weeks to months.
 
-Once the project has passed review, it will appear in the [Zooniverse project list](/projects/). We will consider including your project in our Zooniverse Newsletter and other promotional material. If you want your project to be promoted, note that we favour projects whose researchers are proactive in engaging with their community, on the Talk discussion forums and elsewhere.
+Once the project has passed review, it will appear in the [Zooniverse project list](https://zooniverse.org/projects/). We will consider including your project in our Zooniverse Newsletter and other promotional material. If you want your project to be promoted, note that we favour projects whose researchers are proactive in engaging with their community, on the Talk discussion forums and elsewhere.
 
-_If you'd like your project to launch on a particular day, perhaps to coincide with a press release, please [get in touch](/about/contact)._
+_If you'd like your project to launch on a particular day, perhaps to coincide with a press release, please [get in touch](https://zooniverse.org/about/contact)._
 &nbsp;
 
 ### Zooniverse Policies
@@ -43,7 +43,7 @@ At present, we provide the Zooniverse Project Builder software and hosting for f
 - The content is likely to cause offense, or is suitable only for an adult audience.
 - The copyright on material uploaded to the site is not clear; please only use content you have the right to use.
 
-We reserve the right to decide which projects appear on the main project page and which are promoted to the Zooniverse community. In particular, if you have a project that is very close to an existing Zooniverse project, please [contact us](/about/contact) to discuss.
+We reserve the right to decide which projects appear on the main project page and which are promoted to the Zooniverse community. In particular, if you have a project that is very close to an existing Zooniverse project, please [contact us](https://zooniverse.org/about/contact) to discuss.
 
 Projects promoted to the Zooniverse community **must**:
 
@@ -55,4 +55,4 @@ Projects promoted to the Zooniverse community **must**:
 - Report publications using Zooniverse-produced data to us via this [form](https://docs.google.com/forms/d/18jwLbtV_6M5HCM74xNFtFbiiszWAxpC5IGHaToYjeiw/viewform).
 &nbsp;
 
-If you have any questions relating to the content of this page, please [get in touch](/about/contact).
+If you have any questions relating to the content of this page, please [get in touch](https://zooniverse.org/about/contact).

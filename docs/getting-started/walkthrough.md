@@ -4,13 +4,13 @@
 This tutorial will help walk you through the process, using Kitteh Zoo as an example.
 You can [explore the actual project](https://www.zooniverse.org/projects/vrooje/kitteh-zoo).
 
-If you'd like to read more on strategy on building and running a project, such as what to plan for when building your project and what to do after launch, check out the [Best Practices pages](/lab-best-practices).
+If you'd like to read more on strategy on building and running a project, such as what to plan for when building your project and what to do after launch, check out the [Best Practices pages](../best-practices/0-introduction.md).
 
 [![Kitteh Zoo screenshot](/img/how-to-lab/how-to-1.jpg)](/img/how-to-lab/how-to-1.jpg)
 
 ### Getting Started
 
-To get started building, go to [the Project Builder home page](/lab) and log in to your Zooniverse account, then click the "Build a Project" button in the top right. Here you can see all of the projects you own and collaborate on. Click on "Create a project" to start building.
+To get started building, go to [the Project Builder home page](https://zooniverse.org/lab) and log in to your Zooniverse account, then click the "Build a Project" button in the top right. Here you can see all of the projects you own and collaborate on. Click on "Create a project" to start building.
 
 [![Project Builder screenshot](/img/how-to-lab/how-to-2.jpg)](/img/how-to-lab/how-to-2.jpg)
 
@@ -126,7 +126,7 @@ Note that a workflow with fewer tasks will be easier for volunteers to complete.
 
 _Workflow Name_: Give your workflow a short, but descriptive name. If you have multiple workflows and give volunteers the option of choosing which they want to work on, this name will appear on a button instead of "Get started!"
 
-_Version_: Version indicates which version of the workflow you are on. Every time you save changes to a workflow, you create a new version. Big changes, like adding or deleting questions, will change the version by the number to the left of the ".": 1.0 to 2.0, etc. Smaller changes, like modifying the help text, will change the integer to the right of the ".", e.g. 2.0 to 2.1. The version is tracked with each classification in case you need it when analyzing your data. _Note:_ the version looks like a decimal number, _but it is not_: it is a string with two numbers separated by a "." character. So, for example, version 2.1 is not the same as version 2.10. 
+_Version_: Version indicates which version of the workflow you are on. Every time you save changes to a workflow, you create a new version. Big changes, like adding or deleting questions, will change the version by the number to the left of the ".": 1.0 to 2.0, etc. Smaller changes, like modifying the help text, will change the integer to the right of the ".", e.g. 2.0 to 2.1. The version is tracked with each classification in case you need it when analyzing your data. _Note:_ the version looks like a decimal number, _but it is not_: it is a string with two numbers separated by a "." character. So, for example, version 2.1 is not the same as version 2.10.
 
 _Tasks_: There are two main types of tasks: questions and drawing. For question tasks, the volunteer chooses from a list of answers but does not mark or draw on the image. In drawing tasks, the volunteer marks or draws directly on the image using tools that you specify. They can also give sub-classifications for each mark. Note that you can set the first task from the drop-down menu.
 
@@ -177,7 +177,7 @@ Once the image has uploaded, it will appear above the "Add an image" box. You ca
 
 ### DETAILS - Visibility
 
-This page is where you decide whether your project is public and whether it's ready to go live. For more information on the different project stages, see our [project builder policies](/help/lab-policies).
+This page is where you decide whether your project is public and whether it's ready to go live. For more information on the different project stages, see our [project builder policies](policies.md).
 
 ### DETAILS - Collaborators
 
