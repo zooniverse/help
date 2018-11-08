@@ -15,6 +15,7 @@ pipeline {
         skipDefaultCheckout true
       }
       steps {
+        sh "cat .git/config"
         sh "mkdocs gh-deploy"
       }
     }
