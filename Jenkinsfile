@@ -15,10 +15,6 @@ pipeline {
         skipDefaultCheckout true
       }
       steps {
-        withCredentials([usernamePassword(credentialsId: 'a9de592f-59b3-4920-af93-dc7873256ad4', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-          sh "git config remote.origin.url 'https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/zooniverse/help.git'"
-        }
-
         sh "mkdocs gh-deploy"
       }
     }
