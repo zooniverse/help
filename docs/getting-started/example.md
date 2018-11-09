@@ -4,7 +4,7 @@
 This tutorial will help walk you through the process, using Kitteh Zoo as an example.
 You can [explore the actual project](https://www.zooniverse.org/projects/vrooje/kitteh-zoo).
 
-If you'd like to read more on strategy on building and running a project, such as what to plan for when building your project and what to do after launch, check out the [Best Practices pages](../best-practices/0-introduction.md).
+If you'd like to read more on strategy on building and running a project, such as what to plan for when building your project and what to do after launch, check out the [Best Practices pages](../best-practices/index.md).
 
 [![Kitteh Zoo screenshot](/img/how-to-lab/how-to-1.jpg)](/img/how-to-lab/how-to-1.jpg)
 
@@ -177,7 +177,7 @@ Once the image has uploaded, it will appear above the "Add an image" box. You ca
 
 ### DETAILS - Visibility
 
-This page is where you decide whether your project is public and whether it's ready to go live. For more information on the different project stages, see our [project builder policies](policies.md).
+This page is where you decide whether your project is public and whether it's ready to go live. For more information on the different project stages, see our [project builder policies](lab-policies.md).
 
 ### DETAILS - Collaborators
 

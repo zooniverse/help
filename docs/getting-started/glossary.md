@@ -102,5 +102,5 @@ If you'd like to see a definition that currently isn't on this page, [get in tou
 
 + **Inactive workflow** - Inactive workflows are ones that aren’t currently being shown to volunteers, but can be edited. You can make a workflow active and inactive by ticking the relevant box on the Visibility tab on the Project Builder page.
 
-+ **Zooniverse approved project** - this is a project that has undergone beta testing and been approved by the Zooniverse team. Details of this process can be found on the [Policy Page](policies.md). Zooniverse approved projects that are currently live can be seen on the [Projects page](https://zooniverse.org/projects).
++ **Zooniverse approved project** - this is a project that has undergone beta testing and been approved by the Zooniverse team. Details of this process can be found on the [Policy Page](lab-policies.md). Zooniverse approved projects that are currently live can be seen on the [Projects page](https://zooniverse.org/projects).
 

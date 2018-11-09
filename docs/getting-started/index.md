@@ -13,7 +13,7 @@ A brief overview of all the steps you need to complete to set up your project.
 7. Once you’ve created a workflow, the "Associated Subject Sets" section allows you to link your workflow to your subject sets. If you have no subjects, go to the “Subject Sets” tab and upload your data (see step 5 above).
 8. Hit the "Test this workflow" button to see how your project looks.
 9. Explore your project to figure out what works and what doesn't. Make changes, then refresh your project page to test these out.
-10. Guidelines on how to design your project to maximize engagement and data quality are provided on the [Policies page](policies.md).
+10. Guidelines on how to design your project to maximize engagement and data quality are provided on the [Policies page](lab-policies.md).
 11. When you are happy with your project, set it to “Public” on the “Visibility” tab. Use the “Apply for review” button to submit it to the Zooniverse team for review.
 
 
@@ -139,7 +139,7 @@ This page is where you decide whether your project is public and whether it's re
 
 * **Beta Status:** Here, you will find a checklist of tasks that must be complete for your project to undergo beta review. Projects must complete review in order to launch as full Zooniverse projects and be promoted as such. Once these tasks are complete, click “Apply for review”.
 
-* **Workflow Settings:** You will see a list of all workflows created for the project. You can set the workflows to “Active”, choose what metric to measure for completeness statistics, and whether those statistics should be shown on your project’s Stats Page.For more information on the different project stages, see our [Project Builder policies](policies.md).
+* **Workflow Settings:** You will see a list of all workflows created for the project. You can set the workflows to “Active”, choose what metric to measure for completeness statistics, and whether those statistics should be shown on your project’s Stats Page.For more information on the different project stages, see our [Project Builder policies](lab-policies.md).
 
 ### Talk
 
@@ -235,4 +235,4 @@ Subject sets can be pretty powerful, and sometimes complex. You can have a singl
 
 ## Further Help
 
-If you'd like some further information, check out the [documentation behind building Kitteh Zoo](walkthrough.md), that talks you through building this project in the Project Builder.\n\nIf this doesn't help, get in contact with the Zooniverse team via the [contact page](https://zooniverse.org/about/contact).
+If you'd like some further information, check out the [documentation behind building Kitteh Zoo](example.md), that talks you through building this project in the Project Builder.\n\nIf this doesn't help, get in contact with the Zooniverse team via the [contact page](https://zooniverse.org/about/contact).
