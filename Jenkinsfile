@@ -1,7 +1,11 @@
 #!groovy
 
 pipeline {
-  agent { dockerfile true }
+  agent { 
+    dockerfile {
+      args "-v /etc/group:/etc/group:ro -v /etc/passwd:/etc/passwd:ro -v /etc/shadow:/etc/shadow:ro"
+    }
+  }
 
   options {
     quietPeriod(120)
