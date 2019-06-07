@@ -28,7 +28,7 @@ It is important you review the results produced at this stage to ensure they are
 &nbsp;
 
 **3. Zooniverse Project**
-Once your project has been successfully reviewed and you have a final version of your project, you can apply for your project to be launched as an official Zooniverse project. To do this, click “Apply for full launch” in the “Visibility” section of the project builder.
+Once your project has been successfully reviewed and you have a final version of your project, you can apply for your project to be launched as an official Zooniverse project. To do this, notify the team by email at contact@zooniverse.org.
 
 Your project will then undergo a final review process. This may include requesting information from you about your plan for using the results, and examining the results from the review phase. We may also carry out a peer review of your project. This review process can take a variable amount of time, from weeks to months.
 
