@@ -46,15 +46,15 @@ This `csv` file has the information for every major version of a workflow.  This
 * `version`: The major version number
 * `active`: `true` if the workflow is active
 * `classifications_count`: How many classifications have been made on the workflow
-* `pairwise`:
-* `grouped`:
-* `prioritized`:
+* `pairwise`: `true` if selection behavior is set to compare subjects against each other (not typically used)
+* `grouped`: `true` if selection behavior set to select subjects by set (not typically used)
+* `prioritized`: `true` if selection behavior shows subjects in a given order (not typically used)
 * `primary_language`: The language code for the workflow
 * `first_task`: The task key for the first task
-* `tutorial_subject_id`:
+* `tutorial_subject_id`: A default subject linked to the tutorial (not typically used)
 * `retired_set_member_subjects_count`: The number of retired subjects from the workflow
 * `tasks`: A `JSON` blob showing the full workflow structure
 * `retirement`: The retirement rules for the workflow
-* `aggregation`:
+* `aggregation`: Information passed to downstream aggregation services (depreciated)
 * `strings`: A `JSON` blob containing all the text associated with the workflow
 * `minor_version`: The minor version number
