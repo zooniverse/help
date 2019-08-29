@@ -77,9 +77,7 @@ Detailed instructions on how to use the pages described above.
 
 * **Other Tags:** Enter a list of additional tags to describe your project separated by commas to help users find your project.
 
-* **External links:** Adding an external link will make it appear as a new tab alongside the About, Classify, Talk, and Collect tabs. You can rearrange the displayed order by clicking and dragging on the left gray tab next to each link.
-
-* **Social links:** Adding a social link will append a media icon at the end of your project menu bar. You can rearrange the displayed order by clicking and dragging on the left gray tab next to each link.
+* **External and Social Links:** Adding an external link will add an entry in an External Project Links section that appears at the bottom of the project landing page.  Adding a social link will add an entry in the same section along with an appropriate media icon in the link list. You can rearrange the displayed order among external links and social links by clicking and dragging on the left gray tab next to each link in the project builder interface.
 
 * **Checkbox: Private project:** On "private" projects, only users with specified project roles can see or classify on the project. We strongly recommend you keep your project private while you're still editing it. Share it with your team to get feedback by adding them in the Collaborators area (linked at the left-hand side of the Project Builder). Team members you add can see your project even if it's private. Once your project is public, anyone with the link can view and classify on it.
 

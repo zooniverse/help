@@ -20,4 +20,4 @@ In both cases afterwards the site will be served from [localhost:8000](htto://lo
 
 ## Deploying
 
-We're working to get Jenkins to deploy this automatically. In the mean time, `mkdocs gh-deploy` will deploy for you.
+Jenkins deploys changes automatically when merging to master.
