@@ -2,7 +2,7 @@
 
 The documentation is built by MkDocs. For full documentation visit [mkdocs.org](https://mkdocs.org).
 
-## Editting
+## Editing
 
 It's perfectly acceptable to just edit Markdown files on Github and submitting
 pull requests directly from there. If you feel unsure if your syntax is
