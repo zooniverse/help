@@ -5,6 +5,7 @@
 ### Useful Links, Blog Posts, and Documents:
 
 - [Project Builder Policies](../getting-started/lab-policies.md) &mdash; Official Zooniverse policy about user-built projects.
+- [Project Review: Best Practices & Flowchart](https://docs.google.com/document/d/1SJmOdGmpzYGyKpSnFt_tEe_BZIc2Bzmc3kKlWw-gX68/edit?usp=sharing) &mdash; Overview of project review process and timeline, with helpful diagram and list of suggestions for projects entering review process.
 - [Examples of Strong Newsletters](https://docs.google.com/document/d/1xB0nNPzwwzNgCwm0_ZufIy-0I6HX3OG2YHkVZ-oBQCo/edit?usp=sharing) &mdash; Samples of newsletters we have used.
 - [Overview of Talk](https://docs.google.com/document/d/1UmFCpWcNk18gj9HsPKMCIvTcEacPmHBIq1JDM2qcOzs) &mdash; Best practices for Talk board usage and descriptions of associated team roles.
 - [What Are Moderators For?](https://docs.google.com/document/d/1L8LwYy_uUxwX1NqE5sXi0fnrjZKG1DZu1fWLath9BOE) &mdash; Learn what moderators are and why you want them.
