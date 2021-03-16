@@ -51,7 +51,7 @@ Projects promoted to the Zooniverse community **must**:
 - Make their classification data open after a proprietary period, normally lasting two years from project launch.
 - Communicate research findings to their communities, via open access publication, a blog or elsewhere.
 - Acknowledge Zooniverse in any publications. Please use the following text:
-"_This publication uses data generated via the [Zooniverse.org](https://www.zooniverse.org/) platform, development of which is funded by generous support, including a Global Impact Award from Google, and by a grant from the Alfred P. Sloan Foundation._"
+"_This publication uses data generated via the [Zooniverse.org](https://www.zooniverse.org/) platform, development of which is funded by generous support, including from the National Science Foundation, NASA, the Institute of Museum and Library Services, UKRI, a Global Impact Award from Google, and the Alfred P. Sloan Foundation._"
 - Report publications using Zooniverse-produced data to us via this [form](https://docs.google.com/forms/d/18jwLbtV_6M5HCM74xNFtFbiiszWAxpC5IGHaToYjeiw/viewform).
 &nbsp;
 
