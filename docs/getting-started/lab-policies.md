@@ -55,4 +55,16 @@ Projects promoted to the Zooniverse community **must**:
 - Report publications using Zooniverse-produced data to us via this [form](https://docs.google.com/forms/d/18jwLbtV_6M5HCM74xNFtFbiiszWAxpC5IGHaToYjeiw/viewform).
 &nbsp;
 
+Any changes made to the standard Zooniverse policies for a particular project **must be** (1) approved by the Zooniverse team in writing, in advance of launch, and (2) communicated to volunteers via the Announcement Banner, which must be displayed for the duration of the project.
+
+In addition, participants reasonably expect to have access to the subjects (e.g. images) after the project has finished, in order to provide classification data and discussions with context. Exceptions to this requirement need to (1) be approved by the Zooniverse team in writing, prior to launch, and (2) must be communicated to volunteers throughout the project via the Announcement Banner, which must be displayed for the duration of the project. 
+
+If the project dataset is unable to beshared publicly and the data needs to be removed from the Zooniverse platform to comply with institutional practice, the requirements are as follows:
+
+1. The project data will not be removed until the entire project is complete.
+2. Upon the project's completion, the project page will be replaced by an Archive page (see: https://anno.tate.org.uk/#/), which must include the following information:
+    - If available, a link to the project data (e.g. images hosted behind a paywall)
+    - A link to the classification data when available (i.e. the project results), nb: this can be delayed for up to 2 years to allow teams to publish results, etc., in line with project policies detailed above
+    - Links to any publications about the project or using project data
+
 If you have any questions relating to the content of this page, please [get in touch](https://zooniverse.org/about/contact).
