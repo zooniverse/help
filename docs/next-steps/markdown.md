@@ -17,4 +17,4 @@ Panoptes has a special version of markdown that lets you specify the image dimen
 
 will display a square image resized to 60 by 60 pixels.
 
-This works for an image you host yourself (see [Adam’s section]) - just update the URL.
+This works for an image you host yourself (see [Hosting your own subject media](hosting-your-own-subject-media.md)) - just update the URL.
