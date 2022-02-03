@@ -5,7 +5,7 @@
 A brief overview of all the steps you need to complete to set up your project.
 
 1. Log in to your Zooniverse account.
-2. Click on ["Build a Project"](www.zooniverse.org/lab) and click "Create a New Project".
+2. Click on ["Build a Project"](https://www.zooniverse.org/lab) and click "Create a New Project".
 3. Enter your project details in the pop-up that appears. You’ll then be taken to a “Project Details” page where you can add further basic information.
 4. Add more information about your project via the blue tabs on the left-hand side of the project builder page. Guidance for each of these sections is provided on the page itself.
 5.  If you have data to upload, add your subjects via the “Subject Sets” tab of the Project Builder (detailed instructions are provided [here](#subjects)),
