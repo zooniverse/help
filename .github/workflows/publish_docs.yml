@@ -1,0 +1,14 @@
+name: Update Github Pages
+on:
+  push: { branches: master }
+jobs:
+  build_and_deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+      - name: Deploy MkDocs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.24
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
