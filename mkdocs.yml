@@ -1,3 +1,7 @@
 site_name: Zooniverse Help
 repo_url: https://github.com/zooniverse/help/
-theme: material
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: teal
