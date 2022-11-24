@@ -1,3 +1,6 @@
+---
+description: A quick guide to building a project.
+---
 # How to create a project with our Project Builder
 
 ## A quick guide to building a project

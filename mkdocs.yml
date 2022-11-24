@@ -1,5 +1,6 @@
 site_name: Zooniverse Help
 site_url: https://help.zooniverse.org
+site_description: How to do things in the Zooniverse.
 repo_url: https://github.com/zooniverse/help/
 theme:
   name: material

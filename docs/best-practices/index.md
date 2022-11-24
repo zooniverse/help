@@ -1,3 +1,6 @@
+---
+description: Best practices for engagement and success.
+---
 # Building, Launching, and Running Your Zooniverse Project:
 # Best Practices for Engagement & Success
 
