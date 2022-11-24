@@ -1,4 +1,5 @@
 site_name: Zooniverse Help
+site_url: https://help.zooniverse.org
 repo_url: https://github.com/zooniverse/help/
 theme:
   name: material
@@ -7,3 +8,5 @@ theme:
   palette:
     scheme: default
     primary: teal
+plugins:
+  - social
