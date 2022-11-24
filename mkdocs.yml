@@ -2,6 +2,8 @@ site_name: Zooniverse Help
 repo_url: https://github.com/zooniverse/help/
 theme:
   name: material
+  logo: img/zooniverse.png
+  favicon: https://static.zooniverse.org/www.zooniverse.org/favicon.ico
   palette:
     scheme: default
     primary: teal
