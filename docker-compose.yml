@@ -5,7 +5,7 @@ services:
     build:
       context: .
     volumes:
-      - ./:/usr/src/help
+      - ./:/docs
     ports:
       - "8000:8000"
-    command: 'mkdocs serve -a 0.0.0.0:8000'
+    command: 'serve -a 0.0.0.0:8000'
