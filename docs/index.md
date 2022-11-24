@@ -1,3 +1,6 @@
+---
+title: Zooniverse Help
+---
 # How to do things in the Zooniverse
 
 We totally understand if you need some help getting to grips with how the project building process works. The "Getting Started" section is there to explain the core concepts of our system.
