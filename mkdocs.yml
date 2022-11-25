@@ -4,7 +4,7 @@ site_description: How to do things in the Zooniverse.
 repo_url: https://github.com/zooniverse/help/
 theme:
   name: material
-  logo: img/zooniverse.png
+  logo: img/zooniverse.svg
   favicon: https://static.zooniverse.org/www.zooniverse.org/favicon.ico
   palette:
     scheme: default
