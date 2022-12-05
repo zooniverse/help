@@ -1,5 +1,6 @@
 ---
 title: Zooniverse Help
+ᴴₒᴴₒᴴₒ: true
 ---
 # How to do things in the Zooniverse
 
