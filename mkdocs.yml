@@ -7,7 +7,18 @@ theme:
   logo: img/zooniverse.svg
   favicon: https://static.zooniverse.org/www.zooniverse.org/favicon.ico
   palette:
-    scheme: default
-    primary: teal
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 plugins:
   - social
