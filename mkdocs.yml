@@ -22,3 +22,71 @@ theme:
         name: Switch to light mode
 plugins:
   - social
+nav:
+  - 'Getting Started':
+    - 'How to create a project with the Project Builder': getting-started/how-to.md
+    - 'Example project': getting-started/example.md
+    - 'Lab policies': getting-started/lab-policies.md
+    - 'Glossary': getting-started/glossary.md
+  - 'Best Practices': 
+    - 'Introduction': best-practices/introduction.md
+    - 'Part I: Building a great project': best-practices/1-great-project.md
+    - 'Part II: The launch rush': best-practices/2-launch-rush.md
+    - 'Part III: In for the long haul': best-practices/3-long-haul.md
+    - 'Appendix: Resources and examples': best-practices/4-resources.md 
+  - 'Next Steps':
+    - 'Caesar for data processing': next-steps/caesar-realtime-data-processing.md
+    - 'Data analysis': next-steps/data-analysis.md
+    - 'Data exports': next-steps/data-exports.md
+    - 'Experimental features': next-steps/experimental-features.md
+    - 'Hosting your own subject media': next-steps/hosting-your-own-subject-media.md
+    - 'Markdown': next-steps/markdown.md
+    - 'Newsletters': next-steps/newsletters.md
+    - 'Subject selection process': next-steps/subject-selection.md
+  - 'Transcription Project Guide': 
+    - 'Getting Started':
+      - 'Who is this resource for': transcription-project-guide/getting-started/who-is-this-resource-for.md
+      - 'How to use this resource': transcription-project-guide/getting-started/how-to-use-this-resource.md
+      - 'What is Zooniverse': transcription-project-guide/getting-started/what-is-zooniverse.md
+      - 'What is a crowdsourced text transcription project': transcription-project-guide/getting-started/what-is-crowdsourced-transcription.md
+      - 'Early considerations': transcription-project-guide/getting-started/early-considerations.md
+    - 'Project Data':
+      - 'What is a Subject': transcription-project-guide/project-data/what-is-a-subject.md
+      - 'Where will your data come from': transcription-project-guide/project-data/where-will-your-data-come-from.md
+      - 'How do I get my data into Zooniverse': transcription-project-guide/project-data/how-do-i-get-my-data-into-zooniverse.md
+    - 'Workflows':
+      - 'What is a Workflow': transcription-project-guide/workflows/what-is-a-workflow.md
+      - 'Designing Workflows for the data output you want': transcription-project-guide/workflows/designing-workflows.md
+      - 'How to design a Workflow': transcription-project-guide/workflows/how-to-design-a-workflow.md
+    - 'Designing For Volunteers':
+      - 'Who are the volunteers': transcription-project-guide/designing-for-volunteers/who-are-the-volunteers.md
+      - 'Home page': transcription-project-guide/designing-for-volunteers/home-page.md
+      - 'Talk': transcription-project-guide/designing-for-volunteers/talk.md
+      - 'About pages': transcription-project-guide/designing-for-volunteers/about-pages.md
+      - 'Tutorial, Field Guide, and Help text': transcription-project-guide/designing-for-volunteers/tutorial-field-guide-help.md  
+    - 'Beta Testing':
+      - 'What is beta testing for': transcription-project-guide/beta-testing/what-is-beta-for.md
+      - 'Beta: step by step': transcription-project-guide/beta-testing/beta-step-by-step.md
+    - 'Project Launch':
+      - 'Prepare for launch': transcription-project-guide/project-launch/prepare-for-launch.md
+      - 'Build a community': transcription-project-guide/project-launch/build-a-community.md
+      - 'Sustain your community': transcription-project-guide/project-launch/sustain-your-community.md
+      - 'Acknowledging volunteers': transcription-project-guide/project-launch/acknowledging-volunteers.md
+    - 'Working With Data':
+      - 'Designing your project to get the data output you need': transcription-project-guide/working-with-data/designing-for-data.md
+      - 'Data exports': transcription-project-guide/working-with-data/data-exports.md
+      - 'Data aggregation': transcription-project-guide/working-with-data/data-aggregation.md
+      - 'Data sharing requirements': transcription-project-guide/working-with-data/data-sharing.md
+      - 'Unexpected data': transcription-project-guide/working-with-data/unexpected-data.md
+      - 'Data curation': transcription-project-guide/working-with-data/data-curation.md 
+    - 'Project Maintenance and Conclusion':
+      - 'Long term projects': transcription-project-guide/project-maintenance-and-conclusion/long-term-projects.md
+      - 'Maintaining volunteer communities': transcription-project-guide/project-maintenance-and-conclusion/maintaining-communities.md
+      - 'Financial support for projects': transcription-project-guide/project-maintenance-and-conclusion/financial-support.md
+      - 'Sharing data and results': transcription-project-guide/project-maintenance-and-conclusion/sharing-data-and-results.md
+      - 'Wrapping up your Zooniverse project': transcription-project-guide/project-maintenance-and-conclusion/wrapping-up-your-project.md
+    - 'Acknowledgements and Resources':
+      - 'Additional project team': transcription-project-guide/acknowledgements-and-resources/project-team.md
+      - 'Cohort members and projects': transcription-project-guide/acknowledgements-and-resources/cohort-members.md
+      - 'Institute website': transcription-project-guide/acknowledgements-and-resources/institute-website.md
+      - 'Works cited': transcription-project-guide/acknowledgements-and-resources/works-cited.md
