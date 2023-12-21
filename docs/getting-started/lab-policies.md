@@ -55,6 +55,8 @@ Projects promoted to the Zooniverse community **must**:
 - Report publications using Zooniverse-produced data to us via this [form](https://docs.google.com/forms/d/18jwLbtV_6M5HCM74xNFtFbiiszWAxpC5IGHaToYjeiw/viewform).
 &nbsp;
 
+The Zooniverse is not typically a platform for surveys which ask for audience opinion, or about them; our projects normally invite volunteers to actively assist in research. Therefore, we typically do not support survey-style projects. If you aren't sure whether your project goals fit this model, please [contact us](https://zooniverse.org/about/contact) to discuss.
+
 Any changes made to the standard Zooniverse policies for a particular project **must be** (1) approved by the Zooniverse team in writing, in advance of launch, and (2) communicated to volunteers via the Announcement Banner, which must be displayed for the duration of the project.
 
 In addition, participants reasonably expect to have access to the subjects (e.g. images) after the project has finished, in order to provide classification data and discussions with context. Exceptions to this requirement need to (1) be approved by the Zooniverse team in writing, prior to launch, and (2) must be communicated to volunteers throughout the project via the Announcement Banner, which must be displayed for the duration of the project. 
