@@ -22,3 +22,35 @@ theme:
         name: Switch to light mode
 plugins:
   - social
+
+nav:
+  - 'Getting Started':
+    - getting-started/index.md
+    - getting-started/example.md
+    - getting-started/glossary.md
+    - getting-started/lab-policies.md
+  - 'Best Practices': 
+    - best-practices/index.md
+    - best-practices/1-great-project.md
+    - best-practices/2-launch-rush.md
+    - best-practices/3-long-haul.md
+    - best-practices/4-resources.md
+  - 'Next Steps':
+    - next-steps/caesar-realtime-data-processing.md
+    - next-steps/data-analysis.md 
+    - next-steps/data-exports.md
+    - next-steps/experimental-features.md
+    - next-steps/hosting-your-own-subject-media.md
+    - next-steps/markdown.md
+    - next-steps/newsletters.md
+    - next-steps/subject-selection.md
+  - 'Transcription Project Guide':
+    - transcription-project-guide/index.md
+    - transcription-project-guide/project-data.md
+    - transcription-project-guide/workflows.md
+    - transcription-project-guide/designing-for-volunteers.md
+    - transcription-project-guide/beta-testing.md
+    - transcription-project-guide/project-launch.md
+    - transcription-project-guide/working-with-data.md 
+    - transcription-project-guide/project-maintenance-and-conclusion.md
+    - transcription-project-guide/acknowledgements-and-resources.md
