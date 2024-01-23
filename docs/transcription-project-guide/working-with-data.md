@@ -49,7 +49,15 @@ This section will cover task types that are commonly used in Text Transcription 
 
 This is the data export format for a question task where only a single response has been submitted, from the project _Corresponding with Quakers_:
 
-`{"task":"T5","task_label":"What is the letter about? Choose a few keywords.","value":["health/illness/death"]}]`
+``` json
+{
+  "task":"T5",
+  "task_label":"What is the letter about? Choose a few keywords.",
+  "value":[
+    "health/illness/death"
+  ]
+}
+```
 
 In the above case, a volunteer has selected the option "health/illness/death" for the question `What is the document about? Choose a few keywords.`
 
@@ -60,7 +68,16 @@ In the above case, a volunteer has selected the option "health/illness/death" fo
 
 This is the data export format for a question task where multiple choices are allowed, from the project _Corresponding with Quakers_:
 
-`{"task":"T5","task_label":"What is the letter about? Choose a few keywords.","value":["letter writing/the post","family and friends"]}`
+``` json
+{
+  "task":"T5",
+  "task_label":"What is the letter about? Choose a few keywords.",
+  "value":[
+    "letter writing/the post",
+    "family and friends"
+  ]
+}
+```
 
 In the above case, a volunteer has selected the options "letter writing/the post" and "family and friends" for the question `What is the document about? Choose a few keywords.`
 
@@ -72,7 +89,19 @@ This is what the task input area looks like for this specific example (i.e. what
 
 This is the data export format for a single dropdown task, from the project _Shadows on Stone: Identifying Sing Sing's Incarcerated_:
 
-`{"task":"T30","value":[{"select_label":"Relationship status","option":true,"value":"6e68e5fc7071a","label":"Married"}]}`
+``` json
+{
+  "task":"T30",
+  "value":[
+    {
+      "select_label":"Relationship status",
+      "option":true,
+      "value":"6e68e5fc7071a",
+      "label":"Married"
+    }
+  ]
+}
+```
 
 In the above case, a volunteer has entered "Married" into the "Relationship status" field via selecting an entry from the options provided in the dropdown list.
 
@@ -85,7 +114,47 @@ This is what the task input area looks like for this specific example (i.e. what
 
 This is the data export format for three dropdown tasks, from the project _Shadows on Stone: Identifying Sing Sing's Incarcerated_, presented together in the same workflow step:
 
-`{"task":"T52","task_label":null,"value":[{"task":"T15","value":[{"select_label":"Sentenced (month)","option":true,"value":3,"label":"3 - March"}]},{"task":"T16","value":[{"select_label":"Sentenced (day)","option":true,"value":7,"label":"7"}]},{"task":"T17","value":[{"select_label":"Sentenced (year)","option":true,"value":1898,"label":"1898"}]}]}`
+``` json
+{
+  "task":"T52",
+  "task_label":null,
+  "value":[
+    {
+      "task":"T15",
+      "value":[
+        {
+          "select_label":"Sentenced (month)",
+          "option":true,
+          "value":3,
+          "label":"3 - March"
+        }
+      ]
+    },
+    {
+      "task":"T16",
+      "value":[
+        {
+          "select_label":"Sentenced (day)",
+          "option":true,
+          "value":7,
+          "label":"7"
+        }
+      ]
+    },
+    {
+      "task":"T17",
+      "value":[
+        {
+          "select_label":"Sentenced (year)",
+          "option":true,
+          "value":1898,
+          "label":"1898"
+        }
+      ]
+    }
+  ]
+}
+```
 
 This is what this data looks like when parsed:
 
@@ -102,7 +171,13 @@ This is what the task input area looks like for this specific example (i.e. what
 
 This is the data export format for a free-text entry task, from the project _Shadows on Stone: Identifying Sing Sing's Incarcerated_:
 
-`[{"task":"T50","value":"March 24, 1899","task_label":"Date"}`
+``` json
+{
+  "task":"T50",
+  "value":"March 24, 1899",
+  "task_label":"Date"
+}
+```
 
 In the above case, a volunteer has entered "March 24, 1899" into the `Date` field provided.
 
@@ -116,7 +191,340 @@ This is what the task input area looks like for this specific example (i.e. what
 
 This is the Project Builder data export format for the Transcription Task, from the project _Corresponding with Quakers_:
 
-`[{"task":"T0","value":[{"x1":1460.4500246994899,"x2":805.3800428124487,"y1":96.11065371315667,"y2":104.96295076568421,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1450.3331137823154,"x2":1350.4286184752184,"y1":166.92903013337732,"y2":154.2828914869094,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":799.0569734892148,"x2":135.13469454964604,"y1":170.7228717273177,"y2":174.5167133212581,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1474.3607772106047,"x2":615.6879631154292,"y1":282.00889181623586,"y2":285.8027334101763,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1441.4808167297879,"x2":79.49168450518695,"y1":374.3257039354521,"y2":386.9718425819201,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1475.6253910752514,"x2":69.37477358801246,"y1":461.58406059608114,"y2":466.64251605466836,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1427.5700642186732,"x2":63.05170426477869,"y1":553.9008727152974,"y2":566.5470113617654,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1384.573192820682,"x2":71.90400131730621,"y1":646.2176848345135,"y2":655.0699818870411,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1485.7423019924258,"x2":61.78709040013183,"y1":756.2390910587849,"y2":763.8267742466657,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1441.4808167297879,"x2":57.99324880619139,"y1":870.0543388769968,"y2":877.6420220648777,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1473.0961633459578,"x2":171.80849662440326,"y1":957.3126955376256,"y2":969.9588341840936,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1460.4500246994899,"x2":168.01465503046276,"y1":1068.598715626544,"y2":1073.657171085131,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1417.4531533014988,"x2":56.72863494154467,"y1":1154.5924584225259,"y2":1178.6201218508152,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1487.0069158570725,"x2":61.7870904001318,"y1":1253.2323398649762,"y2":1282.3184587518526,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1476.8900049398983,"x2":83.28552609912745,"y1":1358.1952906306606,"y2":1383.4875679235963,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1490.800757451013,"x2":54.19940721225106,"y1":1459.3643998024043,"y2":1490.9797464185742,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1437.6869751358474,"x2":65.58093199407224,"y1":1541.564301004446,"y2":1578.238103079203,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1476.8900049398983,"x2":49.14095175366387,"y1":1626.2934299357817,"y2":1666.7610736044794,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1417.4531533014988,"x2":45.347110159723485,"y1":1702.1702618145891,"y2":1759.077885723695,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1452.862341511609,"x2":56.72863494154453,"y1":1794.4870739338055,"y2":1838.7485591964435,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0}],"taskType":"transcription"},{"task":"T0.0.0","value":"Mountmelick  4th of 3rd mo","taskType":"text","markIndex":0},{"task":"T0.0.0","value":"1811","taskType":"text","markIndex":1},{"task":"T0.0.0","value":"My dear Aunt Sally,","taskType":"text","markIndex":2},{"task":"T0.0.0","value":"Thou sent to know if I would","taskType":"text","markIndex":3},{"task":"T0.0.0","value":"chuse thee to write to me? certainly, \u0026 for two","taskType":"text","markIndex":4},{"task":"T0.0.0","value":"reasons thy letters would be most welcome, the","taskType":"text","markIndex":5},{"task":"T0.0.0","value":"one, because they come from thee, \u0026 the other","taskType":"text","markIndex":6},{"task":"T0.0.0","value":"from Ballitore. I hear thou art with","taskType":"text","markIndex":7},{"task":"T0.0.0","value":"Mary Bostello, it is a bad time for me to write,","taskType":"text","markIndex":8},{"task":"T0.0.0","value":"for my letter cannot recompense for taking","taskType":"text","markIndex":9},{"task":"T0.0.0","value":"from such elegant \u0026 agreeable company","taskType":"text","markIndex":10},{"task":"T0.0.0","value":"but thou has always very good company,","taskType":"text","markIndex":11},{"task":"T0.0.0","value":"but thou has not always Mary Costello, I","taskType":"text","markIndex":12},{"task":"T0.0.0","value":"would be obliged to thee to remember me to her.","taskType":"text","markIndex":13},{"task":"T0.0.0","value":"I suppose thou often sees my dear Lydia, alas","taskType":"text","markIndex":14},{"task":"T0.0.0","value":"Beaty's foreboding fears were but too well founded","taskType":"text","markIndex":15},{"task":"T0.0.0","value":"how are thy eyes \u0026 head? I hope thy are, at","taskType":"text","markIndex":16},{"task":"T0.0.0","value":"least, no worse. Governess had not time to look","taskType":"text","markIndex":17},{"task":"T0.0.0","value":"for the verse thou sent for, but I intend to","taskType":"text","markIndex":18},{"task":"T0.0.0","value":"send it the next time. I am sorry I have","taskType":"text","markIndex":19},{"task":"T1","task_label":"Have all the volunteer-made underline marks on all pages turned grey?","value":"No"}`
+``` json
+[
+  {
+    "task":"T0",
+    "value":[
+      {
+        "x1":1460.4500246994899,
+        "x2":805.3800428124487,
+        "y1":96.11065371315667,
+        "y2":104.96295076568421,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1450.3331137823154,
+        "x2":1350.4286184752184,
+        "y1":166.92903013337732,
+        "y2":154.2828914869094,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":799.0569734892148,
+        "x2":135.13469454964604,
+        "y1":170.7228717273177,
+        "y2":174.5167133212581,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {"x1":1474.3607772106047,
+      "x2":615.6879631154292,
+      "y1":282.00889181623586,
+      "y2":285.8027334101763,
+      "frame":0,
+      "details":[{"task":"T0.0.0"}],
+      "toolType":"transcriptionLine",
+      "toolIndex":0
+    },
+      {
+        "x1":1441.4808167297879,
+        "x2":79.49168450518695,
+        "y1":374.3257039354521,
+        "y2":386.9718425819201,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1475.6253910752514,
+        "x2":69.37477358801246,
+        "y1":461.58406059608114,
+        "y2":466.64251605466836,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1427.5700642186732,
+        "x2":63.05170426477869,
+        "y1":553.9008727152974,
+        "y2":566.5470113617654,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1384.573192820682,
+        "x2":71.90400131730621,
+        "y1":646.2176848345135,
+        "y2":655.0699818870411,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1485.7423019924258,
+        "x2":61.78709040013183,
+        "y1":756.2390910587849,
+        "y2":763.8267742466657,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1441.4808167297879,
+        "x2":57.99324880619139,
+        "y1":870.0543388769968,
+        "y2":877.6420220648777,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1473.0961633459578,
+        "x2":171.80849662440326,
+        "y1":957.3126955376256,
+        "y2":969.9588341840936,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1460.4500246994899,
+        "x2":168.01465503046276,
+        "y1":1068.598715626544,
+        "y2":1073.657171085131,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1417.4531533014988,
+        "x2":56.72863494154467,
+        "y1":1154.5924584225259,
+        "y2":1178.6201218508152,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1487.0069158570725,
+        "x2":61.7870904001318,
+        "y1":1253.2323398649762,
+        "y2":1282.3184587518526,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1476.8900049398983,
+        "x2":83.28552609912745,
+        "y1":1358.1952906306606,
+        "y2":1383.4875679235963,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1490.800757451013,
+        "x2":54.19940721225106,
+        "y1":1459.3643998024043,
+        "y2":1490.9797464185742,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1437.6869751358474,
+        "x2":65.58093199407224,
+        "y1":1541.564301004446,
+        "y2":1578.238103079203,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1476.8900049398983,
+        "x2":49.14095175366387,
+        "y1":1626.2934299357817,
+        "y2":1666.7610736044794,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1417.4531533014988,
+        "x2":45.347110159723485,
+        "y1":1702.1702618145891,
+        "y2":1759.077885723695,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      },
+      {
+        "x1":1452.862341511609,
+        "x2":56.72863494154453,
+        "y1":1794.4870739338055,
+        "y2":1838.7485591964435,
+        "frame":0,
+        "details":[{"task":"T0.0.0"}],
+        "toolType":"transcriptionLine",
+        "toolIndex":0
+      }
+    ],
+    "taskType":"transcription"
+  },
+  {
+    "task":"T0.0.0",
+    "value":"Mountmelick  4th of 3rd mo",
+    "taskType":"text",
+    "markIndex":0
+  },
+  {
+    "task":"T0.0.0",
+    "value":"1811",
+    "taskType":"text",
+    "markIndex":1
+  },
+  {
+    "task":"T0.0.0",
+    "value":"My dear Aunt Sally,",
+    "taskType":"text",
+    "markIndex":2
+  },
+  {
+    "task":"T0.0.0",
+    "value":"Thou sent to know if I would",
+    "taskType":"text",
+    "markIndex":3
+  },
+  {
+    "task":"T0.0.0",
+    "value":"chuse thee to write to me? certainly, \u0026 for two",
+    "taskType":"text",
+    "markIndex":4
+  },
+  {
+    "task":"T0.0.0",
+    "value":"reasons thy letters would be most welcome, the",
+    "taskType":"text",
+    "markIndex":5
+  },
+  {
+    "task":"T0.0.0",
+    "value":"one, because they come from thee, \u0026 the other",
+    "taskType":"text",
+    "markIndex":6
+  },
+  {
+    "task":"T0.0.0",
+    "value":"from Ballitore. I hear thou art with",
+    "taskType":"text",
+    "markIndex":7
+  },
+  {
+    "task":"T0.0.0",
+    "value":"Mary Bostello, it is a bad time for me to write,",
+    "taskType":"text",
+    "markIndex":8
+  },
+  {
+    "task":"T0.0.0",
+    "value":"for my letter cannot recompense for taking",
+    "taskType":"text",
+    "markIndex":9
+  },
+  {
+    "task":"T0.0.0",
+    "value":"from such elegant \u0026 agreeable company",
+    "taskType":"text",
+    "markIndex":10
+  },
+  {
+    "task":"T0.0.0",
+    "value":"but thou has always very good company,",
+    "taskType":"text",
+    "markIndex":11
+  },
+  {
+    "task":"T0.0.0",
+    "value":"but thou has not always Mary Costello, I",
+    "taskType":"text",
+    "markIndex":12
+  },
+  {
+    "task":"T0.0.0",
+    "value":"would be obliged to thee to remember me to her.",
+    "taskType":"text",
+    "markIndex":13
+  },
+  {
+    "task":"T0.0.0",
+    "value":"I suppose thou often sees my dear Lydia, alas",
+    "taskType":"text",
+    "markIndex":14
+  },
+  {
+    "task":"T0.0.0",
+    "value":"Beaty's foreboding fears were but too well founded",
+    "taskType":"text",
+    "markIndex":15
+  },
+  {
+    "task":"T0.0.0",
+    "value":"how are thy eyes \u0026 head? I hope thy are, at",
+    "taskType":"text",
+    "markIndex":16
+  },
+  {
+    "task":"T0.0.0",
+    "value":"least, no worse. Governess had not time to look",
+    "taskType":"text",
+    "markIndex":17
+  },
+  {
+    "task":"T0.0.0",
+    "value":"for the verse thou sent for, but I intend to",
+    "taskType":"text",
+    "markIndex":18
+  },
+  {
+    "task":"T0.0.0",
+    "value":"send it the next time. I am sorry I have",
+    "taskType":"text",
+    "markIndex":19
+  },
+  {
+    "task":"T1",
+    "task_label":"Have all the volunteer-made underline marks on all pages turned grey?",
+    "value":"No"
+  }
+]
+```
 
 This is an example of what the first two lines of positional data look like when parsed:
 
