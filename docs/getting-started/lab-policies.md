@@ -4,6 +4,7 @@ This page is for people who have used our Project Builder, and would now like to
 
 ### How to Launch your Project
 A live project can exist in three different states, it may be a:
+
 1. Public Project
 2. Review Project
 3. Zooniverse Project
@@ -39,6 +40,7 @@ _If you'd like your project to launch on a particular day, perhaps to coincide w
 
 ### Zooniverse Policies
 At present, we provide the Zooniverse Project Builder software and hosting for free. **We reserve the right to remove content for any reason whatsoever**. We will remove content and projects where:
+
 - The content is not legal.
 - The content is likely to cause offense, or is suitable only for an adult audience.
 - The copyright on material uploaded to the site is not clear; please only use content you have the right to use.
