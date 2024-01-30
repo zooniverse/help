@@ -260,7 +260,7 @@ If you want your Subject Sets to remain separate (i.e. you don’t want to group
 
 ### Case Study: The ins and outs of creating Subject Sets 
 
-_Poets & Lovers_ is a project to transcribe the diary of 'Michael Field,' created by two women novelists Katharine Harris Bradley and Edith Emma Cooper.
+_Poets & Lovers_ is a project to transcribe the diary of 'Michael Field' created by two women poets, Katharine Harris Bradley and Edith Emma Cooper.
 
 Peter Logan, Principal Investigator:
 
