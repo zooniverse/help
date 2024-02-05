@@ -63,7 +63,7 @@ Any changes made to the standard Zooniverse policies for a particular project **
 
 In addition, participants reasonably expect to have access to the subjects (e.g. images) after the project has finished, in order to provide classification data and discussions with context. Exceptions to this requirement need to (1) be approved by the Zooniverse team in writing, prior to launch, and (2) must be communicated to volunteers throughout the project via the Announcement Banner, which must be displayed for the duration of the project. 
 
-If the project dataset is unable to beshared publicly and the data needs to be removed from the Zooniverse platform to comply with institutional practice, the requirements are as follows:
+If the project dataset is unable to be shared publicly and the data needs to be removed from the Zooniverse platform to comply with institutional practice, the requirements are as follows:
 
 1. The project data will not be removed until the entire project is complete.
 2. Upon the project's completion, the project page will be replaced by an Archive page (see: https://anno.tate.org.uk/#/), which must include the following information:
