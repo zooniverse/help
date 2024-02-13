@@ -254,7 +254,7 @@ This type of Subject Set creation also ensures that volunteers will also encount
 
 #### 2.3.3.2 Subject Set selection
 
-If you want your Subject Sets to remain separate (i.e. you don’t want to group them all together within the same Workflow), you may want to consider using Subject Set Selection. This is a platform feature that allows you to let volunteers choose what Subject Set to work on within a single Workflow. If you have a single transcription Workflow that has multiple Subject Sets associated with it, simply send an email to [contact@zooniverse.org](contact@zooniverse.org) with your Project ID and the relevant Workflow ID, and we can turn this on for you.
+If you want your Subject Sets to remain separate (i.e. you don’t want to group them all together within the same Workflow), you may want to consider using Subject Set Selection. This is a platform feature that allows you to let volunteers choose what Subject Set to work on within a single Workflow. If you have a single transcription Workflow that has multiple Subject Sets associated with it, simply send an email to [contact@zooniverse.org](contact@zooniverse.org) with your Project ID and the relevant Workflow ID, and we can turn this on for you. **If you are using this feature, please note that the maximum number of subject sets you can associate with a single workflow is 50.** If you go over this number, additional subject sets will not be displayed. 
 
 
 
