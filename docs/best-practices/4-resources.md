@@ -14,7 +14,6 @@
 - [Zooniverse GitHub](https://github.com/zooniverse) &mdash; Zooniverse’s code base. You can submit issues and pull requests.
 - [Zooniverse Researchers & Moderators](https://www.facebook.com/groups/123295911357282/) &mdash; Private Facebook group that you may join.
 - [Zooniverse Backchannel Blog](https://zoobackchannel.wordpress.com/) &mdash; Private blog you may request to join. Posts are relatively rare and often concerned with technical details of handling Zooniverse data.
-- [17 Tools for Social Media](https://www.quicksprout.com/2015/08/14/17-tools-thatll-take-your-social-media-marketing-results-to-the-next-level/) &mdash; Social media is important, but can also be time-consuming. These tools can help you pre-schedule, analyze, and get the most out of your posts.
 - [The Power of a Challenge](http://blog.zooniverse.org/2015/08/31/sunspotter-citizen-science-challenge-update-zooniverse-volunteers-are-overachievers/) &mdash; A challenge that got 650,000 classifications in a weekend.
 - [Zooniverse "Meta" Publications](https://zooniverse.org/about/publications) &mdash; for those wishing to know a lot more about research into the practice of citizen science. (Click the "Meta" link on the left side of the page.)
 - [Why We Don’t Have an ‘I Don’t Know’ Button](http://blog.snapshotserengeti.org/2012/12/14/we-need-an-i-dont-know-button/) &mdash; Volunteers often ask for some way to express uncertainty. Using Snapshot Serengeti, this explains why we want a best guess.
@@ -31,7 +30,7 @@
 
 - [Chimp & See Talk](http://talk.chimpandsee.org/) &mdash; This popular Talk is also used for the "Chimp ID" process: a good example of non-competitive gamized behavior that also serves a research purpose.
 - [My Galaxies](http://writing.galaxyzoo.org/) &mdash; Write text using galaxies as letters; built with volunteer help.
-- Cookie recipes for [Seafloor Explorer](http://blog.seafloorexplorer.org/2013/12/13/crunchy-buttery-sea-stars/), [Worm Watch Lab](http://blog.wormwatchlab.org/2013/12/17/green-eggs-and-worms/) and [Notes From Nature](blog.notesfromnature.org/2013/12/21/cookies-from-nature/).
+- Cookie recipes for [Seafloor Explorer](http://blog.seafloorexplorer.org/2013/12/13/crunchy-buttery-sea-stars/), [Worm Watch Lab](http://blog.wormwatchlab.org/2013/12/17/green-eggs-and-worms/) and [Notes From Nature](http://blog.notesfromnature.org/2013/12/21/cookies-from-nature/).
 - [Snapshot Serengeti Meme Generator](http://blog.snapshotserengeti.org/2013/07/31/save-the-memes/) &mdash; allowed users to caption photos (now defunct).
 - Zooniverse project cocktails for Advent, [part one](http://blog.zooniverse.org/2013/12/22/zooniverse-cocktails/) and [part two](http://blog.zooniverse.org/2011/12/20/zooniverse-cocktail-hour/).
 - [Just for Fun](http://blog.zooniverse.org/category/fun/) &mdash; Various "fun" posts on the Zooniverse blog, many about gamizing.
