@@ -1,8 +1,9 @@
-## How to Launch your Project and Zooniverse Policies
-This page is for people who have used our Project Builder, and would now like to share their project with the Zooniverse community or their own crowd of collaborators or volunteers.
+This page is for people who have used our Project Builder and would now like to share their project with the Zooniverse community or their own crowd of collaborators and volunteers. Please review Zooniverse platform policies and information regarding project promotion and review provided below.
 &nbsp;
 
-### How to Launch your Project
+If you have any questions relating to the content of this page, please [get in touch](https://www.zooniverse.org/about#contact).
+
+# How to Launch your Project
 A live project can exist in three different states, it may be a:
 
 1. Public Project
@@ -12,13 +13,13 @@ A live project can exist in three different states, it may be a:
 Each of these project states is discussed below.
 &nbsp;
 
-**1. Public Project**
+## Public Project
 Do you have your own crowd of volunteers, or only want members of your collaboration to classify your data? You can make your project public simply by sharing your project’s URL with those you want to take part.
 
 _If you're planning a big public launch, or you think your project might attract significant attention, you should [let us know](https://zooniverse.org/about/contact) so we can support you properly. Please note, there is a limit of 10,000 subjects per user - [contact us](https://zooniverse.org/about/contact) if you'd like to host more._
 &nbsp;
 
-**2. Review Project**
+## Review Project
 If you would like the Zooniverse volunteer community to contribute to your project, the first step is to apply for review. You can do this in the project builder by clicking the “Apply for review” button within the “Visibility” section. At this point, your project is considered a “Review Project”.
 
 Your project will then be subject to two stages of review – firstly, the Zooniverse team will check your project complies with Zooniverse rules (see below). Typically, we will respond to you within two weeks. If successful, your project will then be shared with a group of volunteer project testers who will provide feedback. We will contact you when a slot becomes available for volunteer review (this currently takes one to four weeks). Once your project has been shared with our volunteer project testers, the majority of project feedback is typically received within a week. This will be made immediately accessible to you.
@@ -28,7 +29,7 @@ During this process you should address the formal feedback provided by the volun
 It is important you review the results produced at this stage to ensure they are of sufficient quality for your research. If they aren’t, please consider re-approaching your project design, make any changes, and submit for review again.
 &nbsp;
 
-**3. Zooniverse Project**
+## Zooniverse Project
 Once your project has been successfully reviewed and you have a final version of your project, you can apply for your project to be launched as an official Zooniverse project. To do this, notify the team by email at contact@zooniverse.org.
 
 Your project will then undergo a final review process. This may include requesting information from you about your plan for using the results, and examining the results from the review phase. We may also carry out a peer review of your project. This review process can take a variable amount of time, from weeks to months.
@@ -38,7 +39,10 @@ Once the project has passed review, it will appear in the [Zooniverse project li
 _If you'd like your project to launch on a particular day, perhaps to coincide with a press release, please [get in touch](https://zooniverse.org/about/contact)._
 &nbsp;
 
-### Zooniverse Policies
+# Zooniverse Policies
+
+## Use of Project Builder & Platform
+
 At present, we provide the Zooniverse Project Builder software and hosting for free. **We reserve the right to remove content for any reason whatsoever**. We will remove content and projects where:
 
 - The content is not legal.
@@ -47,8 +51,9 @@ At present, we provide the Zooniverse Project Builder software and hosting for f
 
 We reserve the right to decide which projects appear on the main project page and which are promoted to the Zooniverse community. In particular, if you have a project that is very close to an existing Zooniverse project, please [contact us](https://zooniverse.org/about/contact) to discuss.
 
-Projects promoted to the Zooniverse community **must**:
+## Expectations of Approved Projects
 
+Projects promoted to the Zooniverse community **must**:
 - Have the goal of producing useful research; your study needs to be well designed, and you must intend to analyze and write up your results as a formal publication.
 - Make their classification data open after a proprietary period, normally lasting two years from project launch.
 - Communicate research findings to their communities, via open access publication, a blog or elsewhere.
@@ -71,4 +76,4 @@ If the project dataset is unable to be shared publicly and the data needs to be 
     - A link to the classification data when available (i.e. the project results), nb: this can be delayed for up to 2 years to allow teams to publish results, etc., in line with project policies detailed above
     - Links to any publications about the project or using project data
 
-If you have any questions relating to the content of this page, please [get in touch](https://zooniverse.org/about/contact).
+If you have any questions relating to the content of this page, please [get in touch](https://www.zooniverse.org/about#contact).
