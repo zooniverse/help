@@ -1,0 +1,1628 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How to do things in the Zooniverse.">
+      
+      
+      
+        <link rel="canonical" href="https://help.zooniverse.org/transcription-project-guide/working-with-data/">
+      
+      
+        <link rel="prev" href="../project-launch/">
+      
+      
+        <link rel="next" href="../project-maintenance-and-conclusion/">
+      
+      
+      <link rel="icon" href="https://static.zooniverse.org/www.zooniverse.org/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Working with data - Zooniverse Help</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Working with data - Zooniverse Help" >
+      
+        <meta  property="og:description"  content="How to do things in the Zooniverse." >
+      
+        <meta  property="og:image"  content="https://help.zooniverse.org/assets/images/social/transcription-project-guide/working-with-data.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://help.zooniverse.org/transcription-project-guide/working-with-data/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Working with data - Zooniverse Help" >
+      
+        <meta  name="twitter:description"  content="How to do things in the Zooniverse." >
+      
+        <meta  name="twitter:image"  content="https://help.zooniverse.org/assets/images/social/transcription-project-guide/working-with-data.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#71-designing-for-data-output" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zooniverse Help" class="md-header__button md-logo" aria-label="Zooniverse Help" data-md-component="logo">
+      
+  <img src="../../img/zooniverse.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zooniverse Help
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Working with data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zooniverse/help/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zooniverse Help" class="md-nav__button md-logo" aria-label="Zooniverse Help" data-md-component="logo">
+      
+  <img src="../../img/zooniverse.svg" alt="logo">
+
+    </a>
+    Zooniverse Help
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zooniverse/help/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create a project with our Project Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/lab-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Launch your Project and Zooniverse Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building, Launching, and Running Your Zooniverse Project:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/1-great-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part I: Building a Great Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/2-launch-rush/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part II: The Launch Rush
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/3-long-haul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part III: In For the Long Haul
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/4-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix: Resources and Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Next Steps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Next Steps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/caesar-realtime-data-processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Caesar for more efficient data processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/data-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/data-exports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Exports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/experimental-features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Experimental Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/hosting-your-own-subject-media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hosting your own subject media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/newsletters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Newsletters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/subject-selection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subject Selection Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Transcription Project Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Transcription Project Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../designing-for-volunteers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing for volunteers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beta testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-launch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project launch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Working with data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Working with data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-designing-for-data-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Designing for data output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-data-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Data exports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Data exports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-how-to-export-data-from-the-project-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1 How to export data from the Project Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-when-to-export-data-from-the-project-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2 When to export data from the Project Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-how-to-export-data-from-alice" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.3 How to export data from ALICE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-data-export-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4 Data export examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2.4 Data export examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7241-question-task-project-builder-export-single-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.1 Question task (Project Builder export) - single response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7242-question-task-project-builder-export-multiple-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.2 Question task (Project Builder export) - multiple responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7243-dropdown-menu-single-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.3 Dropdown menu - single (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7244-dropdown-menu-multiple-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.4 Dropdown menu - multiple (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7245-free-text-entry-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.5 Free-text entry (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7246-transcription-task-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.6 Transcription Task (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7247-transcription-task-alice-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.7 Transcription Task (ALICE Export)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-data-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Data aggregation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Data aggregation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-text-aggregation-with-alice" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.1 Text aggregation with ALICE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-other-task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.2 Other Task types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-data-sharing-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Data sharing requirement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-unexpected-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Unexpected data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Unexpected data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-poets-and-lovers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Poets and Lovers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-data-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 Data curation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-maintenance-and-conclusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project maintenance and conclusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgements-and-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements and resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-designing-for-data-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Designing for data output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-data-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Data exports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Data exports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-how-to-export-data-from-the-project-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1 How to export data from the Project Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-when-to-export-data-from-the-project-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2 When to export data from the Project Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-how-to-export-data-from-alice" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.3 How to export data from ALICE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-data-export-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4 Data export examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2.4 Data export examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7241-question-task-project-builder-export-single-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.1 Question task (Project Builder export) - single response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7242-question-task-project-builder-export-multiple-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.2 Question task (Project Builder export) - multiple responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7243-dropdown-menu-single-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.3 Dropdown menu - single (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7244-dropdown-menu-multiple-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.4 Dropdown menu - multiple (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7245-free-text-entry-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.5 Free-text entry (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7246-transcription-task-project-builder-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.6 Transcription Task (Project Builder export)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7247-transcription-task-alice-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4.7 Transcription Task (ALICE Export)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-data-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Data aggregation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Data aggregation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-text-aggregation-with-alice" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.1 Text aggregation with ALICE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-other-task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.2 Other Task types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-data-sharing-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Data sharing requirement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-unexpected-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Unexpected data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Unexpected data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-poets-and-lovers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Poets and Lovers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-data-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 Data curation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Working with data</h1>
+
+<h2 id="71-designing-for-data-output">7.1 Designing for data output</h2>
+<p>The primary objective of your Zooniverse project involves transforming an existing dataset (images of handwriting) into another form of dataset (lines and perhaps columns of text) that can be analyzed more efficiently to achieve the broader goals of your project. This transcription data may take on various forms depending on your plans for use. In this section, we’ll consider how your data can be processed, stored, analyzed, and shared during the course of your Zooniverse project and after it is completed. </p>
+<p>Before creating your project, you should know what kind of data you want to collect. Your final data set will comprise a consensus for each Task in your Workflow for a given Subject. Keeping this in mind allows you to think of an ideal architecture for building your project and the provided tools to onboard your historical information to a usable digital dataset.</p>
+<h2 id="72-data-exports">7.2 Data exports</h2>
+<h3 id="721-how-to-export-data-from-the-project-builder">7.2.1 How to export data from the Project Builder</h3>
+<p>You can request a data export via the Data Exports tab of the Project Builder. In this space, there are <a href="https://help.zooniverse.org/next-steps/data-exports/">several types of data</a> you can request.</p>
+<table>
+<thead>
+<tr>
+<th>Export Type</th>
+<th style="text-align: center;">Contents</th>
+<th style="text-align: right;">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classification export</td>
+<td style="text-align: center;">all task data from all workflows for your entire project</td>
+<td style="text-align: right;">JSON in CSV</td>
+</tr>
+<tr>
+<td>Workflow classification export</td>
+<td style="text-align: center;">all task data from a specific workflow</td>
+<td style="text-align: right;">JSON in CSV</td>
+</tr>
+<tr>
+<td>Workflow export</td>
+<td style="text-align: center;">structural information about how your workflow looks, with version info</td>
+<td style="text-align: right;">JSON in CSV</td>
+</tr>
+<tr>
+<td>Subject export</td>
+<td style="text-align: center;">a list of all subjects you have uploaded to the project, with any metadata included</td>
+<td style="text-align: right;">JSON in CSV</td>
+</tr>
+<tr>
+<td>Talk comment export</td>
+<td style="text-align: center;">all comment data from Talk</td>
+<td style="text-align: right;">JSON</td>
+</tr>
+<tr>
+<td>Talk hashtag export</td>
+<td style="text-align: center;">all hashtag data from Talk</td>
+<td style="text-align: right;">JSON</td>
+</tr>
+</tbody>
+</table>
+<h3 id="722-when-to-export-data-from-the-project-builder">7.2.2 When to export data from the Project Builder</h3>
+<p>You can request a data export at any point, even if you have only submitted test transcriptions to your project. If you have not submitted any test transcriptions on your workflow(s), your classification data export will be empty. The Data Exports tab will also show when a Data Export was last requested for each export type.</p>
+<h3 id="723-how-to-export-data-from-alice">7.2.3 How to export data from ALICE</h3>
+<p>For information on exporting data from ALICE, please refer to the <a href="https://alice.zooniverse.org/about#Data%20exports">ALICE documentation</a>. Note that only ‘approved’ transcriptions can be exported from ALICE.</p>
+<h3 id="724-data-export-examples">7.2.4 Data export examples</h3>
+<p><a href="/img/transcription-images/7-2-4_export_csv_headers.png"><img alt="A screenshot showing the headers from a Project Builder workflow classification export CSV file, including classification id, user name, user id, user ip, workflow id, workflow name, workflow version, created at, gold standard, expert, metadata, annotations, subject data, and subject ids" src="/img/transcription-images/7-2-4_export_csv_headers.png" /></a>
+<em>Above</em>: the header structure of a Project Builder workflow classification export. All examples below demonstrate the task-specific structure of data found in the <code>annotations</code> column, unless otherwise noted. </p>
+<p>This section will cover task types that are commonly used in Text Transcription projects. For information on other task types, please see <a href="https://help.zooniverse.org/getting-started/#task-content">the main 'How to create a project' documentation</a>.</p>
+<h4 id="7241-question-task-project-builder-export-single-response">7.2.4.1 Question task (Project Builder export) - single response</h4>
+<p>This is the data export format for a question task where only a single response has been submitted, from the project <em>Corresponding with Quakers</em>:</p>
+<p><code>{"task":"T5","task_label":"What is the letter about? Choose a few keywords.","value":["health/illness/death"]}]</code></p>
+<p>In the above case, a volunteer has selected the option "health/illness/death" for the question <code>What is the document about? Choose a few keywords.</code></p>
+<p><a href="/img/transcription-images/7-2-4-1_corresponding_mult_question.png"><img alt="A screenshot showing a question task input area from a Zooniverse project. The task label reads 'What is the document about? Choose a few keywords.', and the options are &quot;health/illness/death&quot;, &quot;childbirth/pregnancy/breastfeeding&quot;, &quot;Quakerism/religion&quot;, &quot;business/finance/household accounts&quot;, &quot;travel&quot;, &quot;education&quot;, &quot;slavery/abolition/colonialism&quot;, &quot;gender/women/female preaching&quot;, &quot;American Revolution/French Revolution&quot;, &quot;politics&quot;, &quot;books/reading/authorship&quot;, &quot;letter writing/the post&quot;, &quot;family and friends&quot;, &quot;other&quot;." src="/img/transcription-images/7-2-4-1_corresponding_mult_question.png" /></a></p>
+<h4 id="7242-question-task-project-builder-export-multiple-responses">7.2.4.2 Question task (Project Builder export) - multiple responses</h4>
+<p>This is the data export format for a question task where multiple choices are allowed, from the project <em>Corresponding with Quakers</em>:</p>
+<p><code>{"task":"T5","task_label":"What is the letter about? Choose a few keywords.","value":["letter writing/the post","family and friends"]}</code></p>
+<p>In the above case, a volunteer has selected the options "letter writing/the post" and "family and friends" for the question <code>What is the document about? Choose a few keywords.</code></p>
+<p>This is what the task input area looks like for this specific example (i.e. what the volunteer sees when entering data):</p>
+<p><a href="/img/transcription-images/7-2-4-1_corresponding_mult_question.png"><img alt="A screenshot showing a question task input area from a Zooniverse project. The task label reads 'What is the document about? Choose a few keywords.', and the options are &quot;health/illness/death&quot;, &quot;childbirth/pregnancy/breastfeeding&quot;, &quot;Quakerism/religion&quot;, &quot;business/finance/household accounts&quot;, &quot;travel&quot;, &quot;education&quot;, &quot;slavery/abolition/colonialism&quot;, &quot;gender/women/female preaching&quot;, &quot;American Revolution/French Revolution&quot;, &quot;politics&quot;, &quot;books/reading/authorship&quot;, &quot;letter writing/the post&quot;, &quot;family and friends&quot;, &quot;other&quot;." src="/img/transcription-images/7-2-4-1_corresponding_mult_question.png" /></a></p>
+<h4 id="7243-dropdown-menu-single-project-builder-export">7.2.4.3 Dropdown menu - single (Project Builder export)</h4>
+<p>This is the data export format for a single dropdown task, from the project <em>Shadows on Stone: Identifying Sing Sing's Incarcerated</em>:</p>
+<p><code>{"task":"T30","value":[{"select_label":"Relationship status","option":true,"value":"6e68e5fc7071a","label":"Married"}]}</code></p>
+<p>In the above case, a volunteer has entered "Married" into the "Relationship status" field via selecting an entry from the options provided in the dropdown list.</p>
+<p>This is what the task input area looks like for this specific example (i.e. what the volunteer sees when entering data):</p>
+<p><a href="/img/transcription-images/7-2-4-3_single_relationship_dropdown.png"><img alt="A screenshot showing a multi-step dropdown task input area from a Zooniverse project. The task label reads 'Relationship status', and an open dropdown menu is shown underneath, with the options 'Single', 'Married', 'Widower', and 'Divorced'." src="/img/transcription-images/7-2-4-3_single_relationship_dropdown.png" /></a></p>
+<h4 id="7244-dropdown-menu-multiple-project-builder-export">7.2.4.4 Dropdown menu - multiple (Project Builder export)</h4>
+<p>This is the data export format for three dropdown tasks, from the project <em>Shadows on Stone: Identifying Sing Sing's Incarcerated</em>, presented together in the same workflow step:</p>
+<p><code>{"task":"T52","task_label":null,"value":[{"task":"T15","value":[{"select_label":"Sentenced (month)","option":true,"value":3,"label":"3 - March"}]},{"task":"T16","value":[{"select_label":"Sentenced (day)","option":true,"value":7,"label":"7"}]},{"task":"T17","value":[{"select_label":"Sentenced (year)","option":true,"value":1898,"label":"1898"}]}]}</code></p>
+<p>This is what this data looks like when parsed:</p>
+<p><a href="/img/transcription-images/7-2-4-4_date_dropdown_parsed.png"><img alt="A screenshot showing parsed JSON data for a dropdown task." src="/img/transcription-images/7-2-4-4_date_dropdown_parsed.png" /></a></p>
+<p>In the above case, a volunteer has entered "March" for <code>Sentenced (month)</code>, "7" for <code>Sentenced (day)</code>, and "1898" for <code>Sentenced (year)</code>, meaning that, according to this record, this person was sentenced on March 7, 1898.</p>
+<p>This is what the task input area looks like for this specific example (i.e. what the volunteer sees when entering data):</p>
+<p><a href="/img/transcription-images/7-2-4-4_date_dropdown.png"><img alt="A screenshot showing the multi-step dropdown task input area from a Zooniverse project. The three task labels read 'Sentenced (month)', 'Sentenced (day)', and 'Sentenced (year)'. For each field, an unopened dropdown menu is shown underneath." src="/img/transcription-images/7-2-4-4_date_dropdown.png" /></a></p>
+<h4 id="7245-free-text-entry-project-builder-export">7.2.4.5 Free-text entry (Project Builder export)</h4>
+<p>This is the data export format for a free-text entry task, from the project <em>Shadows on Stone: Identifying Sing Sing's Incarcerated</em>:</p>
+<p><code>[{"task":"T50","value":"March 24, 1899","task_label":"Date"}</code></p>
+<p>In the above case, a volunteer has entered "March 24, 1899" into the <code>Date</code> field provided.</p>
+<p>This is what the task input area looks like for this specific example (i.e. what the volunteer sees when entering data):</p>
+<p><a href="/img/transcription-images/7-2-4-4_date_FTE.png"><img alt="A screenshot showing the free-text entry task input area from a Zooniverse project. The task label reads 'Date' and an empty text input field is shown underneath." src="/img/transcription-images/7-2-4-4_date_FTE.png" /></a></p>
+<h4 id="7246-transcription-task-project-builder-export">7.2.4.6 Transcription Task (Project Builder export)</h4>
+<p>This is the Project Builder data export format for the Transcription Task, from the project <em>Corresponding with Quakers</em>:</p>
+<p><code>[{"task":"T0","value":[{"x1":1460.4500246994899,"x2":805.3800428124487,"y1":96.11065371315667,"y2":104.96295076568421,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1450.3331137823154,"x2":1350.4286184752184,"y1":166.92903013337732,"y2":154.2828914869094,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":799.0569734892148,"x2":135.13469454964604,"y1":170.7228717273177,"y2":174.5167133212581,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1474.3607772106047,"x2":615.6879631154292,"y1":282.00889181623586,"y2":285.8027334101763,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1441.4808167297879,"x2":79.49168450518695,"y1":374.3257039354521,"y2":386.9718425819201,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1475.6253910752514,"x2":69.37477358801246,"y1":461.58406059608114,"y2":466.64251605466836,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1427.5700642186732,"x2":63.05170426477869,"y1":553.9008727152974,"y2":566.5470113617654,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1384.573192820682,"x2":71.90400131730621,"y1":646.2176848345135,"y2":655.0699818870411,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1485.7423019924258,"x2":61.78709040013183,"y1":756.2390910587849,"y2":763.8267742466657,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1441.4808167297879,"x2":57.99324880619139,"y1":870.0543388769968,"y2":877.6420220648777,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1473.0961633459578,"x2":171.80849662440326,"y1":957.3126955376256,"y2":969.9588341840936,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1460.4500246994899,"x2":168.01465503046276,"y1":1068.598715626544,"y2":1073.657171085131,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1417.4531533014988,"x2":56.72863494154467,"y1":1154.5924584225259,"y2":1178.6201218508152,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1487.0069158570725,"x2":61.7870904001318,"y1":1253.2323398649762,"y2":1282.3184587518526,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1476.8900049398983,"x2":83.28552609912745,"y1":1358.1952906306606,"y2":1383.4875679235963,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1490.800757451013,"x2":54.19940721225106,"y1":1459.3643998024043,"y2":1490.9797464185742,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1437.6869751358474,"x2":65.58093199407224,"y1":1541.564301004446,"y2":1578.238103079203,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1476.8900049398983,"x2":49.14095175366387,"y1":1626.2934299357817,"y2":1666.7610736044794,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1417.4531533014988,"x2":45.347110159723485,"y1":1702.1702618145891,"y2":1759.077885723695,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0},{"x1":1452.862341511609,"x2":56.72863494154453,"y1":1794.4870739338055,"y2":1838.7485591964435,"frame":0,"details":[{"task":"T0.0.0"}],"toolType":"transcriptionLine","toolIndex":0}],"taskType":"transcription"},{"task":"T0.0.0","value":"Mountmelick  4th of 3rd mo","taskType":"text","markIndex":0},{"task":"T0.0.0","value":"1811","taskType":"text","markIndex":1},{"task":"T0.0.0","value":"My dear Aunt Sally,","taskType":"text","markIndex":2},{"task":"T0.0.0","value":"Thou sent to know if I would","taskType":"text","markIndex":3},{"task":"T0.0.0","value":"chuse thee to write to me? certainly, \u0026 for two","taskType":"text","markIndex":4},{"task":"T0.0.0","value":"reasons thy letters would be most welcome, the","taskType":"text","markIndex":5},{"task":"T0.0.0","value":"one, because they come from thee, \u0026 the other","taskType":"text","markIndex":6},{"task":"T0.0.0","value":"from Ballitore. I hear thou art with","taskType":"text","markIndex":7},{"task":"T0.0.0","value":"Mary Bostello, it is a bad time for me to write,","taskType":"text","markIndex":8},{"task":"T0.0.0","value":"for my letter cannot recompense for taking","taskType":"text","markIndex":9},{"task":"T0.0.0","value":"from such elegant \u0026 agreeable company","taskType":"text","markIndex":10},{"task":"T0.0.0","value":"but thou has always very good company,","taskType":"text","markIndex":11},{"task":"T0.0.0","value":"but thou has not always Mary Costello, I","taskType":"text","markIndex":12},{"task":"T0.0.0","value":"would be obliged to thee to remember me to her.","taskType":"text","markIndex":13},{"task":"T0.0.0","value":"I suppose thou often sees my dear Lydia, alas","taskType":"text","markIndex":14},{"task":"T0.0.0","value":"Beaty's foreboding fears were but too well founded","taskType":"text","markIndex":15},{"task":"T0.0.0","value":"how are thy eyes \u0026 head? I hope thy are, at","taskType":"text","markIndex":16},{"task":"T0.0.0","value":"least, no worse. Governess had not time to look","taskType":"text","markIndex":17},{"task":"T0.0.0","value":"for the verse thou sent for, but I intend to","taskType":"text","markIndex":18},{"task":"T0.0.0","value":"send it the next time. I am sorry I have","taskType":"text","markIndex":19},{"task":"T1","task_label":"Have all the volunteer-made underline marks on all pages turned grey?","value":"No"}</code></p>
+<p>This is an example of what the first two lines of positional data look like when parsed:</p>
+<p><a href="/img/transcription-images/7-2-4-6_parsed_line_data.png"><img alt="A screenshot showing parsed JSON data for the positional lines that make up part of the transcription task." src="/img/transcription-images/7-2-4-6_parsed_line_data.png" /></a></p>
+<p>This is an example of what the first four lines of text data look like when parsed: </p>
+<p><a href="/img/transcription-images/7-2-4-6_parsed_text_data.png"><img alt="A screenshot showing parsed JSON data for the text data that makes up part of the transcription task." src="/img/transcription-images/7-2-4-6_parsed_text_data.png" /></a></p>
+<h4 id="7247-transcription-task-alice-export">7.2.4.7 Transcription Task (ALICE Export)</h4>
+<p>This is the most basic of the ALICE data exports format (plain .txt) for the Transcription Task, from the project <em>Corresponding with Quakers</em> (first four lines of text only):</p>
+<p><code>Mountmelick 4th of 3rd mo</code></p>
+<p><code>1811</code></p>
+<p><code>My dear Aunt Sally,</code></p>
+<p><code>Thou sent to know if I would</code></p>
+<p>This export version is only available after a subject is marked as <code>Approved</code> in ALICE. For more information on how to use ALICE, read the <a href="https://alice.zooniverse.org/about">documentation</a>.</p>
+<h2 id="73-data-aggregation">7.3 Data aggregation</h2>
+<p>Because Zooniverse projects collect multiple transcriptions per Subject, you will need to have a plan for how to identify a single transcription that best represents the material you are transcribing. This could be through manual review, a ‘best of’ determination, scripted data aggregation methods, or other. </p>
+<p>In this section we describe existing methods for aggregating data from text transcription projects.</p>
+<h3 id="731-text-aggregation-with-alice">7.3.1 Text aggregation with ALICE</h3>
+<p>The following images demonstrate text transcription data processing using <a href="https://alice.zooniverse.org/about">ALICE</a>. The first shows the aggregate line view for a given page, while the second shows the view for reviewing and editing an individual line of text.</p>
+<p><a href="/img/transcription-images/7-3-1_cwq_ALICE_subject.png"><img alt="A screenshot of the ALICE interface for processing transcribed data using the Zooniverse text transcription task. On the left side of the screenshot, under the title “Original Subject” is a photograph of an 18th century letter written in cursive. Each line of text is underlined in a bright color. On the right side of the screenshot is the transcribed text, corresponding to each line. Next to each line of transcribed text are columns titled ‘flag’ and ‘consensus score.’" src="/img/transcription-images/7-3-1_cwq_ALICE_subject.png" /></a>
+<em>Above:</em> Letter from John Peters, Dec. 4, 1755. University of California Santa Barbara Mss 4, Box 12, folder 40, 001. A screenshot from the ALICE interface for <em>Corresponding with Quakers</em>, Principal Investigator and Project Director Rachael Scarborough King. </p>
+<p><a href="/img/transcription-images/7-3-1_cwq_ALICE_line.png"><img alt="A screenshot of the ALICE interface for processing transcribed data using the Zooniverse text transcription task. On the left side of the screenshot, under the title ‘Original Subject’ is a photograph of an 18th century letter written in cursive. The first line of the letter is underlined in yellow. On the right side of the screenshot is the transcribed text corresponding to each line. This has been grayed out and a popup window appears above the text, with 4 separate transcriptions of the line. Each transcription indicates the date it was submitted and the user who submitted it. Below, there is an ‘aggregated transcription (Via algorithm)” or the option to enter an entirely new transcription." src="/img/transcription-images/7-3-1_cwq_ALICE_line.png" /></a>
+<em>Above:</em> Letter from John Peters, Dec. 4, 1755. University of California Santa Barbara Mss 4, Box 12, folder 40, 001. A screenshot from the ALICE interface for <em>Corresponding with Quakers</em>, Principal Investigator and Project Director Rachael Scarborough King. </p>
+<p>The Aggregated Line Inspector and Collaborative Editor (<a href="https://alice.zooniverse.org/about">ALICE</a>) is the main tool for researchers seeking to automate aggregation of multiple volunteer transcriptions into a single response. To use ALICE, you will need to be using the Transcription Task in your project to collect volunteer transcriptions. Please read through the comprehensive <a href="https://alice.zooniverse.org/about">documentation about ALICE</a> if you plan to use this tool, as there are <a href="https://docs.google.com/document/d/1XpoMC8SBYVCie9mjU_ZBuT3dLR4bWTN-eZE5lHvls2U/edit?usp=sharing">restrictions on how to set up and build your project</a> which require intervention from the Zooniverse team. </p>
+<h3 id="732-other-task-types">7.3.2 Other Task types</h3>
+<p>Zooniverse has a robust framework for aggregating data generated via other Task types (e.g. Question Tasks, Dropdown Tasks, etc.). The in-house code supports data aggregation for nearly all the Project Builder Task types, by providing <a href="https://github.com/zooniverse/panoptes">tools</a> to process and aggregate classification data exported from Zooniverse projects. </p>
+<p>A general overview of this process would be: configuring Panoptes to your exported data, extracting the pertinent data from a classification export, and then reducing data for a given Task based on the consensus from each Task’s classification set. </p>
+<p>For an example of Python data aggregation for a Question Task, see this <a href="https://colab.research.google.com/drive/1sB5datXGQe11jye2DGbfm7OjCo05xaXO?usp=sharing">notebook</a>. </p>
+<h2 id="74-data-sharing-requirement">7.4 Data sharing requirement</h2>
+<p>Projects promoted to the Zooniverse community have the goal of producing useful research; your study needs to be well designed, and you must intend to analyze and write up your results as a formal publication. You must make volunteer classification data open within two years of a project’s completion. You also commit to communicating research findings to your volunteer community. Finally, you must formally <a href="https://www.zooniverse.org/about/acknowledgements">acknowledge Zooniverse</a> in any publications.</p>
+<p>Please report publications using Zooniverse-produced data to us via this <a href="https://docs.google.com/forms/d/18jwLbtV_6M5HCM74xNFtFbiiszWAxpC5IGHaToYjeiw/viewform">form</a>.</p>
+<h2 id="75-unexpected-data">7.5 Unexpected data</h2>
+<p>One of the benefits of a crowdsourced transcription project is that you are engaging with volunteers who come from a wide variety of backgrounds and fields. While you have a specific end-goal of using your classifications, there are many other, often unexpected outputs of a crowdsourced transcription project. </p>
+<p>Talk boards provide one site where volunteers can share data or findings with one another and the research team. For example, the letters of <a href="https://www.zooniverse.org/projects/pmlogan/poets-and-lovers">Poets and Lovers</a> often referenced specific paintings or pieces of art. Volunteers on the project took it upon themselves to look up digitized versions of the artworks mentioned and posted them on Talk. This not only provided a fantastic resource for volunteers who wanted to learn more about the two women authors of the diaries, but also the research team will try to incorporate these links into the published edition of the diaries. Talk boards can be exported from the ‘Data Exports’ tab of the Project Builder as a JSON for easier data analysis.</p>
+<h3 id="case-study-poets-and-lovers">Case study: <em>Poets and Lovers</em></h3>
+<p><a href="https://www.zooniverse.org/projects/pmlogan/poets-and-lovers">Poets and Lovers</a> is a project to transcribe the diary of Michael Field which was created by two women novelists Katharine Harris Bradley and Edith Emma Cooper.</p>
+<p>Peter Logan, Principal Investigator:</p>
+<blockquote>
+<p>The questions aren't hard and if I can't answer them, I tell one of my partners to get involved, and they'll know the answer. And some of the questions have been very interesting too. Some of them brought up things we didn't know about. So that was an unexpected outcome. We did actually learn things about what's in these diaries that we didn't know about. [The authors] talk a lot about paintings in the diaries, and I was going to write up [the volunteers] responses to the paintings. One of the volunteers found links to online images of the paintings, so we can incorporate them into the transcription. Which is exactly what we're going to do.</p>
+</blockquote>
+<p>Project outputs are not limited to data. By virtue of the nature of crowdsourced transcription projects, research and data are opened up to more people. Many project teams have seen the engagement with the public as a vital output of their work, and have structured their research and project around that engagement. For example, the <a href="https://mappingprejudice.umn.edu/">Mapping Prejudice</a> team primarily worked with volunteers directly through meetings. They saw the work of educating people on the history of racial covenants through these in-person or small virtual events as an integral practice for their community work. Here, the <em>process</em> of crowdsourced transcription was as important of an output as the data.</p>
+<h2 id="76-data-curation">7.6 Data curation</h2>
+<p>Depending on your affiliations, aspirations, and your project’s goals for presenting data, there may be several ways to preserve and share your project’s results. The most straightforward and cost-effective way for you as a researcher would be to utilize an affiliate institution's data repository (ones with the <a href="https://www.coretrustseal.org">CoreTrustSeal</a> are best). These institutional repositories allow for consistent access and long-term presentation of your data while allowing you to organize your data in a clear and detailed manner. If you are not a part of an institution, good options for preserving and publishing your data are the <a href="https://osf.io/">Open Science Framework</a> and <a href="https://datadryad.org/stash">Dryad</a>. In the social sciences, a widely used data repository is <a href="https://www.openicpsr.org/openicpsr/">Open ICSPR</a>. </p>
+<p>Examples of successful data publications from Zooniverse projects can be found here: <a href="https://www.zooniverse.org/about/publications#data">https://www.zooniverse.org/about/publications#data</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
