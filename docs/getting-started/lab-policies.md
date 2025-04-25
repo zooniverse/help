@@ -61,6 +61,7 @@ We reserve the right to decide which projects appear on the main project page an
 ### Expectations of Approved Projects
 
 Projects promoted to the Zooniverse community **must**:
+
 - Have the goal of producing useful research; your study needs to be well designed, and you must intend to analyze and write up your results as a formal publication.
 - Make their classification data open after a proprietary period, normally lasting two years from project launch.
 - Communicate research findings to their communities, via open access publication, a blog or elsewhere.
