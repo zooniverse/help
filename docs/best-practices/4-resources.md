@@ -17,7 +17,7 @@
 - [The Power of a Challenge](http://blog.zooniverse.org/2015/08/31/sunspotter-citizen-science-challenge-update-zooniverse-volunteers-are-overachievers/) &mdash; A challenge that got 650,000 classifications in a weekend.
 - [Zooniverse "Meta" Publications](https://zooniverse.org/about/publications) &mdash; for those wishing to know a lot more about research into the practice of citizen science. (Click the "Meta" link on the left side of the page.)
 - [Why We Don’t Have an ‘I Don’t Know’ Button](http://blog.snapshotserengeti.org/2012/12/14/we-need-an-i-dont-know-button/) &mdash; Volunteers often ask for some way to express uncertainty. Using Snapshot Serengeti, this explains why we want a best guess.
-- [Federal Crowdsourcing and Citizen Science Toolkit](https://crowdsourcing-toolkit.sites.usa.gov/) &mdash; Running a citizen science project from within the federal government comes with added constraints. This kit can help.
+- [Federal Crowdsourcing and Citizen Science Toolkit](https://www.citizenscience.gov/toolkit/) &mdash; Running a citizen science project from within the federal government comes with added constraints. This kit can help.
 
 ### Examples of Project Builder Projects:
 
