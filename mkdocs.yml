@@ -11,7 +11,7 @@ theme:
     - scheme: default
       primary: teal
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -22,6 +22,7 @@ theme:
         name: Switch to light mode
 plugins:
   - social
+  - search
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -38,7 +39,7 @@ nav:
     - getting-started/example.md
     - getting-started/glossary.md
     - getting-started/lab-policies.md
-  - 'Best Practices': 
+  - 'Best Practices':
     - best-practices/index.md
     - best-practices/1-great-project.md
     - best-practices/2-launch-rush.md
@@ -46,7 +47,7 @@ nav:
     - best-practices/4-resources.md
   - 'Next Steps':
     - next-steps/caesar-realtime-data-processing.md
-    - next-steps/data-analysis.md 
+    - next-steps/data-analysis.md
     - next-steps/data-exports.md
     - next-steps/experimental-features.md
     - next-steps/hosting-your-own-subject-media.md
@@ -61,6 +62,6 @@ nav:
     - transcription-project-guide/designing-for-volunteers.md
     - transcription-project-guide/beta-testing.md
     - transcription-project-guide/project-launch.md
-    - transcription-project-guide/working-with-data.md 
+    - transcription-project-guide/working-with-data.md
     - transcription-project-guide/project-maintenance-and-conclusion.md
     - transcription-project-guide/acknowledgements-and-resources.md
