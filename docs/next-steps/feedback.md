@@ -45,7 +45,7 @@ For single-answer question tasks, this strategy will determine whether the user 
 |----------------|-------------|
 | `#training_subject` | Set to `true` to mark this subject as a training subject. |
 | `#feedback_N_id` | The feedback rule ID (matches the workflow configuration). |
-| `#feedback_N_answer` | The correct answer index (e.g., 0 for “Yes”, 1 for “No”). |
+| `#feedback_N_answer` | The correct answer index (e.g., "0" for "Yes", "1" for "No"). |
 | `#feedback_N_successMessage` | *(Optional)* Custom message when the volunteer classifies correctly. |
 | `#feedback_N_failureMessage` | *(Optional)* Custom message when the volunteer classifies incorrectly. |
 
@@ -56,13 +56,15 @@ For single-answer question tasks, this strategy will determine whether the user 
 
 Above is the metadata required for single-answer question tasks. You can also find this documented in the [FEM GitHub](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/single-answer-question/README.md#feedback-strategy-single-answer-question).
 
-For other task types, please refer to the following resources for specific metadata requirements:
+All strategies share a common set of keys: `#feedback_N_id`, `#feedback_N_successMessage` (optional), `#feedback_N_failureMessage` (optional), `#training_subject` (optional, used by Caesar)
 
-- [Single Answer Question Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/single-answer-question/README.md)
-- [Graph2dRange Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/datavis/graph2drange/README.md)
-- [Survey Task Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/survey/simple/README.md)
-- [Empty Annotation Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/dud/README.md)
-- [Radial Drawing Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/drawing/radial/README.md)
+Other task types / strategies use other keywords; please refer to the linked documentation resources for complete details:
+
+- [Single Answer Question](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/single-answer-question/README.md): `#feedback_N_answer`
+- [Simple Survey](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/survey/simple/README.md): `#feedback_N_choiceIds`
+- [Radial Drawing](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/drawing/radial/README.md): `#feedback_N_x`, `#feedback_N_y`, `#feedback_N_tolerance` (optional)
+- [Graph2dRange Drawing](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/datavis/graph2drange/README.md): `#feedback_N_x`, `#feedback_N_width`, `#feedback_N_tolerance` (optional)
+- [Empty Annotation ("dud")](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/dud/README.md): No addition keys
 
 
 ### Example: Uploading Subjects via Code
