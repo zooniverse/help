@@ -1,13 +1,11 @@
 # Feedback
 
-The **Feedback** functionality in Zooniverse allows project teams to provide volunteers with immediate guidance when they classify designated *training subjects*. This helps participants learn as they go and improves the quality of collected data.  When a volunteer classifies a training subject, the system can show whether their answer was correct — along with customizable success or failure messages. **Feedback** is configured per Workflow and can be used with most tasks (including question, survey, and drawing tasks).
-
-*Note:* **Feedback** is currently an **experimental feature** and may not be configurable for all tasks. If you're interested in seeing if **Feedback** would be a good fit for your project, please email [contact@zooniverse.org](mailto:contact@zooniverse.org) with your project details.
+The **Feedback** functionality in Zooniverse allows project teams to provide volunteers with immediate guidance when they classify designated *training subjects*. This helps participants learn as they go and improves the quality of collected data.  When a volunteer classifies a training subject, the system can show whether their answer was correct along with customizable success or failure messages. **Feedback** is configured per Workflow and can be used with certain tasks (including question, survey, and drawing tasks).
 
 
 ## Setting Up Feedback in a Workflow
 
-Once you've contacted the Zooniverse team and **Feedback** has been enabled for your project, you can configure it within your workflow.
+Feedback can be configured on the **Workflow** page in the Project Builder. Follow these steps to set it up:
 
 1. Open your workflow and navigate to the **Feedback** section under your question options.  
    - This section appears below your question’s possible answers.  
@@ -25,7 +23,7 @@ Once you've contacted the Zooniverse team and **Feedback** has been enabled for 
 
 Once configured, click **Save rule** to apply your settings. You can edit or delete the rule later if needed.
 
-| ![Figure 1. Example of a yes/no task with feedback section visible](/img/feedback_setup1.png) | ![Figure 2. Example of a feedback rule configuration showing success and failure messages](/img/feedback_setup2.png) |
+| ![Figure 1. Example of a yes/no task with feedback section visible](../img/feedback_setup1.png) | ![Figure 2. Example of a feedback rule configuration showing success and failure messages](../img/feedback_setup2.png) |
 | :---: | :----: |
 | *Figure 1. Example of a question task setup with feedback section visible below answer options.* | *Figure 2. Example of a feedback rule setup showing success and failure messages for positive and negative feedback.* |
 
@@ -35,20 +33,36 @@ Once configured, click **Save rule** to apply your settings. You can edit or del
 
 ## Creating a Training Subject Set
 
-You’ll need a **Training Subject Set**, which contains examples for which the correct answers are already known.  
+Feedback requires specifying a **Training Subject Set**, which contains examples for which the correct answers are already known. These are the subjects that will be used to provide feedback to volunteers during classification. When uploading or editing these subjects, you will need to include feedback-specific metadata fields in the [subject manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest). 
 
-When uploading or editing these subjects, include feedback-specific metadata fields in the subject manifest (CSV). For example:
+### Feedback Strategies
+
+The exact metadata you need to upload depends on the task type. Below, we show the metadata required for single-answer question tasks and provide links to additional resources for other task types.
+
+For single-answer question tasks, this strategy will determine whether the user correctly answered a single question, or, alternatively, if no answer was provided. A single subject can have multiple feedback rules. To group the metadata fields for a single feedback rule together, N should be an integer that is identical for each rule, e.g.:
 
 | Metadata Field | Description |
 |----------------|-------------|
-| `#feedback_1_id` | The feedback rule ID (matches the workflow configuration). |
-| `#feedback_1_answer` | The correct answer index (e.g., 0 for “Yes”, 1 for “No”). |
-| `#feedback_1_successMessage` | *(Optional)* Custom message when the volunteer classifies correctly. |
-| `#feedback_1_failureMessage` | *(Optional)* Custom message when the volunteer classifies incorrectly. |
+| `#training_subject` | Set to `true` to mark this subject as a training subject. |
+| `#feedback_N_id` | The feedback rule ID (matches the workflow configuration). |
+| `#feedback_N_answer` | The correct answer index (e.g., 0 for “Yes”, 1 for “No”). |
+| `#feedback_N_successMessage` | *(Optional)* Custom message when the volunteer classifies correctly. |
+| `#feedback_N_failureMessage` | *(Optional)* Custom message when the volunteer classifies incorrectly. |
+
 
 *Note:* Feedback answer indices must be **strings** when uploaded through the API (e.g., `'0'` not `0`).
 
-If your subjects are already uploaded, you can simply copy them into a new **training subject set** and update their metadata accordingly.
+#### All Task Types
+
+Above is the metadata required for single-answer question tasks. You can also find this documented in the [FEM GitHub](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/single-answer-question/README.md#feedback-strategy-single-answer-question).
+
+For other task types, please refer to the following resources for specific metadata requirements:
+
+- [Single Answer Question Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/single-answer-question/README.md)
+- [Graph2dRange Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/datavis/graph2drange/README.md)
+- [Survey Task Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/survey/simple/README.md)
+- [Empty Annotation Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/dud/README.md)
+- [Radial Drawing Feedback Metadata](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/drawing/radial/README.md)
 
 
 ### Example: Uploading Subjects via Code
@@ -61,6 +75,7 @@ subject_set_id = 000000
 feedback_id = 101  # Must match workflow feedback rule ID
 
 metadata_yes = {
+    '#training_subject': 'true',
     '#feedback_1_id': feedback_id,
     '#feedback_1_answer': '0',  # Correct answer (string)
     '#feedback_1_successMessage': "Correct!",
@@ -68,6 +83,7 @@ metadata_yes = {
 }
 
 metadata_no = {
+    '#training_subject': 'true',
     '#feedback_1_id': feedback_id,
     '#feedback_1_answer': '1',
     '#feedback_1_successMessage': "Correct!",
@@ -98,41 +114,50 @@ for each_subject in training_subjects_yes:
 This example uses shared success/failure messages for simplicity, but we recommend customizing them per subject to provide helpful information to the volunteer.
 
 
-### Metadata Rules Summary
-
-Each **Feedback** rule must have its own numbered group of metadata fields:
-
-| Field | Required | Description |
-|--------|-----------|-------------|
-| `#feedback_N_id` | Yes | The feedback rule ID from your workflow. |
-| `#feedback_N_answer` | Yes | Index of the correct answer (zero-based). |
-| `#feedback_N_successMessage` | Optional | Shown when the user is correct; overrides workflow default. |
-| `#feedback_N_failureMessage` | Optional | Shown when the user is incorrect; overrides workflow default. |
-
-For example, a subject might include:
-```
-#feedback_1_id, #feedback_1_answer, #feedback_2_id, #feedback_2_answer
-```
-
 ## Training Strategy and Probability
 
 The training strategy determines how frequently volunteers are shown training subjects as they progress through classifications. This helps balance early guidance with independent classification as users gain experience.
 
-Each project can define its own strategy using two configuration values:
+### Configuration Parameters
 
-- **`training_chances`** – a list of probabilities for the first *N* classifications.  
-- **`training_default_chance`** – the fallback probability used after *N* classifications.
+Training behavior is controlled via workflow configuration variables:
+
+- **`training_set_ids`** – identifies which subject sets contain training subjects
+- **`training_chances`** – an array of probability values used to determine frequency at which training subjects are shown. A value is selected from this array using the index derived from a user's seen subjects count for the workflow
+- **`training_default_chance`** – the fallback probability used when no array-based values are available or when the user has exceeded the array length
+
+Workflow parameters can be configured via the Panoptes Python client by project owners and collaborators. See [this script](https://github.com/zooniverse/Data-digging/blob/master/scripts_Utility/configure_training_subjects.py) in the [Data-digging repository](https://github.com/zooniverse/Data-digging) for implementation examples of client commands.
+
+
+### Example Configuration
 
 In the following example, volunteers have a 50% chance of receiving a training subject for their first 10 classifications, which gradually decreases over time. After 100 classifications, the default rate (5%) is applied.
 
 ```python
+from panoptes_client import Panoptes, Workflow
+
+puser = <ZOONIVERSE_USERNAME>
+ppswd = <ZOONIVERSE_PASSWORD>
+
+workflow_id = 999999
+training_set_ids = [888888, 777777]
+
 # 10 classifications at 50% probability, then 40 at 20%, then 50 at 10%
 training_chances = (10 * [0.5]) + (40 * [0.2]) + (50 * [0.1])
 training_default_chance = 0.05  # After 100 classifications
+
+Panoptes.connect(username=puser, password=ppswd)
+
+w = Workflow.find(workflow_id)
+w.configuration['training_set_ids'] = training_set_ids
+w.configuration['training_default_chance'] = training_default_chance
+w.configuration['training_chances'] = training_chances
+w.configuration['subject_queue_page_size'] = 4
+w.save()
 ```
 
 This tapering strategy allows teams to introduce volunteers to known examples early on while reducing training frequency as they become more confident and consistent.
 
-*Note:* These values are set at the workflow level but must be entered by the Zooniverse team. After determining the appropriate values for your project, reach out to your Zooniverse contact or email [contact@zooniverse.org](mailto:contact@zooniverse.org) for implementation.
+
 
 
