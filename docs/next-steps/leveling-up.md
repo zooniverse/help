@@ -15,7 +15,7 @@ The user skill is determined by calculating a per-class confusion matrix (for a 
 
 Let's take an example of a multi-class problem. Suppose a subject set has 4 classes (A, B, C). Then the user skill is calculated using a 3x3 confusion matrix. For simplicity, let's assume that this user has only seen gold standard subjects with class C, and out of 5 subjects, they classified 3 correctly as class C and the other two as classes A and B respectively. Therefore, their confusion matrix will be as follows:
 
-[![Multi-class confusion matrix](/img/leveling-up/user-skill-confusion-multi-class.png)](/img/leveling-up/user-skill-confusion-multi-class.png)
+[![Multi-class confusion matrix](../img/leveling-up/user-skill-confusion-multi-class.png)](/img/leveling-up/user-skill-confusion-multi-class.png)
 
 Let's say that the 5 subjects have the following difficulties:
 
@@ -35,13 +35,13 @@ In this case, Subject 1 and 2 have medium difficulties with this user correctly 
 
 This calculation increases the weight of correct classifications of difficult subjects (e.g., Subject 2) and incorrect classifications of easy subjects (Subject 3) by inverting the difficulty of correct classifications (`1 - subject_difficulty`). Therefore, the new subject difficulty weighted confusion matrix is:
 
-[![Subject difficulty weighted multi-class confusion matrix](/img/leveling-up/user-skill-confusion-multi-class-weighted.png)](/img/leveling-up/user-skill-confusion-multi-class-weighted.png)
+[![Subject difficulty weighted multi-class confusion matrix](../img/leveling-up/user-skill-confusion-multi-class-weighted.png)](/img/leveling-up/user-skill-confusion-multi-class-weighted.png)
 
 Summing over the columns, we get the user skill for class C to be `1.1 / (1.1 + 0.8 + 0.2) = 52.3%`.
 
 For a binary task, the confusion matrix is 2x2. Since we only compare feedback against positive expert classifications, the second column is blank. We can proceed similarly with the calculation of the subject difficulty to calculate the user skill.
 
-[![Binary confusion matrix](/img/leveling-up/user-skill-confusion-binary.png)](/img/leveling-up/user-skill-confusion-binary.png)
+[![Binary confusion matrix](../img/leveling-up/user-skill-confusion-binary.png)](/img/leveling-up/user-skill-confusion-binary.png)
 
 
 ## Pre-requisites
@@ -71,7 +71,7 @@ The LU framework is an advanced system that touches multiple subsystems in Zooni
 ### Step 3: Create & Configure Workflows on Caesar
 First, create the workflows on Caesar. Visit https://caesar.zooniverse.org/workflows, click “+ Add” button in the upper right corner of the page and enter your workflow ID from the project builder page.
 
-[![The Caesar workflow page](/img/leveling-up/caesar-workflow-page.png)](/img/leveling-up/caesar-workflow-page.png)
+[![The Caesar workflow page](../img/leveling-up/caesar-workflow-page.png)](/img/leveling-up/caesar-workflow-page.png)
 
 
 #### Set up the extractors (choose your workflow from Caesar and go to the Extractors tab):
@@ -79,12 +79,12 @@ First, we need to extract the feedback from gold standard subjects to calculate 
 
 1. Click on "Create Extractors" and  select "External"
 
-[![Add an external extractor](/img/leveling-up/add-extractor.png)](/img/leveling-up/add-extractor.png)
+[![Add an external extractor](../img/leveling-up/add-extractor.png)](/img/leveling-up/add-extractor.png)
 
 
 2. Provide a key for this extractor (e.g., "feedback")
 3. Use this URL: `https://aggregation-caesar.zooniverse.org/extractors/question_extractor?pluck={"feedback":"metadata.feedback.T0"}`. Be sure to change the `T0` to your task defined in the project builder.
-[![Add a pluck-field extractor](/img/leveling-up/add-pluck-extractor.png)](/img/leveling-up/add-pluck-extractor.png)
+[![Add a pluck-field extractor](../img/leveling-up/add-pluck-extractor.png)](/img/leveling-up/add-pluck-extractor.png)
 
 You may continue to add other extractors as needed for the project!
 
@@ -98,7 +98,7 @@ Go to the reducers tab and set up two reducers. One will be to calculate the sub
 3. Use this URL: `https://aggregation-caesar.zooniverse.org/reducers/subject_difficulty_reducer`
 4. Click on Filters and type in the feedback extractor we set up previously enclosed in `[]`: `["feedback"]`
 5. Click on Empty extracts and select `ignore_empty`. Your configuration should like the one below:
-[![Add subject difficulty reducer](/img/leveling-up/add-subject-difficulty-reducer.png)](/img/leveling-up/add-subject-difficulty-reducer.png)
+[![Add subject difficulty reducer](../img/leveling-up/add-subject-difficulty-reducer.png)](/img/leveling-up/add-subject-difficulty-reducer.png)
 
 ##### User skill reducer
 1. Click on "Create Reducers" and  select "External"
@@ -110,7 +110,7 @@ Go to the reducers tab and set up two reducers. One will be to calculate the sub
 
 5. Click on Filters and type in the feedback extractor we set up previously enclosed in `[]`: `["feedback"]`
 6. Click on Empty extracts and select `ignore_empty`. Your configuration should like the one below:
-[![Add user skill reducer](/img/leveling-up/add-user-skill-reducer.png)](/img/leveling-up/add-user-skill-reducer.png)
+[![Add user skill reducer](../img/leveling-up/add-user-skill-reducer.png)](/img/leveling-up/add-user-skill-reducer.png)
 7. Contact a Zooniverse team member to set up advanced routing between your subject difficulty and the user skill reducer. Be sure to note the names of the reducers and the workflow ID.
 
 ### Step 4: Creating rules and leveling up volunteers
