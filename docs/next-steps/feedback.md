@@ -38,9 +38,6 @@ Once configured, click **Save rule** to apply your settings. You can edit or del
 | *Figure 1. Example of a question task setup with feedback section visible below answer options.* | *Figure 2. Example of a feedback rule setup showing success and failure messages for positive and negative feedback.* |
 
 
-
-
-
 ## Creating a Training Subject Set
 
 Feedback requires specifying a **Training Subject Set**, which contains examples for which the correct answers are already known. These are the subjects that will be used to provide feedback to volunteers during classification. When uploading or editing these subjects, you will need to include **feedback-specific metadata entries** in the [subject manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest). 
@@ -61,8 +58,20 @@ For single-answer question tasks, this strategy will determine whether the user 
 | `#feedback_N_successMessage` | *(Optional)* Custom message when the volunteer classifies correctly. |
 | `#feedback_N_failureMessage` | *(Optional)* Custom message when the volunteer classifies incorrectly. |
 
+Metadata Example:
+```python
+metadata = {
+    '#training_subject': 'true',
+    '#feedback_1_id': '101',
+    '#feedback_1_answer': '0',  # Index of correct answer (string)
+    '#feedback_1_successMessage': "Correct!",
+    '#feedback_1_failureMessage': "Oops! Try again."
+}
+```
 
 *Note:* Feedback answer indices must be **strings** when configured using the Python Client or API directly (e.g., `'0'` not `0`). The CLI will upload manifest contents correctly as strings by default.
+
+While it is easiest to include feedback subject metadata fields in manifest files during initial subject creation and upload, it is also possible to add these metadata keys after subject creation using the Python Client to edit metadata. See [this script](https://github.com/zooniverse/Data-digging/blob/master/scripts_Utility/edit_metadata_indiv.py) in the [Data-digging repository](https://github.com/zooniverse/Data-digging) for implementation examples of client commands.
 
 #### All Task Types
 
@@ -79,55 +88,6 @@ Other task types / strategies use other keywords; please refer to the linked doc
 - [Empty Annotation ("dud")](https://github.com/zooniverse/front-end-monorepo/blob/master/packages/lib-classifier/src/store/feedback/strategies/dud/README.md): No addition keys
 
 
-### Example: Uploading Subjects via Code
-
-Here’s a simple example of how to upload training subjects programmatically using the Panoptes Python client:
-
-```python
-project_id = 0000
-subject_set_id = 000000
-feedback_id = 101  # Must match workflow feedback rule ID
-
-metadata_yes = {
-    '#training_subject': 'true',
-    '#feedback_1_id': feedback_id,
-    '#feedback_1_answer': '0',  # Correct answer (string)
-    '#feedback_1_successMessage': "Correct!",
-    '#feedback_1_failureMessage': "Oops! Try again."
-}
-
-metadata_no = {
-    '#training_subject': 'true',
-    '#feedback_1_id': feedback_id,
-    '#feedback_1_answer': '1',
-    '#feedback_1_successMessage': "Correct!",
-    '#feedback_1_failureMessage': "Not quite right!"
-}
-
-subject_set = SubjectSet.find(subject_set_id)
-
-for each_subject in training_subjects_no:
-    s = Subject()
-    s.links.project = project_id
-    s.add_location(str(each_subject))
-    s.metadata = metadata_no
-    s.save()
-    s.reload()
-    subject_set.add(s)
-
-for each_subject in training_subjects_yes:
-    s = Subject()
-    s.links.project = project_id
-    s.add_location(str(each_subject))
-    s.metadata = metadata_yes
-    s.save()
-    s.reload()
-    subject_set.add(s)
-```
-
-This example uses shared success/failure messages for simplicity, but we recommend customizing them per subject to provide helpful information to the volunteer.
-
-
 ## Setting Frequency of Training Subjects
 
 Subject sets can be identified as training sets, allowing them to be served differently from the rest of the linked sets and removing them from workflow retirement statistics. Specifically, training sets can be served to workflow participants with decreasing frequency over time, providing greater guidance early on and tapering off later when volunteers have become more confident and consistent.
@@ -140,33 +100,6 @@ Training behavior is controlled via three workflow configuration variables:
 
 Workflow parameters can be configured via the Panoptes Python client by project owners and collaborators. See [this script](https://github.com/zooniverse/Data-digging/blob/master/scripts_Utility/configure_training_subjects.py) in the [Data-digging repository](https://github.com/zooniverse/Data-digging) for implementation examples of client commands.
 
-
-### Example Configuration
-
-In the following example, volunteers have a 50% chance of receiving a training subject for their first 10 classifications, which gradually decreases over time. After 100 classifications, the default rate (5%) is applied.
-
-```python
-from panoptes_client import Panoptes, Workflow
-
-puser = <ZOONIVERSE_USERNAME>
-ppswd = <ZOONIVERSE_PASSWORD>
-
-workflow_id = 999999
-training_set_ids = [888888, 777777]
-
-# 10 classifications at 50% probability, then 40 at 20%, then 50 at 10%
-training_chances = (10 * [0.5]) + (40 * [0.2]) + (50 * [0.1])
-training_default_chance = 0.05  # After 100 classifications
-
-Panoptes.connect(username=puser, password=ppswd)
-
-w = Workflow.find(workflow_id)
-w.configuration['training_set_ids'] = training_set_ids
-w.configuration['training_default_chance'] = training_default_chance
-w.configuration['training_chances'] = training_chances
-w.configuration['subject_queue_page_size'] = 4
-w.save()
-```
 
 ## Adapting Subject Retirement
 
