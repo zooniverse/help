@@ -2,28 +2,38 @@
 
 The **Feedback** functionality in Zooniverse allows project teams to provide volunteers with immediate guidance when they classify designated *training subjects*. This helps participants learn as they go and improves the quality of collected data.  When a volunteer classifies a training subject, the system can show whether their answer was correct along with customizable success or failure messages. **Feedback** is configured per Workflow and can be used with certain tasks (including question, survey, and drawing tasks).
 
+| ![Figure 1. Example of a feedback popup, for the Planet Hunters TESS project.](/img/feedback/feedback_phtess.png) |
+| :---: |
+| *Figure 1. Example of a feedback popup, for the Planet Hunters TESS project.* |
 
-## Setting Up Feedback in a Workflow
+
+There are four aspects to configuring feedback for your workflow:
+
+1. [Adding Workflow Feedback Rules](#adding-workflow-feedback-rules)
+2. [Creating a Training Subject Set](#creating-a-training-subject-set)
+3. [Setting Frequency of Training Subjects](#setting-frequency-of-training-subjects)
+4. [Adapting Subject Retirement](#adapting-subject-retirement)
+
+
+## Adding Workflow Feedback Rules
 
 Feedback can be configured on the **Workflow** page in the Project Builder. Follow these steps to set it up:
 
-1. Open your workflow and navigate to the **Feedback** section under your question options.  
-   - This section appears below your question’s possible answers.  
-   - For example, in a yes/no task setup (see below), you’ll see where feedback rules can be added.
+1. Open your workflow and navigate to the **Feedback** section under your question options. This section appears below the task area. For example, below answer options for a question task; see screenshot below.
 
 2. Select **Create new feedback rule** to open the configuration panel.  
 
 3. Enter a unique **Feedback Rule ID** — this can be any number, but you’ll need to reference it later when uploading your training subjects.  
 
 4. Enable **positive** and/or **negative feedback**, and enter default messages for each.  
-   - These messages will be shown to volunteers when they correctly or incorrectly classify a known training subject.  
-   - You can later override these defaults by specifying custom messages in subject metadata.
+    - These messages will be shown to volunteers when they correctly and/or incorrectly classify a known training subject.  
+    - You can override these default responses by specifying subject-specific messages in subject metadata.
 
 5. Choose a **Feedback Strategy**, such as *Single Answer Question* (recommended for yes/no tasks).
 
 Once configured, click **Save rule** to apply your settings. You can edit or delete the rule later if needed.
 
-| ![Figure 1. Example of a yes/no task with feedback section visible](../img/feedback_setup1.png) | ![Figure 2. Example of a feedback rule configuration showing success and failure messages](../img/feedback_setup2.png) |
+| ![Figure 1. Example of a yes/no task with feedback section visible](/img/feedback/feedback_setup1.png) | ![Figure 2. Example of a feedback rule configuration showing success and failure messages](/img/feedback/feedback_setup2.png) |
 | :---: | :----: |
 | *Figure 1. Example of a question task setup with feedback section visible below answer options.* | *Figure 2. Example of a feedback rule setup showing success and failure messages for positive and negative feedback.* |
 
@@ -33,24 +43,26 @@ Once configured, click **Save rule** to apply your settings. You can edit or del
 
 ## Creating a Training Subject Set
 
-Feedback requires specifying a **Training Subject Set**, which contains examples for which the correct answers are already known. These are the subjects that will be used to provide feedback to volunteers during classification. When uploading or editing these subjects, you will need to include feedback-specific metadata fields in the [subject manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest). 
+Feedback requires specifying a **Training Subject Set**, which contains examples for which the correct answers are already known. These are the subjects that will be used to provide feedback to volunteers during classification. When uploading or editing these subjects, you will need to include **feedback-specific metadata entries** in the [subject manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest). 
 
 ### Feedback Strategies
 
-The exact metadata you need to upload depends on the task type. Below, we show the metadata required for single-answer question tasks and provide links to additional resources for other task types.
+The exact metadata keys required depends on the task type. Below, we show the metadata required for the common case of a single-answer question task, and provide links to external documentation for other task types.
+
+#### Single Answer Question Strategy
 
 For single-answer question tasks, this strategy will determine whether the user correctly answered a single question, or, alternatively, if no answer was provided. A single subject can have multiple feedback rules. To group the metadata fields for a single feedback rule together, N should be an integer that is identical for each rule, e.g.:
 
 | Metadata Field | Description |
 |----------------|-------------|
-| `#training_subject` | Set to `true` to mark this subject as a training subject. |
+| `#training_subject` | Set to `true` to mark this subject as a training subject; used by Caesar for subject retirement rules. |
 | `#feedback_N_id` | The feedback rule ID (matches the workflow configuration). |
 | `#feedback_N_answer` | The correct answer index (e.g., "0" for "Yes", "1" for "No"). |
 | `#feedback_N_successMessage` | *(Optional)* Custom message when the volunteer classifies correctly. |
 | `#feedback_N_failureMessage` | *(Optional)* Custom message when the volunteer classifies incorrectly. |
 
 
-*Note:* Feedback answer indices must be **strings** when uploaded through the API (e.g., `'0'` not `0`).
+*Note:* Feedback answer indices must be **strings** when configured using the Python Client or API directly (e.g., `'0'` not `0`). The CLI will upload manifest contents correctly as strings by default.
 
 #### All Task Types
 
@@ -116,13 +128,11 @@ for each_subject in training_subjects_yes:
 This example uses shared success/failure messages for simplicity, but we recommend customizing them per subject to provide helpful information to the volunteer.
 
 
-## Training Strategy and Probability
+## Setting Frequency of Training Subjects
 
-The training strategy determines how frequently volunteers are shown training subjects as they progress through classifications. This helps balance early guidance with independent classification as users gain experience.
+Subject sets can be identified as training sets, allowing them to be served differently from the rest of the linked sets and removing them from workflow retirement statistics. Specifically, training sets can be served to workflow participants with decreasing frequency over time, providing greater guidance early on and tapering off later when volunteers have become more confident and consistent.
 
-### Configuration Parameters
-
-Training behavior is controlled via workflow configuration variables:
+Training behavior is controlled via three workflow configuration variables:
 
 - **`training_set_ids`** – identifies which subject sets contain training subjects
 - **`training_chances`** – an array of probability values used to determine frequency at which training subjects are shown. A value is selected from this array using the index derived from a user's seen subjects count for the workflow
@@ -158,8 +168,6 @@ w.configuration['subject_queue_page_size'] = 4
 w.save()
 ```
 
-This tapering strategy allows teams to introduce volunteers to known examples early on while reducing training frequency as they become more confident and consistent.
+## Adapting Subject Retirement
 
-
-
-
+In cases where training subjects are meant to be shown at higher frequency than typical subjects, it is desired that training subjects not be retired. Therefore, subject retirement conditions need to treat training subjects differently than other subjects. To accomplish this, you can use [Caesar](https://help.zooniverse.org/next-steps/caesar-realtime-data-processing/) for subject retirement. Specifically, Caesar reducers can filter according to "training behavior" to differentiate between training subjects and normal "experiment" subjects: when using the `experiment_only` setting, training subjects (identified via `#training_subject` subject metadata key) will be ignored.
