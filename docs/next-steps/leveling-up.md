@@ -1,6 +1,6 @@
 # Leveling-Up framework for using volunteer skill
 
-The leveling up (LU) framework is a method to track the skill of a volunteer and the difficulty of individual subjects (through the [feedback](/next-steps/feedback) mechanism). This allows the research team to gate more difficult subjects to higher skill volunteers, and provide a method to level up the volunteers through classification of gold standard subjects.
+The leveling up framework is a method to track the skill of a volunteer and the difficulty of individual subjects (through the [feedback](/next-steps/feedback) mechanism). This allows the research team to gate more difficult subjects to higher skill volunteers, and provide a method to level up the volunteers through classification of gold standard subjects.
 
 ## Overview
 
@@ -13,7 +13,7 @@ The data from the feedback system is used in two ways:
 
 The user skill is determined by calculating a per-class confusion matrix (for a binary problem the classes are just True/False), and the per-class user skill is determined by collapsing the confusion matrix per class.
 
-Let's take an example of a multi-class problem. Suppose a subject set has 4 classes (A, B, C). Then the user skill is calculated using a 3x3 confusion matrix. For simplicity, let's assume that this user has only seen gold standard subjects with class C, and out of 5 subjects, they classified 3 correctly as class C and the other two as classes A and B respectively. Therefore, their confusion matrix will be as follows:
+Let's take an example of a multi-class problem. Suppose a subject set has 3 classes: A, B, and C. The user skill is calculated using a 3x3 confusion matrix. For simplicity, let's assume that this user has only seen gold standard subjects with class C, and out of 5 subjects, they classified 3 correctly as class C and the other two as classes A and B respectively. Therefore, their confusion matrix will be as follows:
 
 [![Multi-class confusion matrix](../img/leveling-up/user-skill-confusion-multi-class.png)](/img/leveling-up/user-skill-confusion-multi-class.png)
 
@@ -46,24 +46,22 @@ For a binary task, the confusion matrix is 2x2. Since we only compare feedback a
 
 ## Pre-requisites
 
-The LU framework is an advanced system that touches multiple subsystems in Zooniverse and therefore has a strict set of pre-requisites:
+The leveling up framework is an advanced system that touches multiple subsystems in Zooniverse and therefore has a strict set of pre-requisites:
 
-1. The project must be on FEM to leverage the [feedback](/next-steps/feedback/) capabilities 
-2. You must have a selection of gold standard subjects with expert classifications. The number of subjects will depend on how quickly you want volunteers to level up and how many separate levels you need in your project
+1. You must have a selection of gold standard subjects with expert classifications. The number of subjects will depend on how quickly you want volunteers to level up and how many separate levels you need in your project
+2. You must configure relevant subjects and workflows to use [feedback](/next-steps/feedback/) to evaluate volunteer performance on gold standard subjects.
 3. You must have [Caesar](/next-steps/caesar-realtime-data-processing/) set up to handle real-time data aggregation
-4. You must have a Question or Survey task. Currently leveling up is limited to only these two tasks.
+4. You must have a Question or Survey task. Leveling up is currently limited to these two tasks.
 
 ## Setting up the Leveling Up framework
 
 ### Step 1. Create Project via Project Builder
 
-1. Reach out to a Zooniverse contact to activate tools for Leveling Up
-2. Create Subject Sets. Note that: 
-    1. the subjects will need specific columns to work with feedback). 
-    2. make sure to upload your gold standard subjects with the `#training-subjects` column to ensure that they are not aggregated
+1. Email Zooniverse ([contact@zooniverse.org](mailto:contact@zooniverse.org)) to activate the "workflow assignment" experimental tool for Leveling Up.
+2. Create Subject Sets. Note that gold standard subjects will need specific metadata to work with feedback (e.g., `#training_subject` set to `true`).
 
 ### Step 2: Create Workflows via Project Builder: Levels 1, 2, 3, etc
-1. Reach out to a Zooniverse contact to set Workflow Config: `level`=1, etc for each level
+1. Assign workflow levels via workflow configuration: reach out to request Zooniverse set `level: '1'`, etc key-value pairs in workflow configuration, or edit `Workflow.configuration` directly via Python Client.
 2. Create your task: for now we only support the Question and the Survey tasks (note task key – default assumption is “T0”)
 3. Add Feedback Rules (sync feedback rule IDs with subject metadata key names)
 4. Link Subject Sets to workflow, and note the workflow ID for the next step.
@@ -83,7 +81,7 @@ First, we need to extract the feedback from gold standard subjects to calculate 
 
 
 2. Provide a key for this extractor (e.g., "feedback")
-3. Use this URL: `https://aggregation-caesar.zooniverse.org/extractors/question_extractor?pluck={"feedback":"metadata.feedback.T0"}`. Be sure to change the `T0` to your task defined in the project builder.
+3. Configure the external extractor with this URL: `https://aggregation-caesar.zooniverse.org/extractors/question_extractor?pluck={"feedback":"metadata.feedback.T0"}`. Be sure to change the `T0` to your task defined in the project builder.
 [![Add a pluck-field extractor](../img/leveling-up/add-pluck-extractor.png)](/img/leveling-up/add-pluck-extractor.png)
 
 You may continue to add other extractors as needed for the project!
@@ -95,7 +93,7 @@ Go to the reducers tab and set up two reducers. One will be to calculate the sub
 ##### Subject difficulty reducer
 1. Click on "Create Reducers" and  select "External"
 2. Provide a key for this extractor (e.g., "subject-difficulty")
-3. Use this URL: `https://aggregation-caesar.zooniverse.org/reducers/subject_difficulty_reducer`
+3. Configure the external reducer with this URL: `https://aggregation-caesar.zooniverse.org/reducers/subject_difficulty_reducer`
 4. Click on Filters and type in the feedback extractor we set up previously enclosed in `[]`: `["feedback"]`
 5. Click on Empty extracts and select `ignore_empty`. Your configuration should like the one below:
 [![Add subject difficulty reducer](../img/leveling-up/add-subject-difficulty-reducer.png)](/img/leveling-up/add-subject-difficulty-reducer.png)
@@ -104,18 +102,16 @@ Go to the reducers tab and set up two reducers. One will be to calculate the sub
 1. Click on "Create Reducers" and  select "External"
 2. Provide a key for this extractor (e.g., "user-skill")
 3. Click Topic and select `reduce_by_user`
-4. Set up the URL changing the parameters in the `[]` as needed (see [choosing parameter](#choosing-parameters) for more details): 
-
-`https://aggregation-caesar.zooniverse.org/reducers/user_skill_reducer?mode=[mode]&skill_threshold=[skill_threshold]&count_threshold=[count_threshold]&strategy=[strategy]`
+4. Configure the external reducer with this URL, changing the parameters in the `[]` as needed (see [choosing parameter](#choosing-parameters) for more details): `https://aggregation-caesar.zooniverse.org/reducers/user_skill_reducer?mode=[mode]&skill_threshold=[skill_threshold]&count_threshold=[count_threshold]&strategy=[strategy]`
 
 5. Click on Filters and type in the feedback extractor we set up previously enclosed in `[]`: `["feedback"]`
 6. Click on Empty extracts and select `ignore_empty`. Your configuration should like the one below:
 [![Add user skill reducer](../img/leveling-up/add-user-skill-reducer.png)](/img/leveling-up/add-user-skill-reducer.png)
-7. Contact a Zooniverse team member to set up advanced routing between your subject difficulty and the user skill reducer. Be sure to note the names of the reducers and the workflow ID.
+7. Set "subject reducer keys" property to `["subject-difficulty"]`
 
 ### Step 4: Creating rules and leveling up volunteers
 
-Since these strategies can depend heavily on your workflow and task, please reach out to a Zooniverse contact at this stage to determine how to set up bothe promotion of the volunteer and user skill-weighted subject retirement rules.
+Since these strategies can depend heavily on your workflow and task, please reach out to Zooniverse at this stage to determine how to set up both the promotion of the volunteer and user skill-weighted subject retirement rules. A volunteer's workflow assignment is stored in their project preferences (see also: [Python Client documentation](https://panoptes-python-client.readthedocs.io/en/latest/panoptes_client.html#panoptes_client.project_preferences.ProjectPreferences)), and a Caesar rule can use the "promote user" effect to alter this assignment.
 
 ## Choosing parameters
 There are three main parameters to choose when setting up the user skill calculation:
