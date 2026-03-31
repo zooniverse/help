@@ -14,8 +14,8 @@ This `csv` file has one row for every classification submitted for a project.  T
 * `workflow_name`: The name of the workflow
 * `workflow_version`: The major and minor workflow version for the classification
 * `created_at`: The `UTC` timestamp for the classification
-* `gold_standard`: Identifies if the classification was made on a gold standard subject
-* `expert`: Identifies if the classification was made in "expert" mode
+* `gold_standard`: A boolean that identifies if the classification was made in gold standard mode
+* `expert`: If classification was submitted in gold standard mode, a string that identifies the role of the classifying user: expert or owner.
 * `metadata`: A `JSON` blob containing additional metadata about the classification (e.g. browser size, browser user agent, classification duration, etc...)
 * `annotations`: A `JSON` blob with the annotations made for each task in the workflow.  The exact shape of this blob is dependent on the shape of the workflow.
 * `subject_data`: A `JSON` blob with the metadata associated with the subject that was classified.  The exact shape of this blob is dependent on the metadata uploaded to each subject
