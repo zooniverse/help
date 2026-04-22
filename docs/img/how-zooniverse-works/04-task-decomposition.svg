@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .complex { fill: #FEE2E2; stroke: #EF4444; stroke-width: 2; }
+      .complex-fill { fill: #EF4444; }
+      .decomposed { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .decomposed-fill { fill: #00979D; }
+      .workflow { fill: #EDE9FE; stroke: #7C3AED; stroke-width: 2; }
+      .workflow-fill { fill: #7C3AED; }
+      .arrow-main { fill: none; stroke: #1E293B; stroke-width: 3; }
+      .arrow-split { fill: none; stroke: #00979D; stroke-width: 2; stroke-dasharray: 5,3; }
+      .connector { fill: none; stroke: #94A3B8; stroke-width: 1.5; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .section-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #475569; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .question { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-style: italic; fill: #7C3AED; }
+    </style>
+    <marker id="arrowhead-main" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#1E293B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Task Decomposition: Breaking Complex Tasks into Sequences</text>
+
+  <!-- Key Question -->
+  <text x="400" y="55" text-anchor="middle" class="question">"Can I reduce my task to a sequence of simpler tasks?"</text>
+
+  <!-- BEFORE Section -->
+  <text x="150" y="95" text-anchor="middle" class="section-label">BEFORE: One Complex Task</text>
+
+  <rect x="50" y="110" width="200" height="140" rx="8" class="complex"/>
+  <text x="150" y="135" text-anchor="middle" class="label">Complex Task</text>
+  <text x="150" y="155" text-anchor="middle" class="sublabel">"Identify all species,</text>
+  <text x="150" y="168" text-anchor="middle" class="sublabel">count individuals,</text>
+  <text x="150" y="181" text-anchor="middle" class="sublabel">note behaviors,</text>
+  <text x="150" y="194" text-anchor="middle" class="sublabel">record interactions"</text>
+
+  <rect x="70" y="220" width="60" height="20" rx="4" class="complex-fill"/>
+  <text x="100" y="234" text-anchor="middle" style="font-size: 9px; fill: white;">5 min/item</text>
+
+  <rect x="140" y="220" width="60" height="20" rx="4" class="complex-fill"/>
+  <text x="170" y="234" text-anchor="middle" style="font-size: 9px; fill: white;">High error</text>
+
+  <!-- Arrow -->
+  <path d="M 280 180 L 350 180" class="arrow-main" marker-end="url(#arrowhead-main)"/>
+  <text x="315" y="170" text-anchor="middle" style="font-size: 10px; fill: #1E293B; font-weight: 600;">DECOMPOSE</text>
+
+  <!-- AFTER Section -->
+  <text x="570" y="95" text-anchor="middle" class="section-label">AFTER: Sequential Simple Tasks</text>
+
+  <!-- Task 1 -->
+  <rect x="380" y="110" width="150" height="60" rx="8" class="decomposed"/>
+  <text x="455" y="135" text-anchor="middle" class="label">Workflow 1: Detect</text>
+  <text x="455" y="150" text-anchor="middle" class="sublabel">"Is there an animal?"</text>
+  <text x="455" y="163" text-anchor="middle" class="sublabel">Yes / No</text>
+
+  <!-- Connector 1-2 -->
+  <path d="M 455 170 L 455 190" class="connector"/>
+  <circle cx="455" cy="187" r="3" fill="#94A3B8"/>
+
+  <!-- Task 2 -->
+  <rect x="380" y="195" width="150" height="60" rx="8" class="decomposed"/>
+  <text x="455" y="220" text-anchor="middle" class="label">Workflow 2: Identify</text>
+  <text x="455" y="235" text-anchor="middle" class="sublabel">"What species?"</text>
+  <text x="455" y="248" text-anchor="middle" class="sublabel">Select from list</text>
+
+  <!-- Connector 2-3 -->
+  <path d="M 455 255 L 455 275" class="connector"/>
+  <circle cx="455" cy="272" r="3" fill="#94A3B8"/>
+
+  <!-- Task 3 -->
+  <rect x="380" y="280" width="150" height="60" rx="8" class="decomposed"/>
+  <text x="455" y="305" text-anchor="middle" class="label">Workflow 3: Count</text>
+  <text x="455" y="320" text-anchor="middle" class="sublabel">"How many?"</text>
+  <text x="455" y="333" text-anchor="middle" class="sublabel">1, 2, 3, 4+</text>
+
+  <!-- Benefits column -->
+  <rect x="570" y="140" width="180" height="200" rx="8" class="workflow"/>
+  <text x="660" y="165" text-anchor="middle" class="label" style="fill: #7C3AED;">Benefits</text>
+
+  <text x="590" y="190" class="sublabel">+ Faster per-task</text>
+  <text x="590" y="208" class="sublabel">+ Lower error rate</text>
+  <text x="590" y="226" class="sublabel">+ Better consensus</text>
+  <text x="590" y="244" class="sublabel">+ Parallel processing</text>
+  <text x="590" y="262" class="sublabel">+ Early filtering</text>
+  <text x="590" y="280" class="sublabel">+ Easier training</text>
+
+  <text x="660" y="310" text-anchor="middle" class="sublabel" style="font-style: italic;">"Blank" subjects</text>
+  <text x="660" y="323" text-anchor="middle" class="sublabel" style="font-style: italic;">filtered at step 1</text>
+
+  <!-- Stats comparison -->
+  <rect x="60" y="280" width="180" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="150" y="305" text-anchor="middle" class="label">Complex Task Stats</text>
+  <text x="150" y="325" text-anchor="middle" class="sublabel">Retirement: 15+ per subject</text>
+  <text x="150" y="340" text-anchor="middle" class="sublabel">Agreement: ~60%</text>
+
+  <rect x="380" y="360" width="150" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="455" y="385" text-anchor="middle" class="label">Simple Task Stats</text>
+  <text x="455" y="405" text-anchor="middle" class="sublabel">Retirement: 3-5 per subject</text>
+  <text x="455" y="420" text-anchor="middle" class="sublabel">Agreement: ~90%+</text>
+</svg>

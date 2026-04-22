@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+  <defs>
+    <style>
+      .great-fit { fill: #10B981; }
+      .good-fit { fill: #34D399; }
+      .possible { fill: #FBBF24; }
+      .challenging { fill: #F97316; }
+      .poor-fit { fill: #EF4444; }
+
+      .cell { stroke: white; stroke-width: 2; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: white; }
+      .axis-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #1E293B; }
+      .axis-value { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #64748B; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .legend-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #475569; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" class="title">Dataset Evaluation Matrix: Size vs. Task Complexity</text>
+
+  <!-- Y-axis label -->
+  <text x="30" y="250" text-anchor="middle" class="axis-label" transform="rotate(-90, 30, 250)">Dataset Size</text>
+
+  <!-- X-axis label -->
+  <text x="380" y="470" text-anchor="middle" class="axis-label">Task Complexity</text>
+
+  <!-- Y-axis values -->
+  <text x="80" y="105" text-anchor="end" class="axis-value">100K+</text>
+  <text x="80" y="175" text-anchor="end" class="axis-value">10K-100K</text>
+  <text x="80" y="245" text-anchor="end" class="axis-value">1K-10K</text>
+  <text x="80" y="315" text-anchor="end" class="axis-value">100-1K</text>
+  <text x="80" y="385" text-anchor="end" class="axis-value">&lt;100</text>
+
+  <!-- X-axis values -->
+  <text x="155" y="430" text-anchor="middle" class="axis-value">Simple</text>
+  <text x="155" y="442" text-anchor="middle" class="axis-value">(binary Q)</text>
+  <text x="275" y="430" text-anchor="middle" class="axis-value">Moderate</text>
+  <text x="275" y="442" text-anchor="middle" class="axis-value">(multi-choice)</text>
+  <text x="395" y="430" text-anchor="middle" class="axis-value">Complex</text>
+  <text x="395" y="442" text-anchor="middle" class="axis-value">(drawing)</text>
+  <text x="515" y="430" text-anchor="middle" class="axis-value">Expert</text>
+  <text x="515" y="442" text-anchor="middle" class="axis-value">(transcription)</text>
+
+  <!-- Grid: Row 1 (100K+) -->
+  <rect x="95" y="70" width="120" height="60" class="cell great-fit"/>
+  <text x="155" y="100" text-anchor="middle" class="label">Ideal</text>
+  <text x="155" y="115" text-anchor="middle" class="label">Fast results</text>
+
+  <rect x="215" y="70" width="120" height="60" class="cell great-fit"/>
+  <text x="275" y="100" text-anchor="middle" class="label">Ideal</text>
+  <text x="275" y="115" text-anchor="middle" class="label">High volume</text>
+
+  <rect x="335" y="70" width="120" height="60" class="cell good-fit"/>
+  <text x="395" y="100" text-anchor="middle" class="label">Great</text>
+  <text x="395" y="115" text-anchor="middle" class="label">Rich data</text>
+
+  <rect x="455" y="70" width="120" height="60" class="cell possible"/>
+  <text x="515" y="100" text-anchor="middle" class="label">Possible</text>
+  <text x="515" y="115" text-anchor="middle" class="label">Long timeline</text>
+
+  <!-- Grid: Row 2 (10K-100K) -->
+  <rect x="95" y="140" width="120" height="60" class="cell great-fit"/>
+  <text x="155" y="175" text-anchor="middle" class="label">Great</text>
+
+  <rect x="215" y="140" width="120" height="60" class="cell great-fit"/>
+  <text x="275" y="175" text-anchor="middle" class="label">Ideal</text>
+
+  <rect x="335" y="140" width="120" height="60" class="cell good-fit"/>
+  <text x="395" y="175" text-anchor="middle" class="label">Great</text>
+
+  <rect x="455" y="140" width="120" height="60" class="cell possible"/>
+  <text x="515" y="175" text-anchor="middle" class="label">Possible</text>
+
+  <!-- Grid: Row 3 (1K-10K) -->
+  <rect x="95" y="210" width="120" height="60" class="cell good-fit"/>
+  <text x="155" y="245" text-anchor="middle" class="label">Good</text>
+
+  <rect x="215" y="210" width="120" height="60" class="cell good-fit"/>
+  <text x="275" y="245" text-anchor="middle" class="label">Good</text>
+
+  <rect x="335" y="210" width="120" height="60" class="cell possible"/>
+  <text x="395" y="245" text-anchor="middle" class="label">Possible</text>
+
+  <rect x="455" y="210" width="120" height="60" class="cell challenging"/>
+  <text x="515" y="245" text-anchor="middle" class="label">Challenging</text>
+
+  <!-- Grid: Row 4 (100-1K) -->
+  <rect x="95" y="280" width="120" height="60" class="cell possible"/>
+  <text x="155" y="315" text-anchor="middle" class="label">Possible</text>
+
+  <rect x="215" y="280" width="120" height="60" class="cell possible"/>
+  <text x="275" y="315" text-anchor="middle" class="label">Possible</text>
+
+  <rect x="335" y="280" width="120" height="60" class="cell challenging"/>
+  <text x="395" y="315" text-anchor="middle" class="label">Challenging</text>
+
+  <rect x="455" y="280" width="120" height="60" class="cell poor-fit"/>
+  <text x="515" y="315" text-anchor="middle" class="label">Not ideal</text>
+
+  <!-- Grid: Row 5 (<100) -->
+  <rect x="95" y="350" width="120" height="60" class="cell challenging"/>
+  <text x="155" y="385" text-anchor="middle" class="label">Too small</text>
+
+  <rect x="215" y="350" width="120" height="60" class="cell poor-fit"/>
+  <text x="275" y="385" text-anchor="middle" class="label">Too small</text>
+
+  <rect x="335" y="350" width="120" height="60" class="cell poor-fit"/>
+  <text x="395" y="385" text-anchor="middle" class="label">Too small</text>
+
+  <rect x="455" y="350" width="120" height="60" class="cell poor-fit"/>
+  <text x="515" y="385" text-anchor="middle" class="label">Not viable</text>
+
+  <!-- Legend -->
+  <rect x="600" y="70" width="20" height="20" class="great-fit"/>
+  <text x="625" y="84" class="legend-text">Ideal fit</text>
+
+  <rect x="600" y="95" width="20" height="20" class="good-fit"/>
+  <text x="625" y="109" class="legend-text">Great fit</text>
+
+  <rect x="600" y="120" width="20" height="20" class="possible"/>
+  <text x="625" y="134" class="legend-text">Possible</text>
+
+  <rect x="600" y="145" width="20" height="20" class="challenging"/>
+  <text x="625" y="159" class="legend-text">Challenging</text>
+
+  <rect x="600" y="170" width="20" height="20" class="poor-fit"/>
+  <text x="625" y="184" class="legend-text">Poor fit</text>
+</svg>

@@ -25,6 +25,8 @@ plugins:
   - search
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -65,3 +67,5 @@ nav:
     - transcription-project-guide/working-with-data.md
     - transcription-project-guide/project-maintenance-and-conclusion.md
     - transcription-project-guide/acknowledgements-and-resources.md
+  - 'How Zooniverse Works':
+    - how-zooniverse-works/index.md

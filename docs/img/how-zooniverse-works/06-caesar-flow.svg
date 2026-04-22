@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400">
+  <defs>
+    <style>
+      .input { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2; }
+      .input-fill { fill: #F59E0B; }
+      .process { fill: #EDE9FE; stroke: #7C3AED; stroke-width: 2; }
+      .process-fill { fill: #7C3AED; }
+      .decision { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .decision-fill { fill: #00979D; }
+      .output { fill: #D1FAE5; stroke: #10B981; stroke-width: 2; }
+      .output-fill { fill: #10B981; }
+      .external { fill: #F1F5F9; stroke: #64748B; stroke-width: 2; stroke-dasharray: 5,3; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .arrow { fill: none; stroke: #94A3B8; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-action { fill: none; stroke: #10B981; stroke-width: 2; marker-end: url(#arrowhead-action); }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .section { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 600; fill: #7C3AED; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrowhead-action" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="425" y="30" text-anchor="middle" class="title">Caesar: Real-time Data Processing (Without ML)</text>
+
+  <!-- Section Labels -->
+  <text x="100" y="65" text-anchor="middle" class="section">Input</text>
+  <text x="280" y="65" text-anchor="middle" class="section">Extract</text>
+  <text x="460" y="65" text-anchor="middle" class="section">Reduce</text>
+  <text x="640" y="65" text-anchor="middle" class="section">Rules + Actions</text>
+
+  <!-- Classification Input -->
+  <rect x="40" y="80" width="120" height="70" rx="8" class="input"/>
+  <text x="100" y="110" text-anchor="middle" class="label">Classification</text>
+  <text x="100" y="125" text-anchor="middle" class="sublabel">Volunteer submits</text>
+  <text x="100" y="138" text-anchor="middle" class="sublabel">answers/marks</text>
+
+  <path d="M 160 115 L 200 115" class="arrow"/>
+
+  <!-- Extractor -->
+  <rect x="200" y="80" width="140" height="70" rx="8" class="process"/>
+  <text x="270" y="105" text-anchor="middle" class="label">Extractor</text>
+  <text x="270" y="120" text-anchor="middle" class="sublabel">Pull specific data</text>
+  <text x="270" y="133" text-anchor="middle" class="sublabel">from classification</text>
+
+  <path d="M 340 115 L 380 115" class="arrow"/>
+
+  <!-- Reducer -->
+  <rect x="380" y="80" width="140" height="70" rx="8" class="process"/>
+  <text x="450" y="105" text-anchor="middle" class="label">Reducer</text>
+  <text x="450" y="120" text-anchor="middle" class="sublabel">Aggregate across</text>
+  <text x="450" y="133" text-anchor="middle" class="sublabel">multiple volunteers</text>
+
+  <path d="M 520 115 L 560 115" class="arrow"/>
+
+  <!-- Rule Check -->
+  <polygon points="630,80 700,115 630,150 560,115" class="decision"/>
+  <text x="630" y="112" text-anchor="middle" class="label">Rule</text>
+  <text x="630" y="125" text-anchor="middle" class="label">Met?</text>
+
+  <!-- Actions -->
+  <path d="M 700 115 L 740 115" class="arrow-action"/>
+  <text x="720" y="105" class="sublabel" style="fill: #10B981;">Yes</text>
+
+  <rect x="740" y="85" width="90" height="30" rx="6" class="output"/>
+  <text x="785" y="105" text-anchor="middle" class="label">Retire</text>
+
+  <path d="M 700 115 L 720 115 L 720 155 L 740 155" class="arrow-action"/>
+  <rect x="740" y="125" width="90" height="30" rx="6" class="output"/>
+  <text x="785" y="145" text-anchor="middle" class="label">Move to WF2</text>
+
+  <path d="M 720 155 L 720 195 L 740 195" class="arrow-action"/>
+  <rect x="740" y="165" width="90" height="30" rx="6" class="output"/>
+  <text x="785" y="185" text-anchor="middle" class="label">Webhook</text>
+
+  <!-- Example flow below -->
+  <rect x="40" y="220" width="790" height="150" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="435" y="245" text-anchor="middle" class="label">Example: Consensus-based retirement (no ML)</text>
+
+  <!-- Example boxes -->
+  <rect x="60" y="265" width="130" height="80" rx="6" class="input"/>
+  <text x="125" y="290" text-anchor="middle" class="label">3 volunteers</text>
+  <text x="125" y="305" text-anchor="middle" class="sublabel">classify same subject</text>
+  <text x="125" y="320" text-anchor="middle" class="sublabel">"Is there a galaxy?"</text>
+  <text x="125" y="335" text-anchor="middle" class="sublabel">Yes, Yes, Yes</text>
+
+  <path d="M 190 305 L 230 305" class="arrow"/>
+
+  <rect x="230" y="265" width="130" height="80" rx="6" class="process"/>
+  <text x="295" y="290" text-anchor="middle" class="label">Extract</text>
+  <text x="295" y="308" text-anchor="middle" class="sublabel">question_extractor</text>
+  <text x="295" y="323" text-anchor="middle" class="sublabel">→ [Yes, Yes, Yes]</text>
+
+  <path d="M 360 305 L 400 305" class="arrow"/>
+
+  <rect x="400" y="265" width="130" height="80" rx="6" class="process"/>
+  <text x="465" y="290" text-anchor="middle" class="label">Reduce</text>
+  <text x="465" y="308" text-anchor="middle" class="sublabel">stats_reducer</text>
+  <text x="465" y="323" text-anchor="middle" class="sublabel">→ 100% agree "Yes"</text>
+
+  <path d="M 530 305 L 570 305" class="arrow"/>
+
+  <rect x="570" y="265" width="130" height="80" rx="6" class="decision"/>
+  <text x="635" y="290" text-anchor="middle" class="label">Rule Check</text>
+  <text x="635" y="308" text-anchor="middle" class="sublabel">consensus ≥ 80%</text>
+  <text x="635" y="323" text-anchor="middle" class="sublabel">AND count ≥ 3</text>
+
+  <path d="M 700 305 L 740 305" class="arrow-action"/>
+
+  <rect x="740" y="275" width="80" height="50" rx="6" class="output"/>
+  <text x="780" y="300" text-anchor="middle" class="label" style="fill: #065F46;">Retire!</text>
+  <text x="780" y="315" text-anchor="middle" class="sublabel">Subject done</text>
+</svg>
