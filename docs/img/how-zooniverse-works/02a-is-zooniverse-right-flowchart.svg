@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600">
+  <defs>
+    <style>
+      .decision { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2; }
+      .decision-fill { fill: #F59E0B; }
+      .yes-path { fill: #D1FAE5; stroke: #10B981; stroke-width: 2; }
+      .yes-fill { fill: #10B981; }
+      .no-path { fill: #FEE2E2; stroke: #EF4444; stroke-width: 2; }
+      .no-fill { fill: #EF4444; }
+      .action { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .action-fill { fill: #00979D; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #64748B; }
+      .branch-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 700; }
+      .arrow { fill: none; stroke: #94A3B8; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-yes { fill: none; stroke: #10B981; stroke-width: 2; marker-end: url(#arrowhead-yes); }
+      .arrow-no { fill: none; stroke: #EF4444; stroke-width: 2; marker-end: url(#arrowhead-no); }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrowhead-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+    <marker id="arrowhead-no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EF4444"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" class="title">Is Zooniverse Right For Me? (Flowchart Style)</text>
+
+  <!-- Start -->
+  <rect x="280" y="50" width="140" height="40" rx="20" class="action"/>
+  <text x="350" y="75" text-anchor="middle" class="label">I have a dataset</text>
+
+  <path d="M 350 90 L 350 120" class="arrow"/>
+
+  <!-- Q1: Dataset size -->
+  <polygon points="350,130 450,180 350,230 250,180" class="decision"/>
+  <text x="350" y="175" text-anchor="middle" class="label">Large enough for</text>
+  <text x="350" y="190" text-anchor="middle" class="label">crowdsourcing?</text>
+
+  <!-- Q1 Yes -->
+  <path d="M 450 180 L 500 180" class="arrow-yes"/>
+  <text x="470" y="170" class="branch-label yes-fill">Yes</text>
+
+  <!-- Q1 No -->
+  <path d="M 250 180 L 180 180 L 180 540" class="arrow-no"/>
+  <text x="220" y="170" class="branch-label no-fill">No</text>
+
+  <!-- Q2: Task suitable -->
+  <polygon points="570,130 670,180 570,230 470,180" class="decision"/>
+  <text x="570" y="175" text-anchor="middle" class="label">Task suitable for</text>
+  <text x="570" y="190" text-anchor="middle" class="label">non-experts?</text>
+
+  <path d="M 570 230 L 570 260" class="arrow-yes"/>
+  <text x="580" y="250" class="branch-label yes-fill">Yes</text>
+
+  <path d="M 470 180 L 450 180" class="arrow"/>
+
+  <!-- Q2 No branch -->
+  <path d="M 670 180 L 690 180 L 690 540" class="arrow-no"/>
+  <text x="675" y="170" class="branch-label no-fill">No</text>
+
+  <!-- Q3: Team capacity -->
+  <polygon points="570,270 670,320 570,370 470,320" class="decision"/>
+  <text x="570" y="310" text-anchor="middle" class="label">Team capacity to</text>
+  <text x="570" y="325" text-anchor="middle" class="label">engage volunteers?</text>
+
+  <path d="M 570 370 L 570 400" class="arrow-yes"/>
+  <text x="580" y="390" class="branch-label yes-fill">Yes</text>
+
+  <path d="M 470 320 L 420 320 L 420 540" class="arrow-no"/>
+  <text x="440" y="310" class="branch-label no-fill">No</text>
+
+  <!-- Q4: Timeline -->
+  <polygon points="570,410 670,460 570,510 470,460" class="decision"/>
+  <text x="570" y="450" text-anchor="middle" class="label">Timeline allows for</text>
+  <text x="570" y="465" text-anchor="middle" class="label">volunteer ramp-up?</text>
+
+  <!-- Yes outcome -->
+  <path d="M 570 510 L 570 550" class="arrow-yes"/>
+  <text x="580" y="535" class="branch-label yes-fill">Yes</text>
+
+  <rect x="490" y="555" width="160" height="35" rx="8" class="yes-path"/>
+  <text x="570" y="578" text-anchor="middle" class="label" style="fill: #065F46;">Zooniverse is a fit!</text>
+
+  <!-- No outcome -->
+  <rect x="100" y="530" width="160" height="50" rx="8" class="no-path"/>
+  <text x="180" y="553" text-anchor="middle" class="label" style="fill: #991B1B;">Consider</text>
+  <text x="180" y="568" text-anchor="middle" class="label" style="fill: #991B1B;">alternatives</text>
+
+  <path d="M 260 555 L 420 555" class="arrow-no" style="stroke-dasharray: 5,5;"/>
+  <path d="M 420 540 L 420 555" class="arrow-no" style="stroke-dasharray: 5,5; marker-end: none;"/>
+  <path d="M 690 540 L 690 555 L 650 555" class="arrow-no" style="stroke-dasharray: 5,5;"/>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <style>
+      .decision { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2; }
+      .yes-path { fill: #D1FAE5; stroke: #10B981; stroke-width: 2; }
+      .no-path { fill: #FEE2E2; stroke: #EF4444; stroke-width: 2; }
+      .action { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .neutral { fill: #F1F5F9; stroke: #94A3B8; stroke-width: 2; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .branch-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 700; }
+      .yes-label { fill: #10B981; }
+      .no-label { fill: #EF4444; }
+      .connector { fill: none; stroke: #CBD5E1; stroke-width: 1.5; }
+      .connector-yes { fill: none; stroke: #10B981; stroke-width: 2; }
+      .connector-no { fill: none; stroke: #EF4444; stroke-width: 2; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="25" text-anchor="middle" class="title">Is Zooniverse Right For Me? (Decision Tree Style)</text>
+
+  <!-- Level 0: Start -->
+  <rect x="20" y="60" width="100" height="50" rx="8" class="action"/>
+  <text x="70" y="82" text-anchor="middle" class="label">Start</text>
+  <text x="70" y="96" text-anchor="middle" class="sublabel">I have data</text>
+
+  <!-- Connector to Q1 -->
+  <path d="M 120 85 L 160 85" class="connector"/>
+
+  <!-- Level 1: Dataset size -->
+  <rect x="160" y="50" width="130" height="70" rx="8" class="decision"/>
+  <text x="225" y="75" text-anchor="middle" class="label">Dataset Size</text>
+  <text x="225" y="90" text-anchor="middle" class="sublabel">&gt;1000 items for</text>
+  <text x="225" y="102" text-anchor="middle" class="sublabel">meaningful stats?</text>
+
+  <!-- Yes branch from Q1 -->
+  <path d="M 290 70 L 320 70 L 320 85 L 350 85" class="connector-yes"/>
+  <text x="305" y="65" class="branch-label yes-label">Y</text>
+
+  <!-- No branch from Q1 -->
+  <path d="M 290 105 L 320 105 L 320 420 L 800 420" class="connector-no"/>
+  <text x="305" y="115" class="branch-label no-label">N</text>
+
+  <!-- Level 2: Task complexity -->
+  <rect x="350" y="50" width="130" height="70" rx="8" class="decision"/>
+  <text x="415" y="75" text-anchor="middle" class="label">Task Type</text>
+  <text x="415" y="90" text-anchor="middle" class="sublabel">Can non-experts</text>
+  <text x="415" y="102" text-anchor="middle" class="sublabel">do this task?</text>
+
+  <!-- Yes branch from Q2 -->
+  <path d="M 480 70 L 510 70 L 510 145 L 540 145" class="connector-yes"/>
+  <text x="495" y="65" class="branch-label yes-label">Y</text>
+
+  <!-- No branch from Q2 -->
+  <path d="M 480 105 L 510 105 L 510 350 L 800 350" class="connector-no"/>
+  <text x="495" y="115" class="branch-label no-label">N</text>
+
+  <!-- Level 3: Team capacity -->
+  <rect x="540" y="110" width="130" height="70" rx="8" class="decision"/>
+  <text x="605" y="135" text-anchor="middle" class="label">Team Capacity</text>
+  <text x="605" y="150" text-anchor="middle" class="sublabel">Can engage with</text>
+  <text x="605" y="162" text-anchor="middle" class="sublabel">volunteer community?</text>
+
+  <!-- Yes branch from Q3 -->
+  <path d="M 670 130 L 700 130 L 700 215 L 730 215" class="connector-yes"/>
+  <text x="685" y="125" class="branch-label yes-label">Y</text>
+
+  <!-- No branch from Q3 -->
+  <path d="M 670 165 L 700 165 L 700 280 L 800 280" class="connector-no"/>
+  <text x="685" y="175" class="branch-label no-label">N</text>
+
+  <!-- Level 4: Timeline -->
+  <rect x="730" y="180" width="130" height="70" rx="8" class="decision"/>
+  <text x="795" y="205" text-anchor="middle" class="label">Timeline</text>
+  <text x="795" y="220" text-anchor="middle" class="sublabel">Months to collect</text>
+  <text x="795" y="232" text-anchor="middle" class="sublabel">classifications?</text>
+
+  <!-- Final Yes -->
+  <path d="M 795 250 L 795 280 L 795 310" class="connector-yes"/>
+  <text x="805" y="275" class="branch-label yes-label">Y</text>
+
+  <rect x="730" y="315" width="130" height="40" rx="8" class="yes-path"/>
+  <text x="795" y="340" text-anchor="middle" class="label" style="fill: #065F46;">Use Zooniverse!</text>
+
+  <!-- No outcomes -->
+  <rect x="800" y="260" width="80" height="30" rx="6" class="no-path"/>
+  <text x="840" y="280" text-anchor="middle" class="sublabel" style="fill: #991B1B;">Consider ML</text>
+
+  <rect x="800" y="335" width="80" height="30" rx="6" class="no-path"/>
+  <text x="840" y="353" text-anchor="middle" class="sublabel" style="fill: #991B1B;">Hire experts</text>
+
+  <rect x="800" y="405" width="80" height="30" rx="6" class="no-path"/>
+  <text x="840" y="423" text-anchor="middle" class="sublabel" style="fill: #991B1B;">Too small</text>
+</svg>

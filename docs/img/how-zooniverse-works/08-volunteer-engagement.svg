@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cycle-path { fill: none; stroke: #E2E8F0; stroke-width: 40; }
+      .zoo-fill { fill: #00979D; }
+      .zoo-light { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .researcher-fill { fill: #F59E0B; }
+      .researcher-light { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2; }
+      .volunteer-fill { fill: #7C3AED; }
+      .volunteer-light { fill: #EDE9FE; stroke: #7C3AED; stroke-width: 2; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .center-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 700; fill: #475569; }
+      .step-num { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: white; }
+    </style>
+    <marker id="arrowhead-cycle" markerWidth="12" markerHeight="10" refX="6" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" class="title">Volunteer Engagement Cycle</text>
+
+  <!-- Outer cycle ring -->
+  <circle cx="300" cy="320" r="200" class="cycle-path"/>
+
+  <!-- Directional arrows on cycle -->
+  <path d="M 300 120 A 200 200 0 0 1 500 320" fill="none" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowhead-cycle)"/>
+  <path d="M 500 320 A 200 200 0 0 1 300 520" fill="none" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowhead-cycle)"/>
+  <path d="M 300 520 A 200 200 0 0 1 100 320" fill="none" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowhead-cycle)"/>
+  <path d="M 100 320 A 200 200 0 0 1 300 120" fill="none" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowhead-cycle)"/>
+
+  <!-- Center -->
+  <circle cx="300" cy="320" r="70" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="300" y="310" text-anchor="middle" class="center-label">Sustained</text>
+  <text x="300" y="330" text-anchor="middle" class="center-label">Engagement</text>
+
+  <!-- Step 1: Discover (top) -->
+  <circle cx="300" cy="100" r="30" class="zoo-fill"/>
+  <text x="300" y="107" text-anchor="middle" class="step-num">1</text>
+  <rect x="220" y="50" width="160" height="45" rx="6" class="zoo-light"/>
+  <text x="300" y="70" text-anchor="middle" class="label">Discover Project</text>
+  <text x="300" y="85" text-anchor="middle" class="sublabel">Zooniverse homepage, social</text>
+
+  <!-- Step 2: Learn (top-right) -->
+  <circle cx="460" cy="180" r="30" class="zoo-fill"/>
+  <text x="460" y="187" text-anchor="middle" class="step-num">2</text>
+  <rect x="480" y="155" width="100" height="55" rx="6" class="zoo-light"/>
+  <text x="530" y="175" text-anchor="middle" class="label">Tutorial</text>
+  <text x="530" y="190" text-anchor="middle" class="sublabel">Learn how to</text>
+  <text x="530" y="203" text-anchor="middle" class="sublabel">contribute</text>
+
+  <!-- Step 3: Classify (right) -->
+  <circle cx="500" cy="320" r="30" class="volunteer-fill"/>
+  <text x="500" y="327" text-anchor="middle" class="step-num">3</text>
+  <rect x="520" y="290" width="70" height="55" rx="6" class="volunteer-light"/>
+  <text x="555" y="312" text-anchor="middle" class="label">Classify</text>
+  <text x="555" y="327" text-anchor="middle" class="sublabel">Do the</text>
+  <text x="555" y="340" text-anchor="middle" class="sublabel">work</text>
+
+  <!-- Step 4: Discuss (bottom-right) -->
+  <circle cx="460" cy="460" r="30" class="volunteer-fill"/>
+  <text x="460" y="467" text-anchor="middle" class="step-num">4</text>
+  <rect x="480" y="435" width="100" height="55" rx="6" class="volunteer-light"/>
+  <text x="530" y="457" text-anchor="middle" class="label">Talk</text>
+  <text x="530" y="472" text-anchor="middle" class="sublabel">Discuss with</text>
+  <text x="530" y="485" text-anchor="middle" class="sublabel">community</text>
+
+  <!-- Step 5: Feedback (bottom) -->
+  <circle cx="300" cy="520" r="30" class="researcher-fill"/>
+  <text x="300" y="527" text-anchor="middle" class="step-num">5</text>
+  <rect x="210" y="540" width="180" height="50" rx="6" class="researcher-light"/>
+  <text x="300" y="562" text-anchor="middle" class="label">Results &amp; Feedback</text>
+  <text x="300" y="577" text-anchor="middle" class="sublabel">Researcher shares progress</text>
+
+  <!-- Step 6: Newsletter (bottom-left) -->
+  <circle cx="140" cy="460" r="30" class="researcher-fill"/>
+  <text x="140" y="467" text-anchor="middle" class="step-num">6</text>
+  <rect x="20" y="435" width="110" height="55" rx="6" class="researcher-light"/>
+  <text x="75" y="457" text-anchor="middle" class="label">Newsletter</text>
+  <text x="75" y="472" text-anchor="middle" class="sublabel">Updates &amp;</text>
+  <text x="75" y="485" text-anchor="middle" class="sublabel">recognition</text>
+
+  <!-- Step 7: Return (left) -->
+  <circle cx="100" cy="320" r="30" class="volunteer-fill"/>
+  <text x="100" y="327" text-anchor="middle" class="step-num">7</text>
+  <rect x="10" y="295" width="80" height="55" rx="6" class="volunteer-light"/>
+  <text x="50" y="317" text-anchor="middle" class="label">Return</text>
+  <text x="50" y="332" text-anchor="middle" class="sublabel">Continue</text>
+  <text x="50" y="345" text-anchor="middle" class="sublabel">classifying</text>
+
+  <!-- Step 8: Recruit (top-left) -->
+  <circle cx="140" cy="180" r="30" class="volunteer-fill"/>
+  <text x="140" y="187" text-anchor="middle" class="step-num">8</text>
+  <rect x="10" y="150" width="110" height="55" rx="6" class="volunteer-light"/>
+  <text x="65" y="172" text-anchor="middle" class="label">Share</text>
+  <text x="65" y="187" text-anchor="middle" class="sublabel">Tell friends,</text>
+  <text x="65" y="200" text-anchor="middle" class="sublabel">recruit others</text>
+
+  <!-- Legend -->
+  <rect x="20" y="55" width="12" height="12" class="zoo-fill"/>
+  <text x="38" y="65" class="sublabel">Platform</text>
+  <rect x="20" y="72" width="12" height="12" class="volunteer-fill"/>
+  <text x="38" y="82" class="sublabel">Volunteer</text>
+  <rect x="20" y="89" width="12" height="12" class="researcher-fill"/>
+  <text x="38" y="99" class="sublabel">Researcher</text>
+</svg>

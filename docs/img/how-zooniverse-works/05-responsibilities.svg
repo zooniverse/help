@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <style>
+      .researcher-bg { fill: #FEF3C7; }
+      .researcher-header { fill: #F59E0B; }
+      .zoo-bg { fill: #CCFBF1; }
+      .zoo-header { fill: #00979D; }
+      .shared-bg { fill: #EDE9FE; }
+      .shared-header { fill: #7C3AED; }
+
+      .header-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: white; }
+      .item { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #1E293B; }
+      .item-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #64748B; }
+      .bullet { fill: #475569; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Who's Responsible for What?</text>
+  <text x="400" y="50" text-anchor="middle" class="subtitle">Clear separation of researcher work vs. platform capabilities</text>
+
+  <!-- Researcher Column -->
+  <rect x="40" y="70" width="230" height="460" rx="8" class="researcher-bg"/>
+  <rect x="40" y="70" width="230" height="40" rx="8" class="researcher-header"/>
+  <rect x="40" y="95" width="230" height="15" class="researcher-header"/>
+  <text x="155" y="97" text-anchor="middle" class="header-text">RESEARCHER DOES</text>
+
+  <circle cx="60" cy="135" r="4" class="bullet"/>
+  <text x="75" y="138" class="item">Prepare subjects</text>
+  <text x="75" y="152" class="item-desc">Format data, create manifests</text>
+
+  <circle cx="60" cy="180" r="4" class="bullet"/>
+  <text x="75" y="183" class="item">Design workflows</text>
+  <text x="75" y="197" class="item-desc">Define tasks, write instructions</text>
+
+  <circle cx="60" cy="225" r="4" class="bullet"/>
+  <text x="75" y="228" class="item">Create tutorials</text>
+  <text x="75" y="242" class="item-desc">Train volunteers, set expectations</text>
+
+  <circle cx="60" cy="270" r="4" class="bullet"/>
+  <text x="75" y="273" class="item">Engage community</text>
+  <text x="75" y="287" class="item-desc">Answer questions on Talk</text>
+
+  <circle cx="60" cy="315" r="4" class="bullet"/>
+  <text x="75" y="318" class="item">Analyze data</text>
+  <text x="75" y="332" class="item-desc">Process exports, publish results</text>
+
+  <circle cx="60" cy="360" r="4" class="bullet"/>
+  <text x="75" y="363" class="item">Acknowledge volunteers</text>
+  <text x="75" y="377" class="item-desc">Credit in publications</text>
+
+  <circle cx="60" cy="405" r="4" class="bullet"/>
+  <text x="75" y="408" class="item">Iterate on design</text>
+  <text x="75" y="422" class="item-desc">Improve based on feedback</text>
+
+  <circle cx="60" cy="450" r="4" class="bullet"/>
+  <text x="75" y="453" class="item">Set retirement rules</text>
+  <text x="75" y="467" class="item-desc">How many classifications needed</text>
+
+  <!-- Zooniverse Column -->
+  <rect x="285" y="70" width="230" height="460" rx="8" class="zoo-bg"/>
+  <rect x="285" y="70" width="230" height="40" rx="8" class="zoo-header"/>
+  <rect x="285" y="95" width="230" height="15" class="zoo-header"/>
+  <text x="400" y="97" text-anchor="middle" class="header-text">ZOONIVERSE PROVIDES</text>
+
+  <circle cx="305" cy="135" r="4" class="bullet"/>
+  <text x="320" y="138" class="item">Host infrastructure</text>
+  <text x="320" y="152" class="item-desc">Servers, storage, uptime</text>
+
+  <circle cx="305" cy="180" r="4" class="bullet"/>
+  <text x="320" y="183" class="item">Project Builder</text>
+  <text x="320" y="197" class="item-desc">No-code workflow creation</text>
+
+  <circle cx="305" cy="225" r="4" class="bullet"/>
+  <text x="320" y="228" class="item">Volunteer community</text>
+  <text x="320" y="242" class="item-desc">2M+ registered users</text>
+
+  <circle cx="305" cy="270" r="4" class="bullet"/>
+  <text x="320" y="273" class="item">Classification interface</text>
+  <text x="320" y="287" class="item-desc">Consistent UX for all projects</text>
+
+  <circle cx="305" cy="315" r="4" class="bullet"/>
+  <text x="320" y="318" class="item">Data storage</text>
+  <text x="320" y="332" class="item-desc">Subjects, classifications, exports</text>
+
+  <circle cx="305" cy="360" r="4" class="bullet"/>
+  <text x="320" y="363" class="item">Talk discussion boards</text>
+  <text x="320" y="377" class="item-desc">Community engagement tools</text>
+
+  <circle cx="305" cy="405" r="4" class="bullet"/>
+  <text x="320" y="408" class="item">Subject retirement</text>
+  <text x="320" y="422" class="item-desc">Automatic based on your rules</text>
+
+  <circle cx="305" cy="450" r="4" class="bullet"/>
+  <text x="320" y="453" class="item">Data exports</text>
+  <text x="320" y="467" class="item-desc">CSV/JSON classification data</text>
+
+  <!-- Shared/Optional Column -->
+  <rect x="530" y="70" width="230" height="460" rx="8" class="shared-bg"/>
+  <rect x="530" y="70" width="230" height="40" rx="8" class="shared-header"/>
+  <rect x="530" y="95" width="230" height="15" class="shared-header"/>
+  <text x="645" y="97" text-anchor="middle" class="header-text">OPTIONAL / ADVANCED</text>
+
+  <circle cx="550" cy="135" r="4" class="bullet"/>
+  <text x="565" y="138" class="item">Caesar aggregation</text>
+  <text x="565" y="152" class="item-desc">Real-time data processing</text>
+
+  <circle cx="550" cy="180" r="4" class="bullet"/>
+  <text x="565" y="183" class="item">External data hooks</text>
+  <text x="565" y="197" class="item-desc">Send data to your services</text>
+
+  <circle cx="550" cy="225" r="4" class="bullet"/>
+  <text x="565" y="228" class="item">Machine learning</text>
+  <text x="565" y="242" class="item-desc">Auto-retirement, pre-filtering</text>
+
+  <circle cx="550" cy="270" r="4" class="bullet"/>
+  <text x="565" y="273" class="item">Multi-workflow pipelines</text>
+  <text x="565" y="287" class="item-desc">Chain tasks together</text>
+
+  <circle cx="550" cy="315" r="4" class="bullet"/>
+  <text x="565" y="318" class="item">Custom subject selection</text>
+  <text x="565" y="332" class="item-desc">Priority queues, weighting</text>
+
+  <circle cx="550" cy="360" r="4" class="bullet"/>
+  <text x="565" y="363" class="item">Gold standard validation</text>
+  <text x="565" y="377" class="item-desc">Quality assurance checks</text>
+
+  <circle cx="550" cy="405" r="4" class="bullet"/>
+  <text x="565" y="408" class="item">Newsletters</text>
+  <text x="565" y="422" class="item-desc">Email campaigns to volunteers</text>
+
+  <circle cx="550" cy="450" r="4" class="bullet"/>
+  <text x="565" y="453" class="item">Translations</text>
+  <text x="565" y="467" class="item-desc">Multi-language support</text>
+</svg>

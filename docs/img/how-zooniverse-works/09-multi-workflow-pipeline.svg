@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 450">
+  <defs>
+    <style>
+      .subjects { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2; }
+      .subjects-fill { fill: #F59E0B; }
+      .workflow { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .workflow-fill { fill: #00979D; }
+      .filter { fill: #FEE2E2; stroke: #EF4444; stroke-width: 2; }
+      .filter-fill { fill: #EF4444; }
+      .output { fill: #D1FAE5; stroke: #10B981; stroke-width: 2; }
+      .output-fill { fill: #10B981; }
+      .subset { fill: #EDE9FE; stroke: #7C3AED; stroke-width: 2; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .count { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 700; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .arrow { fill: none; stroke: #94A3B8; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-filter { fill: none; stroke: #EF4444; stroke-width: 2; marker-end: url(#arrowhead-filter); stroke-dasharray: 5,3; }
+      .arrow-pass { fill: none; stroke: #10B981; stroke-width: 2; marker-end: url(#arrowhead-pass); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrowhead-filter" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EF4444"/>
+    </marker>
+    <marker id="arrowhead-pass" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="425" y="30" text-anchor="middle" class="title">Multi-Workflow Pipeline: Progressive Filtering</text>
+
+  <!-- Initial Subjects -->
+  <rect x="40" y="150" width="100" height="120" rx="8" class="subjects"/>
+  <text x="90" y="180" text-anchor="middle" class="label">All Subjects</text>
+  <text x="90" y="240" text-anchor="middle" class="count subjects-fill">10,000</text>
+
+  <path d="M 140 210 L 180 210" class="arrow"/>
+
+  <!-- Workflow 1: Triage -->
+  <rect x="180" y="120" width="140" height="180" rx="8" class="workflow"/>
+  <rect x="180" y="120" width="140" height="30" rx="8" class="workflow-fill"/>
+  <rect x="180" y="140" width="140" height="10" class="workflow-fill"/>
+  <text x="250" y="142" text-anchor="middle" style="font-size: 11px; font-weight: 700; fill: white;">Workflow 1</text>
+  <text x="250" y="175" text-anchor="middle" class="label">Triage</text>
+  <text x="250" y="195" text-anchor="middle" class="sublabel">"Is there something</text>
+  <text x="250" y="208" text-anchor="middle" class="sublabel">interesting here?"</text>
+
+  <text x="250" y="235" text-anchor="middle" class="sublabel">Quick binary task</text>
+  <text x="250" y="250" text-anchor="middle" class="sublabel">3 volunteers each</text>
+  <text x="250" y="280" text-anchor="middle" class="count zoo-fill">30,000 clicks</text>
+
+  <!-- Filter 1 -->
+  <path d="M 320 180 L 360 180 L 360 120 L 400 120" class="arrow-filter"/>
+  <text x="380" y="110" text-anchor="middle" class="sublabel filter-fill">Nothing: 70%</text>
+
+  <rect x="400" y="90" width="80" height="50" rx="6" class="filter"/>
+  <text x="440" y="112" text-anchor="middle" class="label">Filtered</text>
+  <text x="440" y="128" text-anchor="middle" class="count filter-fill">7,000</text>
+
+  <path d="M 320 240 L 360 240 L 360 210 L 400 210" class="arrow-pass"/>
+  <text x="380" y="260" text-anchor="middle" class="sublabel output-fill">Interesting: 30%</text>
+
+  <!-- Subset for WF2 -->
+  <rect x="400" y="170" width="80" height="80" rx="6" class="subset"/>
+  <text x="440" y="200" text-anchor="middle" class="label">To WF2</text>
+  <text x="440" y="230" text-anchor="middle" class="count" style="fill: #7C3AED;">3,000</text>
+
+  <path d="M 480 210 L 520 210" class="arrow"/>
+
+  <!-- Workflow 2: Identify -->
+  <rect x="520" y="120" width="140" height="180" rx="8" class="workflow"/>
+  <rect x="520" y="120" width="140" height="30" rx="8" class="workflow-fill"/>
+  <rect x="520" y="140" width="140" height="10" class="workflow-fill"/>
+  <text x="590" y="142" text-anchor="middle" style="font-size: 11px; font-weight: 700; fill: white;">Workflow 2</text>
+  <text x="590" y="175" text-anchor="middle" class="label">Identify</text>
+  <text x="590" y="195" text-anchor="middle" class="sublabel">"What species</text>
+  <text x="590" y="208" text-anchor="middle" class="sublabel">is this?"</text>
+
+  <text x="590" y="235" text-anchor="middle" class="sublabel">Multi-choice task</text>
+  <text x="590" y="250" text-anchor="middle" class="sublabel">5 volunteers each</text>
+  <text x="590" y="280" text-anchor="middle" class="count zoo-fill">15,000 clicks</text>
+
+  <!-- Filter 2 -->
+  <path d="M 660 180 L 700 180 L 700 120 L 740 120" class="arrow-filter"/>
+  <text x="720" y="110" text-anchor="middle" class="sublabel filter-fill">Common: 80%</text>
+
+  <rect x="740" y="90" width="80" height="50" rx="6" class="output"/>
+  <text x="780" y="112" text-anchor="middle" class="label">Done</text>
+  <text x="780" y="128" text-anchor="middle" class="count output-fill">2,400</text>
+
+  <path d="M 660 240 L 700 240 L 700 210 L 740 210" class="arrow-pass"/>
+  <text x="720" y="260" text-anchor="middle" class="sublabel output-fill">Rare: 20%</text>
+
+  <!-- Subset for WF3 -->
+  <rect x="740" y="170" width="80" height="80" rx="6" class="subset"/>
+  <text x="780" y="200" text-anchor="middle" class="label">To WF3</text>
+  <text x="780" y="230" text-anchor="middle" class="count" style="fill: #7C3AED;">600</text>
+
+  <!-- Summary Stats -->
+  <rect x="40" y="340" width="780" height="90" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="430" y="365" text-anchor="middle" class="label">Efficiency Gains</text>
+
+  <rect x="80" y="380" width="180" height="40" rx="6" fill="#FEE2E2"/>
+  <text x="170" y="400" text-anchor="middle" class="sublabel">Without pipeline:</text>
+  <text x="170" y="413" text-anchor="middle" class="count filter-fill">50,000+ total clicks</text>
+
+  <rect x="310" y="380" width="180" height="40" rx="6" fill="#D1FAE5"/>
+  <text x="400" y="400" text-anchor="middle" class="sublabel">With pipeline:</text>
+  <text x="400" y="413" text-anchor="middle" class="count output-fill">~45,000 clicks (10% saved)</text>
+
+  <rect x="540" y="380" width="240" height="40" rx="6" fill="#CCFBF1"/>
+  <text x="660" y="400" text-anchor="middle" class="sublabel">Plus: detailed data only where needed</text>
+  <text x="660" y="413" text-anchor="middle" class="sublabel">600 rare items get expert attention</text>
+</svg>

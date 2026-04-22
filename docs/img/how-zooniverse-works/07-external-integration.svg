@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <style>
+      .zoo-box { fill: #CCFBF1; stroke: #00979D; stroke-width: 2; }
+      .zoo-fill { fill: #00979D; }
+      .external-box { fill: #F1F5F9; stroke: #64748B; stroke-width: 2; stroke-dasharray: 5,3; }
+      .external-fill { fill: #64748B; }
+      .data-box { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2; }
+      .output-box { fill: #D1FAE5; stroke: #10B981; stroke-width: 2; }
+      .api-box { fill: #EDE9FE; stroke: #7C3AED; stroke-width: 2; }
+
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; fill: #64748B; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1E293B; }
+      .section-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+      .arrow { fill: none; stroke: #94A3B8; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-in { fill: none; stroke: #F59E0B; stroke-width: 2; marker-end: url(#arrowhead-in); }
+      .arrow-out { fill: none; stroke: #10B981; stroke-width: 2; marker-end: url(#arrowhead-out); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrowhead-in" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrowhead-out" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">External Service Integration Points</text>
+
+  <!-- Section labels -->
+  <text x="130" y="60" text-anchor="middle" class="section-label" style="fill: #F59E0B;">Your Systems</text>
+  <text x="400" y="60" text-anchor="middle" class="section-label" style="fill: #00979D;">Zooniverse</text>
+  <text x="670" y="60" text-anchor="middle" class="section-label" style="fill: #64748B;">Your Systems</text>
+
+  <!-- Left: External data sources -->
+  <rect x="40" y="80" width="180" height="300" rx="8" class="external-box"/>
+  <text x="130" y="105" text-anchor="middle" class="label">Your Data Sources</text>
+
+  <rect x="60" y="125" width="140" height="50" rx="6" class="data-box"/>
+  <text x="130" y="150" text-anchor="middle" class="label">S3 / Cloud Storage</text>
+  <text x="130" y="165" text-anchor="middle" class="sublabel">Host your own media</text>
+
+  <rect x="60" y="190" width="140" height="50" rx="6" class="data-box"/>
+  <text x="130" y="215" text-anchor="middle" class="label">Database / API</text>
+  <text x="130" y="230" text-anchor="middle" class="sublabel">Subject metadata</text>
+
+  <rect x="60" y="255" width="140" height="50" rx="6" class="data-box"/>
+  <text x="130" y="280" text-anchor="middle" class="label">ML Pipeline</text>
+  <text x="130" y="295" text-anchor="middle" class="sublabel">Pre-processed subjects</text>
+
+  <!-- Center: Zooniverse -->
+  <rect x="260" y="80" width="280" height="300" rx="8" class="zoo-box"/>
+  <text x="400" y="105" text-anchor="middle" class="label">Zooniverse Platform</text>
+
+  <rect x="280" y="125" width="100" height="70" rx="6" fill="white" stroke="#00979D" stroke-width="1"/>
+  <text x="330" y="150" text-anchor="middle" class="label">Subjects</text>
+  <text x="330" y="167" text-anchor="middle" class="sublabel">Can reference</text>
+  <text x="330" y="180" text-anchor="middle" class="sublabel">external URLs</text>
+
+  <rect x="420" y="125" width="100" height="70" rx="6" fill="white" stroke="#00979D" stroke-width="1"/>
+  <text x="470" y="150" text-anchor="middle" class="label">Workflows</text>
+  <text x="470" y="167" text-anchor="middle" class="sublabel">Define tasks</text>
+
+  <rect x="350" y="210" width="100" height="50" rx="6" fill="white" stroke="#00979D" stroke-width="1"/>
+  <text x="400" y="235" text-anchor="middle" class="label">Caesar</text>
+  <text x="400" y="250" text-anchor="middle" class="sublabel">Processing</text>
+
+  <rect x="280" y="280" width="100" height="70" rx="6" class="api-box"/>
+  <text x="330" y="305" text-anchor="middle" class="label">Panoptes API</text>
+  <text x="330" y="322" text-anchor="middle" class="sublabel">REST endpoints</text>
+  <text x="330" y="337" text-anchor="middle" class="sublabel">for automation</text>
+
+  <rect x="420" y="280" width="100" height="70" rx="6" class="api-box"/>
+  <text x="470" y="305" text-anchor="middle" class="label">Webhooks</text>
+  <text x="470" y="322" text-anchor="middle" class="sublabel">Event-driven</text>
+  <text x="470" y="337" text-anchor="middle" class="sublabel">notifications</text>
+
+  <!-- Right: External outputs -->
+  <rect x="580" y="80" width="180" height="300" rx="8" class="external-box"/>
+  <text x="670" y="105" text-anchor="middle" class="label">Your Processing</text>
+
+  <rect x="600" y="125" width="140" height="50" rx="6" class="output-box"/>
+  <text x="670" y="150" text-anchor="middle" class="label">Custom Aggregator</text>
+  <text x="670" y="165" text-anchor="middle" class="sublabel">Your own reduction logic</text>
+
+  <rect x="600" y="190" width="140" height="50" rx="6" class="output-box"/>
+  <text x="670" y="215" text-anchor="middle" class="label">ML Training</text>
+  <text x="670" y="230" text-anchor="middle" class="sublabel">Labels for models</text>
+
+  <rect x="600" y="255" width="140" height="50" rx="6" class="output-box"/>
+  <text x="670" y="280" text-anchor="middle" class="label">Database Sync</text>
+  <text x="670" y="295" text-anchor="middle" class="sublabel">Update your records</text>
+
+  <rect x="600" y="320" width="140" height="50" rx="6" class="output-box"/>
+  <text x="670" y="345" text-anchor="middle" class="label">Dashboard</text>
+  <text x="670" y="360" text-anchor="middle" class="sublabel">Real-time monitoring</text>
+
+  <!-- Arrows: Data In -->
+  <path d="M 200 150 L 275 150" class="arrow-in"/>
+  <path d="M 200 215 L 260 215 L 260 160 L 275 160" class="arrow-in"/>
+
+  <!-- Arrows: Internal -->
+  <path d="M 330 195 L 330 210 L 345 210" class="arrow"/>
+  <path d="M 470 195 L 470 210 L 455 210" class="arrow"/>
+  <path d="M 400 260 L 400 275" class="arrow"/>
+  <path d="M 400 275 L 380 275 L 380 280" class="arrow" style="marker-end: none;"/>
+  <path d="M 400 275 L 420 275 L 420 280" class="arrow" style="marker-end: none;"/>
+
+  <!-- Arrows: Data Out -->
+  <path d="M 520 315 L 595 150" class="arrow-out"/>
+  <path d="M 520 315 L 595 215" class="arrow-out"/>
+  <path d="M 520 315 L 595 280" class="arrow-out"/>
+  <path d="M 520 315 L 595 345" class="arrow-out"/>
+</svg>
