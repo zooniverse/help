@@ -46,7 +46,7 @@ nav:
     - best-practices/3-long-haul.md
     - best-practices/4-resources.md
   - 'Next Steps':
-    - next-steps/caesar-realtime-data-processing.md
+    - next-steps/caesar.md
     - next-steps/data-analysis.md
     - next-steps/data-exports.md
     - next-steps/experimental-features.md
