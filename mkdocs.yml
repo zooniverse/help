@@ -23,6 +23,9 @@ theme:
 plugins:
   - social
   - search
+  - redirects:
+      redirect_maps:
+        'next-steps/caesar-realtime-data-processing.md': 'next-steps/caesar.md'
 
 markdown_extensions:
   - pymdownx.highlight:
