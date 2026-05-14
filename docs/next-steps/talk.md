@@ -23,9 +23,19 @@ Talk boards are set up via the Talk tab in the Project Builder. All projects com
 - Questions for the research team
 - FAQ
 
-### Quicktalk: In-classifier Talk Commenting
+### QuickTalk: In-classifier Talk Commenting
 
-XXX Add content here!
+#### Overview
+This feature creates a mini ‘Talk’ pop-up in the classification interface, allowing volunteers to read and post Talk comments during the classification process. This is limited to comments made on the ‘Notes’ board. This feature is set at the project level, i.e. when turned on, it will be applied to all active workflows on your project. If you do not wish for your volunteers to access Talk comments for a given subject before they submit their classification, do not turn on this feature.
+
+#### Setup
+At present, Project Builders must request this feature for their project. Send an email request to contact@zooniverse.org, requesting that QuickTalk be turned on for your project. **Be sure to include your Project ID number in your email.** 
+
+#### User Experience Description
+When a volunteer is participating in a QuickTalk-enabled project, the Classify page for each subject will feature a small ‘Discussion’ icon in the bottom right corner of the screen. This icon will either appear without a number, or with a number, depending on the number of Talk comments that subject has received.
+
+Clicking on the icon will open a pop-up box where volunteers can read existing comments from other volunteers or research team members, as well as post their own comments directly from the Classify page.
+
 
 ## Vocabulary and Core Features
 
