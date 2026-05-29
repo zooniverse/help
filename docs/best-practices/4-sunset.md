@@ -1,4 +1,4 @@
-# **Best Practices for Closing Out a Zooniverse Project**
+# Part IV: Closing Out Thoughtfully
 
 Clear and thoughtful communication with your volunteer community is a key part of the Zooniverse experience. When a project reaches a natural stopping point, whether all subjects have been classified or there will be an extended pause (~9 months or more) before the next dataset is uploaded, it’s important to reflect that status and share next steps with participants.
 
