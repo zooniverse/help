@@ -1,6 +1,6 @@
 # Subject Selection Process
 
-When you first set up a project, the process for selecting which subjects get shown to volunteers is very simple: it randomly selects an (unretired, unseen) subject from the linked subject sets for that workflow. 
+When you first set up a project, the process for selecting which subjects get shown to volunteers is very simple: it randomly selects an (unretired, unseen) Subject from the linked Subject sets for that workflow. 
 
 ## Weighting
 ### Per workflow weighting
@@ -19,22 +19,40 @@ It’s also possible to set these same parameters up on a per-user basis. This o
 If you’d like to make use of weighting on one of your projects, please let us know at [contact@zooniverse.org](mailto:contact@zooniverse.org) and we’ll be happy to set it up for you. Be sure to include your project ID number in your email.
 
 
-## Sequential classification
+## Sequential Classification
 ### Overview
 This feature will present subjects to project volunteers in a specific order. This is set on a per-workflow basis, and is established using your [subject manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest).
 
-### Subject Upload and Manifest Creation
-To support Sequential Classification, you must upload your project data with a Manifest that includes a ‘Priority’ column. The contents of this column must be integers. You must include separate Manifests for each Subject Set that you upload to your project. Each Subject Set’s ‘Priority’ column should begin with 1. Click [here](https://docs.google.com/spreadsheets/d/1xgoCCw29i0XlnpYyXiVQIiPTpsw5wCaXQSKfskPX3QA/edit?gid=0#gid=0) to view an example manifest with a 'Priority' column.
+### Subject upload and manifest creation
+To support sequential classification, you must upload your project data with a manifest that includes a ‘Priority’ column. The contents of this column must be integers. You must include separate manifests for each subject set that you upload to your project. Each subject set’s ‘Priority’ column should begin with 1. Click [here](https://docs.google.com/spreadsheets/d/1xgoCCw29i0XlnpYyXiVQIiPTpsw5wCaXQSKfskPX3QA/edit?gid=0#gid=0) to view an example manifest with a 'Priority' column.
 
 ### Setup
-At present, Project Builders must request this feature for their project, on a per-workflow basis. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that Sequential Classification be turned on. Be sure to include your Project ID number and the relevant Workflow ID number(s) in your email. 
+At present, project builders must request this feature for their project, on a per-workflow basis. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that sequential classification be turned on. Be sure to include your project ID number and the relevant workflow ID number(s) in your email. 
 
-## Subject set selection
+## Subject Set Selection
 ### Overview
 This feature allows volunteers to choose what subject set they want to work on within a given workflow. 
 
-### User Experience Description
+### User experience description
 Once this feature is activated, a volunteer will select a workflow from the project homepage, and then a pop-up box will appear, displaying a list of subject sets to choose from. When they select a subject set, they will proceed to the workflow as normal, and *will only be served subjects from within that set* during their classification session. Along with subject set names, this pop-up will also display the completeness metrics for each subject set (n%). If a subject set is complete, it will be displayed in gray, at the end of the list. The maximum number of subject sets you can associate with a single workflow at a time is 50.
 
 ### Setup
-At present, Project Builders must request this feature for their project, on a per-workflow basis. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that Sequential Classification be turned on. Be sure to include your Project ID number and the relevant Workflow ID number(s) in your email. 
+At present, project builders must request this feature for their project, on a per-workflow basis. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that sequential classification be turned on. Be sure to include your project ID number and the relevant workflow ID number(s) in your email. 
+
+## Indexing Tool
+### Overview
+Indexed subjects allow volunteers to choose an individual subject from a list and work through a subject set in sequential order (nb: [sequential classification](https://help.zooniverse.org/next-steps/subject-selection/#sequential-classification) is required for teams who want to use the indexing tool). This option is helpful for teams who have useful metadata already available for their subjects, and who think their volunteer communities will want to choose what subject they want to classify. Indexed subject sets may not contain more than 100 subjects each. 
+
+### User experience description
+After selecting a workflow from a project’s home page, volunteers will be prompted to first select a subject set. Within a subject set, volunteers can select the individual subject they want to work on based on the metadata fields available. Once they have selected a subject, they can work sequentially through the rest of the set, or return to the index and choose a new subject.
+
+On all index pages, the Status column tells volunteers whether a subject is Available (i.e. not complete and not yet seen); Already Seen (i.e. not complete, but already classified by the volunteer viewing the list); or Finished (i.e. has received enough classifications and no longer needs additional effort).
+
+When classifying sequentially, volunteers that reach a retired subject will see a pop-up message blocking the task panel that notes the subject is finished, and offers available options for how to move on with the classification task, including navigating directly to the next classifiable subject or returning to the Index to choose a new subject to classify.
+
+Volunteers can also use ‘Previous’ and ‘Next’ buttons to navigate through the subject set in sequence without leaving the classification interface. 
+
+### Setup
+At present, project builders must request this feature for their project. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that the indexing tool be turned on for your project. Be sure to include your project ID number in that email. 
+
+
