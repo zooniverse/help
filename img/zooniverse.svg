@@ -1,0 +1,8 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title id="zooniverse-logo_1">Zooniverse Logo</title>
+  <g fill="white" stroke="none" transform="translate(50, 50)">
+    <path d="M 0 -45 A 45 45 0 0 1 0 45 A 45 45 0 0 1 0 -45 Z M 0 -30 A 30 30 0 0 0 0 30 A 30 30 0 0 0 0 -30 Z"></path>
+    <path d="M 0 -14 A 14 14 0 0 1 0 14 A 14 14 0 0 1 0 -14 Z"></path>
+    <ellipse cx="0" cy="0" rx="6" ry="65" transform="rotate(50)"></ellipse>
+  </g>
+</svg>
