@@ -96,3 +96,19 @@ Once a line has been transcribed, it will persist on the image, meaning that oth
 This is the most common Task type used in transcription projects. Projects featuring this Task will also be able to use the Aggregate Line Inspector and Collaborative Editor ([ALICE](https://alice.zooniverse.org/about)) to inspect and edit crowdsourced transcriptions after they have reached their retirement limit. 
 
 For detailed instructions on how to set up your project using the Transcription Task, see [this Google Doc](https://docs.google.com/document/d/1XpoMC8SBYVCie9mjU_ZBuT3dLR4bWTN-eZE5lHvls2U/edit?usp=sharing).
+
+#### 3.3.1.4 TextFromSubject Tasks
+
+The TextFromSubject task supports volunteer review of plain text files compared to a reference image, as well as direct editing of text via a pre-populated free-text entry field. Many projects use this to e.g. invite volunteer review and revision of automated transcription via OCR or HTR methods.
+
+The TextFromSubject task requires a multi-subject manifest, which will pair each subject image with its relevant text pair. Each subject must include: 1) an image file; and 2) a plain text file. The text file is treated as a paired subject with the image file, NOT as image metadata.
+
+For example, a subject upload for 20 subjects would need to include 20 image files and 20 corresponding plain text files, as well as a subject [manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest), which provides the ‘roadmap’ during the upload process for which image and text files should be paired together. The manifest can also contain additional columns containing any metadata you would like to remain associated with the subjects.
+
+- It is highly recommended that you include a unique identifier field in your manifest, to help match the project classification data with the appropriate subjects.
+- The image and text file names are required, though you can name these columns whatever you like in your manifest. We recommend including the image column first, and the file name column second. The order of these files will determine which is shown first in the classify interface.
+
+Volunteers will be presented with a digital image containing text, and a free-text entry box that is pre-populated with the transcription of that image assigned to it via the subject manifest. Volunteers are expected to read through the text in the image as well as in the text box. Then they can click into the free-text field to edit the pre-transcribed text as needed. Once they are done, volunteers submit the entire corrected text string as their classification.
+
+TextFromSubject task data will appear in JSON format. Example annotation: {"task":"TASK ID NUMBER","value":"TEXT STRING GOES HERE","taskType":"textFromSubject"}
+
