@@ -210,13 +210,61 @@ This section contains all the different things people can mark. We call each sep
 
 #### Transcription
 
-This section deals with projects which require user-generated text. Tasks can range from adding keywords or extracting metadata to full text transcriptions.
+This section deals with projects which require user-generated text. Tasks can range from adding keywords or extracting metadata to full text transcriptions. For more details about creating transcription projects, please read the [Transcription Project Guide](https://help.zooniverse.org/transcription-project-guide/).
 
 - **Keyword tagging** is helpful when teams want to create a list of all of the things volunteers see in a given image, to make that object more discoverable in a database or online collection. In these cases diversity of opinion is helpful. Setting a retirement rate of 5 to 10 people will help capture diverse opinions.
 
 - **Full text transcription** is more cumbersome and diversity of opinion is less helpful. Teams are usually trying to capture exactly what is on a page, so it will help to set a relatively low retirement rate for each image (i.e. 3 or 5) and be very clear in the tutorial how you would like volunteers to transcribe. Should they preserve spelling and punctuation or modernize it?
 
 - Zooniverse does not currently offer aggregated classifications for text subjects. We can only report what each user transcribed for each subject. Before embarking on a transcription project be sure you have in-house expertise or access to expertise for combining multiple independent transcriptions into a single reading that you could use for research or to upload into a library or museum catalogue or content management system. For more information on Project Builder Data, please visit our [Data Digging code repository](https://github.com/zooniverse/Data-digging) as well as our [Data processing Talk board](https://www.zooniverse.org/talk/1322).
+
+
+#### Highlighter 
+##### Overview
+The highlighter task supports volunteer-created text markup using pre-determined labels.
+
+##### Subject upload and manifest creation
+Highlighter tasks can only be used with text subjects, specifically .txt files. 
+
+##### User experience description
+Volunteers will be presented with a box containing text, and a list of highlighters, including their color and label. Volunteers can use their mouse to select some text from the box, and then choose the highlighter they want to apply to the selected text. They can repeat this process as many times as needed, with as many highlighter options as they like. Only one highlighter can be applied to a selected group of text at a time, i.e. you cannot add multiple highlighter labels to one section of selected text. Once they are done highlighting, volunteers submit the entire labeled text string as their classification.
+
+##### Data export format
+Highlighter task data will appear in JSON format. You can find this in the ‘annotations’ column of your classification export. 
+
+Within the annotation field, you will find the following information for each highlight that a volunteer has made per classification session:
+- Start and end information: these both refer to the character number within the string
+- Text: the contents of the highlighted text
+- Label information: the color of the label (hex code), and the label contents (a text string)
+
+Example annotation:
+[{"task":"TASK ID NUMBER","value":[{"end":INTEGER,"text":"TEXT STRING GOES HERE","start":INTEGER,"labelInformation":{"color":"#HEX CODE","label":"LABEL NAME"}},{"end":INTEGER,"text":"TEXT STRING GOES HERE","start":INTEGER,"labelInformation":{"color":"#HEX CODE","label":"LABEL NAME"}}],"taskType":"highlighter"}]
+
+##### Setup
+At present, project builders must request this feature for their project. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), requesting that the highlighter task be turned on for your project. Be sure to include your project ID number in your email. 
+
+#### TextFromSubject
+##### Overview
+The TextFromSubject task supports volunteer review of plain text files compared to a reference image, as well as direct editing of text via a pre-populated free-text entry field. Many projects use this to e.g. invite volunteer review and revision of automated transcription via OCR or HTR methods.
+
+##### Subject upload and manifest creation
+The TextFromSubject task requires a multi-subject manifest, which will pair each subject image with its relevant text pair. Each subject must include: 1) an image file; and 2) a plain text file. The text file is treated as a paired subject with the image file, NOT as image metadata.
+
+For example, a subject upload for 20 subjects would need to include 20 image files and 20 corresponding plain text files, as well as a subject [manifest](https://help.zooniverse.org/getting-started/example/#details-subject-sets-and-manifest-details-aka-what-is-a-manifest), which provides the ‘roadmap’ during the upload process for which image and text files should be paired together. The manifest can also contain additional columns containing any metadata you would like to remain associated with the subjects.
+
+- It is highly recommended that you include a unique identifier field in your manifest, to help match the project classification data with the appropriate subjects.
+- The image and text file names are required, though you can name these columns whatever you like in your manifest. We recommend including the image column first, and the file name column second. The order of these files will determine which is shown first in the classify interface.
+
+##### User experience description
+Volunteers will be presented with a digital image containing text, and a free-text entry box that is pre-populated with the transcription of that image assigned to it via the subject manifest. Volunteers are expected to read through the text in the image as well as in the text box. Then they can click into the free-text field to edit the pre-transcribed text as needed. Once they are done, volunteers submit the entire corrected text string as their classification.
+
+##### Data export format
+TextFromSubject task data will appear in JSON format. 
+
+Example annotation: {"task":"TASK ID NUMBER","value":"TEXT STRING GOES HERE","taskType":"textFromSubject"}
+
+##### Setup
+At present, project builders must request this feature for their project. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), requesting that the TextFromSubject task be turned on for your project. Be sure to include your project ID number in your email. 
 
 #### Linking the workflow together
 
