@@ -112,3 +112,4 @@ Volunteers will be presented with a digital image containing text, and a free-te
 
 TextFromSubject task data will appear in JSON format. Example annotation: {"task":"TASK ID NUMBER","value":"TEXT STRING GOES HERE","taskType":"textFromSubject"}
 
+**At present, project builders must request this feature for their project**. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), requesting that the TextFromSubject task be turned on for your project. Be sure to include your project ID number in your email. 
