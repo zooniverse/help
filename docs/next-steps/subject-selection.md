@@ -52,6 +52,9 @@ When classifying sequentially, volunteers that reach a retired subject will see 
 
 Volunteers can also use ‘Previous’ and ‘Next’ buttons to navigate through the subject set in sequence without leaving the classification interface. 
 
+### Subject upload and manifest creation
+Project builders must indicate on their subject manifest which fields they want to include in the index. To indicate which metadata fields should appear in the index, simply put a % symbol in front of the heading of the column you want to include.
+
 ### Setup
 At present, project builders must request this feature for their project. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that the indexing tool be turned on for your project. Be sure to include your project ID number in that email. 
 
