@@ -12,7 +12,7 @@ On this page, we will provide a general overview of Caesar and links to existing
 
 Any *existing* Zooniverse Workflow can have a corresponding Caesar configuration by navigating to [caesar.zooniverse.org/workflows](http://caesar.zooniverse.org/workflows) and clicking on the **\+Add** button in the top right corner. In the box that pops up, enter in the Workflow ID of the existing Zooniverse Workflow you would like to configure. This can be found at the top of the Workflow page in the Project Builder, as shown below.
 
-![Example screenshot showing how to find the Project and Workflow IDs on the Workflow page. The project ID is shown in the top left, above the Project Builder menus and the workflow ID is shown at the top of the page.][../img/caesar_add_workflow.png]
+![Example screenshot showing how to find the Project and Workflow IDs on the Workflow page. The project ID is shown in the top left, above the Project Builder menus and the workflow ID is shown at the top of the page.](../img/caesar_add_workflow.png)
 **Figure 1:***Example screenshot showing how to find the Project and Workflow IDs on the Workflow page. The project ID is shown in the top left, above the Project Builder menus and the workflow ID is shown at the top of the page.*
 
 ## How Caesar Works
