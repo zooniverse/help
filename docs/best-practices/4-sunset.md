@@ -4,7 +4,7 @@ Clear and thoughtful communication with your volunteer community is a key part o
 
 ## **When should your project move to “Finished”?**
 
-Projects have three states: active, paused, and finished. When your project is out of data (meaning all available subjects have met the classification requirements you set up in the Project Builder), it is automatically moved to *Paused* so that volunteers know no additional effort is needed at this time. Projects will **not** automatically move to *Finished*, however, so this is something you need to request.
+Projects have three states: active, paused, and finished. Projects will automatically move between *Active* and *Paused* depending whether there are subjects available to be classified. Projects will **not** automatically move to *Finished*, however, so this is something you need to request.
 
 We recommend moving your project to *Finished* when:
 
