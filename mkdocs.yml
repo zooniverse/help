@@ -26,6 +26,7 @@ plugins:
   - redirects:
       redirect_maps:
         'next-steps/caesar-realtime-data-processing.md': 'next-steps/caesar.md'
+        'best-practices/4-resources.md': 'best-practices/resources.md'
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -46,7 +47,8 @@ nav:
     - best-practices/1-great-project.md
     - best-practices/2-launch-rush.md
     - best-practices/3-long-haul.md
-    - best-practices/4-resources.md
+    - best-practices/4-sunset.md
+    - best-practices/resources.md
   - 'Beyond the Basics':
     - next-steps/index.md
     - next-steps/caesar.md
