@@ -23,27 +23,27 @@ For more information, please refer to our main [Zooniverse AI Ethics Framework](
 
 When developing a new Zooniverse project that involves AI/ML, researchers should reflect on and be prepared to answer the following questions. Ideally, the answers to these questions will be available somewhere in the project copy (e.g. the About page, FAQ, etc.).
 
-* Who is responsible for ensuring data quality and integrity?   
-* What AI/ML techniques are being applied?   
-* When and Where in the lifecycle of data collection, processing, and analysis is AI/ML being used? At what point(s) are volunteers entering the lifecycle? Do the two ever interact? If so, how?  
-* Why is AI/ML being used? What is it helping to accomplish and who benefits? What would the research look like if AI/ML was not used?
+- **Who** is responsible for ensuring data quality and integrity?   
+- **What** AI/ML techniques are being applied?   
+- **When** and **Where** in the lifecycle of data collection, processing, and analysis is AI/ML being used? At what point(s) are volunteers entering the lifecycle? Do the two ever interact? If so, how?  
+- **Why** is AI/ML being used? What is it helping to accomplish and who benefits? What would the research look like if AI/ML was not used?
 
 ## **FAQs for Research Teams**
 
 *Don’t see your question answered here? Send us your questions at [contact@zooniverse.org](mailto:contact@zooniverse.org)\! We will update this list as needed.*
 
-* Can I use generative AI to help write or translate my project copy (e.g. About page, etc.)?  
+- ***Can I use generative AI to help write or translate my project copy (e.g. About page, etc.)?***
     - You can use these tools, with the following guidelines:  
         - You must disclose any use of generative AI to write project copy beyond basic text refinement (e.g. grammar, copy editing).   
         - You must disclose any use of generative AI to translate your project copy.   
         - You are responsible for any errors introduced into your project copy due to the use of generative AI.  
-* How much detail should I give about how I’m using AI with my project?  
-    * This is where the 5 Ws framework\[LINK\] can come in handy\! Consider these questions when writing your project copy, explaining your research methods, and describing why your workflows and tasks are structured in the way that they are.  
-    * Remember, your volunteer community may contain a range of expertise and interest when it comes to AI/ML techniques, so if you only include a basic explanation, volunteers who are particularly interested may ask more detailed questions on your Talk boards. Conversely, if your explanation is too detailed, people who are not familiar with these methods may not understand what you are doing, or why.  
-* What if I don’t have any plans to use AI/ML with my project data, but change my mind later?  
-    * Unanticipated uses for project data are generally okay—just because you don’t anticipate using a technology doesn’t necessarily mean you can’t do so. However, your volunteers need to understand what, if any, limitations will be placed on use of the resulting data in order to make an informed decision about whether they want to participate. This is why it is important to communicate **how** your data will be published and/or made available once your project is complete.   
-    * If you do end up using AI/ML with your project data but did not have that as an original goal, it is your responsibility to update your results page accordingly. See the [Results page from the Clump Scout project](https://www.zooniverse.org/projects/hughdickinson/galaxy-zoo-clump-scout/about/results) for a good example of how to report this information after the fact.  
-    * Remember, our [Zooniverse Policies](https://help.zooniverse.org/getting-started/lab-policies/) state that projects promoted to the Zooniverse community must make their classification data open after a proprietary period, normally lasting two years from project launch. It is your responsibility to communicate the details about how and where you plan to make your data available.  
-* I already have a Zooniverse project that I created before these recommendations existed. Do I have to do anything to my project?  
-    * Updating an existing project is not required, but we recommend taking a look at the copy on your project Home page, About page, etc., to see whether you have appropriately disclosed any AI/ML use, details about the technology you’re using, etc.
+- ***How much detail should I give about how I’m using AI with my project?***
+    - This is where the 5 Ws framework\[LINK\] can come in handy\! Consider these questions when writing your project copy, explaining your research methods, and describing why your workflows and tasks are structured in the way that they are.  
+    - Remember, your volunteer community may contain a range of expertise and interest when it comes to AI/ML techniques, so if you only include a basic explanation, volunteers who are particularly interested may ask more detailed questions on your Talk boards. Conversely, if your explanation is too detailed, people who are not familiar with these methods may not understand what you are doing, or why.  
+- ***What if I don’t have any plans to use AI/ML with my project data, but change my mind later?***
+    - Unanticipated uses for project data are generally okay—just because you don’t anticipate using a technology doesn’t necessarily mean you can’t do so. However, your volunteers need to understand what, if any, limitations will be placed on use of the resulting data in order to make an informed decision about whether they want to participate. This is why it is important to communicate **how** your data will be published and/or made available once your project is complete.   
+    - If you do end up using AI/ML with your project data but did not have that as an original goal, it is your responsibility to update your results page accordingly. See the [Results page from the Clump Scout project](https://www.zooniverse.org/projects/hughdickinson/galaxy-zoo-clump-scout/about/results) for a good example of how to report this information after the fact.  
+    - Remember, our [Zooniverse Policies](https://help.zooniverse.org/getting-started/lab-policies/) state that projects promoted to the Zooniverse community must make their classification data open after a proprietary period, normally lasting two years from project launch. It is your responsibility to communicate the details about how and where you plan to make your data available.  
+- ***I already have a Zooniverse project that I created before these recommendations existed. Do I have to do anything to my project?***
+    - Updating an existing project is not required, but we recommend taking a look at the copy on your project Home page, About page, etc., to see whether you have appropriately disclosed any AI/ML use, details about the technology you’re using, etc.
 
