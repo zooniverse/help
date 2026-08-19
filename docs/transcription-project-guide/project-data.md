@@ -196,7 +196,11 @@ The number of image fields you need to include in your Manifest depends on the m
 
 Indexed Subjects allow volunteers to choose an individual Subject from a list and work through a Subject Set in sequential order (nb: Sequential Classification is required for teams who want Indexed Subjects). This option is helpful for teams who have useful metadata already available for their Subjects, and who think their volunteer communities will want to choose what they want to transcribe. Examples might include volunteers who want to find a particular author’s work within a collection, or documents from a particular year.
 
-To indicate which metadata fields should appear in the index, simply put a `%` in front of the heading of the column you want to include. To learn more about Indexed Subjects, read [this blog post](https://blog.zooniverse.org/2021/11/03/engaging-crowds-new-options-for-Subject-delivery-interaction/).
+Project builders must indicate on their subject manifest which fields they want to include in the index. To indicate which metadata fields should appear in the index, simply put a % symbol in front of the heading of the column you want to include.
+
+At present, project builders must request this feature for their project. Send an email request to contact@zooniverse.org, asking that the indexing tool be turned on for your project. Be sure to include your project ID number in that email.
+
+To learn more about Indexed Subjects, read [this blog post](https://blog.zooniverse.org/2021/11/03/engaging-crowds-new-options-for-Subject-delivery-interaction/).
 
 
 
