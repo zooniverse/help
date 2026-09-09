@@ -17,3 +17,4 @@ This section highlights more advanced platform features and workflows to explore
 - [Subject Selection Process](subject-selection.md)
 - [Translations](translations.md)
 - [Leveling Up Framework](leveling-up.md)
+- [Using AI and ML on Zooniverse](ai-ethics.md)
