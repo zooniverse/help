@@ -37,7 +37,7 @@ This feature allows volunteers to choose what subject set they want to work on w
 Once this feature is activated, a volunteer will select a workflow from the project homepage, and then a pop-up box will appear, displaying a list of subject sets to choose from. When they select a subject set, they will proceed to the workflow as normal, and *will only be served subjects from within that set* during their classification session. Along with subject set names, this pop-up will also display the completeness metrics for each subject set (n%). If a subject set is complete, it will be displayed in gray, at the end of the list. The maximum number of subject sets you can associate with a single workflow at a time is 50.
 
 ### Setup
-At present, project builders must request this feature for their project, on a per-workflow basis. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that sequential classification be turned on. Be sure to include your project ID number and the relevant workflow ID number(s) in your email. 
+At present, project builders must request this feature for their project, on a per-workflow basis. Send an email request to [contact@zooniverse.org](mailto:contact@zooniverse.org), asking that subject set selection be turned on. Be sure to include your project ID number and the relevant workflow ID number(s) in your email. 
 
 ## Indexing Tool
 ### Overview
