@@ -284,4 +284,6 @@ Subject sets can be pretty powerful, and sometimes complex. You can have a singl
 
 ## Further Help
 
-If you'd like some further information, check out the [documentation behind building Kitteh Zoo](example.md), that talks you through building this project in the Project Builder.\n\nIf this doesn't help, get in contact with the Zooniverse team via the [contact page](https://zooniverse.org/about/contact).
+If you'd like some further information, check out the [documentation behind building Kitteh Zoo](example.md), that talks you through building this project in the Project Builder.
+
+If this doesn't help, get in contact with the Zooniverse team via the [contact page](https://zooniverse.org/about/contact).
