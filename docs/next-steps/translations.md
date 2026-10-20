@@ -14,6 +14,8 @@ Static translations refer to platform-level text; i.e. the text shared across al
 
 Volunteer translators can be given a Lokalise account to assist with editing existing or inputting new static translations. Detailed instructions are available on [this wiki page](https://github.com/zooniverse/front-end-monorepo/wiki/Contributing-Translations-via-Lokalise). After a translator has submitted new translations, the change is reviewed by a member of the Zooniverse frontend dev team, who can then share a preview of the updated Zooniverse website with the translator to review before it goes live.
 
+Some of the static translations come from volunteer translators. However, we have tested AI translations on a small number of languages for platform-level text only. We recognize that the quality of AI translation differs across languages, and that this comes with a risk of translations being incorrect. We welcome volunteers to help increase the quality of translation across our platform.
+
 ### Project Translations
 Project translations refer to the content created and input by external research teams, e.g. Project Builder users. This content is controlled by the project team. Teams must first input English text into their project via the Project Builder. Then they will need to add the non-English language(s) into which they want their project translated. 
 
