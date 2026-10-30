@@ -7,9 +7,9 @@ Zooniverse projects provide a large amount of data to research teams. These data
 This `csv` file has one row for every classification submitted for a project.  This files has the following columns:
 
 * `classification_id`: A unique ID number assigned to each classification
-* `user_name`: The name of the user that submitted the classification.  Non logged-in users are assigned a unique name based on (a hashed version of) their IP address.
+* `user_name`: The name of the user that submitted the classification.  Non logged-in users are assigned a unique name based on a randomized 10-character string assigned to their IP address (see `user_ip` below).
 * `user_id`: User ID number is provided for logged-in users
-* `user_ip`: A hashed version of the user's IP address (original IP addresses are not provided for privacy reasons)
+* `user_ip`: User IP address are not provided for privacy reasons; randomized 10-character strings are assigned to each unique IP address at time of export creation, allowing contributions from the same IP (and presumably the same not logged-in user) to be identified within the scope of a single export. Note: randomization prevents linkage of IP addresses between exports for different projects, or consecutive exports for a single project. 
 * `workflow_id`: The ID number for the workflow the classification was made on
 * `workflow_name`: The name of the workflow
 * `workflow_version`: The major and minor workflow version for the classification
