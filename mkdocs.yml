@@ -29,6 +29,7 @@ plugins:
         'best-practices/4-resources.md': 'best-practices/resources.md'
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
