@@ -1,9 +1,12 @@
 # Data Exports
 
-Zooniverse project teams can download classifications submitted by volunteers,
-information about their subjects and workflows, and discussions from Talk.
-Classification exports contain individual contributions rather than consensus
-results for each subject.
+Zooniverse project teams can download information about subjects presented
+to volunteers, including their media locations and associated metadata;
+classifications containing volunteers' answers and annotations; workflow
+definitions; and discussions from Talk. Each classification records an
+individual volunteer's submission for a subject, not an aggregated result.
+For an explanation of how classifications become extracted data and aggregated
+results, see [Data Aggregation](data-analysis.md).
 
 For **batch aggregation**, use **Aggregate My Results** on the Project Builder's
 **Data Exports** page. Before configuring an aggregation, request both a
