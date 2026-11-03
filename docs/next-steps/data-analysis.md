@@ -146,9 +146,12 @@ subject after meeting a specified criterion or send it to another workflow
 for additional review.
 
 Caesar is therefore more than another way to download aggregated CSV files: it
-is useful when decisions need to happen during classification. For setup and
-specific extractor, reducer, and rule options, see the
-[Caesar guide](caesar.md).
+is useful when decisions need to happen during classification. For an overview
+of its extractor, reducer, and rule options, see the [Caesar guide](caesar.md).
+For a worked example using a Question extractor and Consensus reducer, see
+[Using Caesar: Aggregate Responses to a Question Task](caesar-question-aggregation.md).
+For a follow-up example that uses those reductions to make decisions, see
+[Retire Subjects with Caesar](caesar-subject-retirement.md).
 
 ## Interpreting the results
 

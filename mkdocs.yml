@@ -52,7 +52,10 @@ nav:
     - best-practices/resources.md
   - 'Beyond the Basics':
     - next-steps/index.md
-    - next-steps/caesar.md
+    - 'Caesar':
+      - 'Overview': next-steps/caesar.md
+      - 'Aggregate question responses': next-steps/caesar-question-aggregation.md
+      - 'Retire subjects with rules': next-steps/caesar-subject-retirement.md
     - next-steps/data-analysis.md
     - next-steps/data-exports.md
     - next-steps/experimental-features.md
