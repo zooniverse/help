@@ -1,12 +1,30 @@
 # Data Exports
 
-Zooniverse project teams can download information about subjects presented
-to volunteers, including their media locations and associated metadata;
-classifications containing volunteers' answers and annotations; workflow
-definitions; and discussions from Talk. Each classification records an
-individual volunteer's submission for a subject, not an aggregated result.
-For an explanation of how classifications become extracted data and aggregated
-results, see [Data Aggregation](data-analysis.md).
+Zooniverse project teams can download results from their projects, as well as information about project components (subjects, workflows), in the form of data exports.
+
+## Types of Exports
+
+| Export | Contents | Format |
+| --- | --- | --- |
+| **Classifications** | Individual classifications submitted by volunteers | CSV, including JSON-formatted fields |
+| **Subjects** | Subjects uploaded to the project and their associated metadata | CSV, including JSON-formatted fields |
+| **Workflows** | Workflow definitions, tasks, settings, and version information | CSV, including JSON-formatted fields |
+| **Talk Comments** | Comments from project Talk discussions | JSON |
+| **Talk Hashtags** | Hashtags used in project Talk discussions | JSON |
+
+Export Formats: Export CSVs contain columns whose values are blobs of JSON-formatted data: key-value pairs that may be hierarchically nested). Examples include: `annotations` from classification exports, `metadata` from subject exports; `tasks` from workflow exports. Talk comment and hashtag exports are pure JSON format.
+
+Classification exports can be requested in three different sizes or scopes:
+
+- **Project:** All classifications submitted across the full project.
+- **Workflow:** Classifications submitted to a specific workflow.
+- **Subject Set:** Classifications submitted for subjects that are members of a specific subject set, and submitted to workflows where that subject set is linked at the time of export creation.
+
+The motivation for different scope options: project-level classification exports can get very large for long-running projects; workflow and subject set scoped exports can help alleviate this challenge by restricting outputs to a specific subset.
+
+<!-- Removing Batch Aggregation text until experimental feature is fully deployed.
+
+Each classification records an individual volunteer's submission for a subject, not an aggregated result. For an explanation of how individual classifications can be combined to drive volunteer consensus about a subject, see [Data Aggregation](data-analysis.md).
 
 For **batch aggregation**, use **Aggregate My Results** on the Project Builder's
 **Data Exports** page. Before configuring an aggregation, request both a
@@ -21,147 +39,53 @@ also covers requesting hosted batch aggregations programmatically.
 In addition to batch aggregation, [Caesar](caesar.md) processes classifications
 as they arrive. It supports real-time aggregation and can automate actions such
 as retiring subjects or adding them to other subject sets.
+-->
 
-## Requesting and downloading an export
+## Requesting and Downloading an Export
 
-1. Sign in to [the Project Builder](https://www.zooniverse.org/lab) and open your
-   project.
-2. Select **Data Exports**.
-3. Request the type of export you need. For a workflow classification export,
-   select the relevant workflow.
-4. When the export has been generated, Zooniverse will email you. Return to the
-   **Data Exports** tab to download the file.
-
-You can request exports while a project is being tested or after it has launched.
+You can request exports at any time: while a project is being tested or after it has launched.
 An export of classifications will be empty if no classifications have been
 submitted. Generating large exports may take some time. Zooniverse processes at
 most one request of each export type within a 24-hour period; the tab also shows
 when an export was last requested.
 
-## Choosing an export
+### Using the Project Builder
 
-| Export | Contents | Format |
-| --- | --- | --- |
-| **Classification** | Individual classifications submitted across the project's workflows | CSV, including JSON-formatted fields |
-| **Workflow classification** | Individual classifications submitted for a selected workflow | CSV, including JSON-formatted fields |
-| **Subject** | Subjects uploaded to the project and their associated metadata | CSV, including JSON-formatted fields |
-| **Workflow** | Workflow definitions, tasks, settings, and version information | CSV, including JSON-formatted fields |
-| **Talk comments** | Comments from project Talk discussions | JSON |
-| **Talk hashtags** | Hashtags used in project Talk discussions | JSON |
+1. Sign in to [the Project Builder](https://www.zooniverse.org/lab) and open your
+   project.
+2. Navigate to the **Data Exports** page.
+3. Request the type of export you need. For a workflow classification export,
+   select the relevant workflow.
+4. When the export has been generated, Zooniverse will email you. Return to the
+   **Data Exports** page to download the file.
 
-!!! note "Workflow classification exports include all versions"
+### Using the Python Client or CLI
 
-    Selecting a workflow for a classification export does **not** select a
-    particular workflow version. The export includes classifications from
-    earlier versions of the same workflow, so it may be large even if the
-    latest version has only a few thousand classifications. Check the
-    `workflow_version` column before filtering or combining the records.
+The Panoptes Python Client ([docs](http://panoptes-python-client.readthedocs.io/), [code](https://github.com/zooniverse/panoptes-python-client)) provides project owners and collaborators a programmatic way to request and download exports without using the Project Builder. This can be helpful for scripting export creation as part of a data pipeline.
 
-Some columns, including `annotations`, `metadata`, and `tasks`, contain
-JSON-formatted data. Their contents depend on the project's workflows and
-subject metadata.
+Please see the Python Client [user guide](https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#data-exports) for specific instructions on how to generate and download exports.
 
-## Downloading exports with the Python client
+This functionality can also be accessed through the Command Line Interface (CLI) tool; see [this link](https://github.com/zooniverse/panoptes-cli#generate-and-download-a-classifications-export) for details.
 
-The [Panoptes Python Client](https://github.com/zooniverse/panoptes-python-client)
-provides a way to request and download exports without using the Project
-Builder. Install it with:
+## Export Column Descriptions
 
-```bash
-pip install panoptes-client
-```
-
-The following example signs in to Zooniverse and downloads the most recently
-generated project classification export. Replace the example IDs with your
-project or workflow IDs, and use an account with permission to access the
-exports.
-
-```python
-from getpass import getpass
-from panoptes_client import Panoptes, Project
-
-Panoptes.connect(
-    username=input("Zooniverse username: "),
-    password=getpass("Zooniverse password: "),
-)
-
-
-def download_export(response, filename):
-    with open(filename, "wb") as file:
-        for chunk in response.iter_content(chunk_size=1024 * 1024):
-            if chunk:
-                file.write(chunk)
-
-
-project = Project(1234)  # Replace with your project ID.
-download_export(project.get_export("classifications"), "classifications.csv")
-```
-
-To list the workflows associated with your project and find their IDs, use:
-
-```python
-for workflow in project.links.workflows:
-    print(workflow.id, workflow.display_name)
-```
-
-This follows the workflow-listing example in the
-[Panoptes Client user guide](https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#other-examples).
-
-To download classifications for a single workflow instead, use the same
-`download_export()` function with a `Workflow` object:
-
-```python
-from panoptes_client import Workflow
-
-workflow = Workflow(5678)  # Replace with your workflow ID.
-download_export(workflow.get_export("classification"), "workflow-classifications.csv")
-```
-
-By default, `get_export()` downloads an **existing** export; it does not
-request a fresh one. To start generating a new project classification export,
-use:
-
-```python
-project.generate_export("classifications")
-```
-
-When the export is ready, download it using `get_export()` as above. You can
-also use `get_export("classifications", generate=True)` to request a fresh
-export and wait for it to finish, subject to the same export-generation limits
-as requests made through the Project Builder.
-
-Other project-level export types include `"subjects"` and `"workflows"`.
-
-!!! note "`classification` vs. `classifications`"
-
-    These are different export type names in the Python client, not
-    interchangeable spellings: use `"classifications"` (plural) with
-    `Project.get_export()` but `"classification"` (singular) with
-    `Workflow.get_export()`. The same distinction appears in the
-    [Panoptes Client export examples](https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#data-exports)
-    for generating exports.
-
-See the [Panoptes Client user guide](https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#data-exports)
-for export metadata, waiting for in-progress exports, and subject-set exports.
-For a command-line alternative, see [Panoptes CLI](https://github.com/zooniverse/panoptes-cli).
-
-## Classification export
+### Classification Export
 
 The classification CSV contains one row for each submitted classification. A
-classification records the answers submitted by one volunteer during one
-classification session; it is **not** a consensus result for a subject. The
-file includes these columns:
+classification records the answers submitted by one volunteer for the tasks 
+of one workflow regarding one subject; it is **not** a consensus result for a subject. 
+The file includes these columns:
 
 * `classification_id`: Unique ID assigned to the classification.
-* `user_name`: User name for a logged-in volunteer. For a volunteer who is not
+* `user_name`: The login/username for a logged-in volunteer. For a volunteer who is not
   logged in, a pseudonymous name based on an export-scoped, randomized
   10-character identifier associated with their IP address.
 * `user_id`: Zooniverse user ID for a logged-in volunteer; absent for an
   anonymous volunteer.
 * `user_ip`: **Not the original IP address.** A randomized 10-character
-  identifier associated with an IP address when the export is generated.
+  identifier assigned to each unique IP address when the export is generated.
   Identifiers can help group contributions within an individual export, but
-  cannot reliably be matched across different exports.
+  cannot be used to match across different exports.
 * `workflow_id`: ID of the workflow used for the classification.
 * `workflow_name`: Name of that workflow.
 * `workflow_version`: Major and minor workflow version used for the
@@ -177,24 +101,22 @@ file includes these columns:
   depends on the task types and workflow definition.
 * `subject_data`: JSON containing the metadata associated with the classified
   subject, based on the metadata supplied when it was uploaded.
-* `subject_ids`: ID of the subject associated with the classification.
+* `subject_ids`: ID of the subject(s) associated with the classification.
 
-### Understanding annotations and workflow versions
-
-The `annotations` field contains task-specific data. For example, a question
+**Annotations:** The `annotations` field contains task-specific data. For example, a question
 might produce a task identifier and one or more selected answer values, while a
 drawing or transcription task produces a different structure. The task
 identifiers can be interpreted using the `tasks` field in the workflow export.
 For concrete examples of question, dropdown, and transcription annotations,
 see [Working with data](../transcription-project-guide/working-with-data.md#724-data-export-examples).
 
-Pay particular attention to `workflow_id` and `workflow_version`. A project may
+**Workflow Version:** Pay particular attention to `workflow_id` and `workflow_version`. A project may
 have several workflows, and a single workflow may change while classifications
 are being collected. Task labels, available answers, and annotation structures
 may therefore differ between records. Inspect those differences before
 aggregating or comparing classifications.
 
-## Subject export
+### Subject Export
 
 The subject CSV contains one row for each subject uploaded to a project. Its
 columns are:
@@ -217,7 +139,7 @@ Use the subject identifier to relate a classification back to a subject. The
 fields in `metadata` depend on what the project team provided when uploading
 subjects; they are not the same for every project.
 
-## Workflow export
+### Workflow Export
 
 The workflow CSV describes the structure of workflows, including their major
 versions. Its columns are:
