@@ -1,88 +1,60 @@
-# Data Aggregation
+# Data Analysis & Aggregation
 
 Zooniverse classifications record the answers and annotations submitted by
-individual volunteers. Most research projects need to bring together multiple
-classifications before using them for further analysis. The appropriate method
-depends on the questions asked in the workflow, the type of annotations
-collected, and whether the results are needed in batches or as classifications
-arrive.
+individual volunteers. Most research projects need to combine multiple
+classifications into a consensus answer before using the results in further analysis. 
+The appropriate method for aggregating classifications depends on the type and complexity of annotations
+collected, and whether real-time processing is needed.
 
 This page explains the stages of aggregation and introduces the tools available
-to project teams. For information about requesting the underlying files, see
+to project teams. For information about obtaining classification exports, see
 [Data Exports](data-exports.md).
 
-## From subjects to aggregated results
+## From Subjects to Aggregated Results
 
-Data moves through several stages in a typical Zooniverse aggregation workflow:
+Data takes three different forms as it moves through a Zooniverse project:
 
-1. **Subject data:** A subject is the material presented to volunteers, such as
+1. **Subject Data:** A subject is the raw material presented to volunteers, such as
    an image, audio recording, video, or text, together with its associated
-   metadata. The subject export describes these records and includes media
-   locations and metadata.
-2. **Classifications:** Each classification contains the answers and
-   annotations submitted by a volunteer for a subject in a particular workflow.
-   A classification may include responses to several tasks. Classification
-   exports contain these individual submissions, not an agreed-upon answer for
-   each subject.
-3. **Extracted data:** An *extractor* selects and structures the information
-   needed from a classification. For a question task, it might retrieve the
-   selected answer; for a drawing task, it might retrieve the coordinates or
-   shape parameters of an annotation.
-4. **Aggregated results:** A *reducer* combines multiple extracts, commonly
-   grouping them by subject. Depending on the task and reduction method, the
-   output might be a majority answer, vote counts, agreement statistics,
-   clustered points, or combined shapes.
+   metadata.
+2. **Individual Classifications:** Each classification contains the answers and
+   annotations submitted by a single volunteer for a subject in a particular workflow.
+   A classification may include responses to several tasks.
+3. **Consensus Result:** When multiple classifications are combined, averaging over
+   the "wisdom of the crowd", the aggregated result is a consensus answer.
 
-In short, **classifications → extracts → reductions** describes the processing
-stages. The original subjects provide the material to which those
-classifications refer.
+The figure below provides a visual representation of these three stages from the [Jovian Vortex Hunter](https://www.zooniverse.org/projects/ramanakumars/jovian-vortex-hunter) project: the subject image (left), individual volunteer-drawn ellipses around features (center), and aggregated ellipses created through clustering and averaging of individual results (right).
+![Three-panel comparison from Jovian Vortex Hunter: the subject image, volunteer-drawn ellipses around features, and combined ellipses.](../img/data-aggregation/jovian-vortex-hunter.png)
 
-### Example: extracting and combining question responses
+
+Zooniverse aggregation tools process volunteer contributions and produce three sequential data products: **classifications, extractions, and reductions**:
+
+1. **Classifications:** The complete contribution produced by a single volunteer on a workflow for a given subject. May consist of multiple components, one for each task included in the workflow.
+2. **Extractions:** The output of an *extractor* that selects and structures relevant information from an individual classification. For a question task, it might retrieve the selected answer; for a drawing task, it might retrieve the coordinates or shape parameters of an annotation.
+3. **Reductions:** The output of a *reducer* that combines multiple extracts for a single subject into a combined result. Depending on the task and reduction method, the output might be a majority answer, vote counts, agreement statistics, clustered points, or combined shapes.
+
+### Example: extracting and reducing classifications for question task
 
 Consider a workflow that asks volunteers whether an image contains a glitch.
-A classification may include answers to several tasks, along with metadata.
-A **question extractor** can select the response for task `T0` and leave
-unrelated task responses and metadata out of the extract.
+Here, a **classification** includes answers to two tasks, along with metadata.
+A **question extractor** is used to select the response for the "Is this a glitch?" question task, filter out
+unrelated task responses, and ignore unnecessary metadata from the classification.
 
 ![A question extractor selects the response to task T0 from a classification containing two task responses and metadata.](../img/data-aggregation/question-extractor.png)
 
-*Question extraction: only the response to task `T0` is retained in this
+*Question Extraction: only the response to the `T0` "Is this a glitch?" question task is retained in this
 illustrative extract.*
 
-Suppose three volunteers answer this question for the same subject: two answer
-**Yes** and one answers **No**. A **reducer** combines those three extracts to
-produce a majority response of **Yes**, with an agreement fraction of
-approximately **0.667** (two out of three volunteers).
+Suppose three volunteers classify the same subject: two answer
+**Yes** and one answers **No**. A **consensus reducer** combines those three extracts to
+compute a consensus label.
 
 ![Three extracts for subject 500 with Yes, Yes, and No responses are combined by a question reducer into a majority Yes response and agreement of 0.667.](../img/data-aggregation/question-reducer.png)
 
-*Question reduction: individual answers are combined into a summary for one
-subject. Actual output fields depend on the reducer and its configuration.*
+*Consensus Reduction: three individual extracts for a subject are combined and a consensus is computed, with majority Yes response and agreement of a majority response of 2/3~0.667.*
 
-### Example: combining drawing annotations
 
-Drawing tasks may require a different aggregation approach. Volunteers can mark
-multiple features and draw shapes at slightly different positions. An
-aggregation may therefore need to group corresponding annotations before
-estimating representative locations or shapes.
-
-![Three-panel comparison from Jovian Vortex Hunter: the subject image, volunteer-drawn ellipses around features, and combined ellipses.](../img/data-aggregation/jovian-vortex-hunter.png)
-
-*Example from the **Jovian Vortex Hunter** project: the subject image (left),
-individual volunteer ellipses (center), and aggregated ellipses (right).*
-
-Aggregation does not always produce a single answer per subject; depending on
-the task and reduction method, a result might include several features, clusters,
-counts, or uncertainty measures.
-
-!!! note "Agreement is not the same as accuracy"
-
-    A high level of agreement shows that volunteers responded consistently;
-    it does not, by itself, establish that their answer is correct. Consider
-    the number of classifications, disagreements, task design, and any
-    validation data when interpreting an aggregation.
-
-## Choosing an aggregation method
+## Choosing an Aggregation Process
 
 Zooniverse offers several ways to process classification data. They serve
 different needs and do not necessarily support the same tasks or configuration
@@ -90,81 +62,53 @@ options.
 
 | Method | When to consider it |
 | --- | --- |
-| **Batch aggregation in the Project Builder** | Start here for a supported, standard aggregation without installing software. The hosted service uses baseline extraction and reduction methods and offers limited customization. |
-| **Local aggregation with `panoptes_aggregation`** | Use the Python package's command-line tools or graphical interface when you need more control over workflow versions, extractor and reducer configuration, or local processing. |
-| **Real-time processing with Caesar** | Use Caesar when classifications should be processed as they arrive, especially if their results need to trigger actions such as subject retirement or routing to another subject set. |
+| **Batch Aggregation** | For simple workflows that do not require complex configuration of extractors and reducers, a Zooniverse-hosted service will perform aggregation at the push of a button. No need for installing software or running processing locally. (Under Development) |
+| **Running Aggregation Software Locally** | Install and run the `panoptes_aggregation` Python package's command-line tools or graphical interface on your local computer when you need more control over workflow versions, extractor and reducer configuration, and interative processing. |
+| **Real-time Processing with Caesar** | Use Caesar when classifications should be processed in near real-time, especially if you want to trigger actions such as subject retirement or routing to another subject set based on results. |
+| **Custom Scripts** | Use of Zooniverse aggregation tools is not required and many research teams create their own processing pipelines and scripts to handle the specific needs of their project. A number of example scripts are available in the [Data Digging repo](https://github.com/zooniverse/Data-digging). |
 
 Text transcription projects may also use specialist tools and review workflows;
 see the [Transcription Project Guide](../transcription-project-guide/working-with-data.md#73-data-aggregation).
 
-### Batch aggregation in the Project Builder
+### Batch Aggregation
 
-The **Aggregate My Results** section of your project's **Data Exports** page
-provides a hosted batch aggregation option. Before configuring a batch
-aggregation, request both a **Workflow Classification** export and a
-**Workflow** export. The Project Builder requires these two exports as inputs.
+*This feature is currently under development; public launch is targeted for 2027.*
 
 Batch aggregation processes an existing collection of classifications rather
 than continuously processing new submissions. It is intended for standard,
 supported workflow tasks; it does not provide all the configuration options
 available when running the aggregation package yourself.
 
-For the prerequisite files and their contents, see [Data Exports](data-exports.md).
-The [Panoptes Client documentation](https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#automated-aggregation-of-classifications)
-also explains how to request hosted batch aggregation programmatically.
+The **Aggregate My Results** section of your project's **Data Exports** page
+facilitates the Zooniverse-hosted batch aggregation processing. Before configuring a batch
+aggregation, request both a **Workflow Classification** export and a
+**Workflows** export. The batch aggregation job requires these two exports as input; see [Data Exports](data-exports.md).
 
-### Local aggregation with `panoptes_aggregation`
+Batch aggregation can also be requested using the Panoptes Python Client; see [Python Client documentation](https://panoptes-python-client.readthedocs.io/en/latest/user_guide.html#automated-aggregation-of-classifications)
+for more information.
 
-The [Panoptes Aggregation package](https://github.com/zooniverse/aggregation-for-caesar)
-can generate extracts and reductions on your own computer. It provides both
-command-line and graphical workflows. A typical process is to obtain the
-classification and workflow exports, select the workflow and applicable
-versions, generate or review the extractor and reducer configurations, and
-then run extraction followed by reduction.
+### Running Aggregation Software Locally
 
-Local processing is useful when your task needs a particular extractor or
-reducer, or when you want to inspect and adjust the configuration before
-processing the data. The supported task types and output formats depend on
-the package; consult its
-[CLI and GUI documentation](https://aggregation-caesar.zooniverse.org/docs)
-for installation, configuration, and examples.
+The `panoptes_aggregation` Python package ([docs](https://aggregation-caesar.zooniverse.org/docs); [Github repo](https://github.com/zooniverse/aggregation-for-caesar)) allows researchers to perform aggregation using Zooniverse-maintained code on their local computer. The software can be installed and run from the command line or using an optional graphical interface, and enables full control of extraction and reduction functionality. The same software is used by the hosted Batch Aggregation service, but running the code locally allows more complex processing and configuration.
 
-!!! note "Check workflow versions"
+Processing consists of obtaining the required classification and workflow exports, configuring appropriate extractors and reducers, and running the extraction and reduction steps.
 
-    A workflow classification export covers the selected workflow, including
-    earlier versions. If task structure or answer choices changed during the
-    project, classifications from different versions may need separate
-    handling. See [Data Exports](data-exports.md#choosing-an-export) for the
-    distinction between workflow and workflow-version selection.
+!!! note "Check Workflow Versions"
 
-### Real-time processing with Caesar
+    A workflow classification export includes all classifications from the selected workflow, which may have been produced by multiple versions of the workflow. The `panoptes_aggregation` code will ask for a specific workflow version, or range of versions over which it will aggregate. If a workflow's tasks changed significantly, classifications from different versions may need to be reduced separately.
 
-[Caesar](caesar.md) monitors classifications as volunteers submit them. Its
-extractors and reducers can calculate updated results, and its **rules and
+### Real-time Processing with Caesar
+
+[Caesar](caesar.md) receives classifications for configured workflows as volunteers submit them. Its
+extractors and reducers can produce near real-time results, and its **rules and
 effects** can act on those results. For example, a project might retire a
 subject after meeting a specified criterion or send it to another workflow
 for additional review.
 
-Caesar is therefore more than another way to download aggregated CSV files: it
-is useful when decisions need to happen during classification. For an overview
-of its extractor, reducer, and rule options, see the [Caesar guide](caesar.md).
+Caesar is best used for its hosted, near real-time processing. While it is possible 
+to export extracts and reductions from Caesar, this is not the app's primary objective.
+For an overview of its extractor, reducer, and rule options, see the [Caesar guide](caesar.md).
 For a worked example using a Question extractor and Consensus reducer, see
 [Using Caesar: Aggregate Responses to a Question Task](caesar-question-aggregation.md).
 For a follow-up example that uses those reductions to make decisions, see
 [Retire Subjects with Caesar](caesar-subject-retirement.md).
-
-## Interpreting the results
-
-Before using an aggregated dataset for downstream research, check which
-workflow and versions were included, how repeat classifications and missing
-answers were handled, and what each output field represents. A count of
-responses, an agreement fraction, a cluster of markings, and an inferred
-consensus answer describe different things. The appropriate quality checks
-will depend on the scientific question and the selected reduction method.
-
-For examples of project-specific processing and analysis code, see
-[Zooniverse Data-digging](https://github.com/zooniverse/Data-digging) and
-[Panoptes analysis examples](https://github.com/vrooje/panoptes_analysis).
-For published examples of more specialized approaches, see
-[Space Warps](https://doi.org/10.1093/mnras/stv2009) and
-[Snapshot Serengeti](https://doi.org/10.1111/cobi.12695).
