@@ -17,6 +17,6 @@ The Zooniverse platform is often one component within a larger research workflow
 
 ## Interfacing with External Data Processing - Examples
 
-- **SWAP:** the Space Warps Analysis Pipeline run by the [Space Warps](spacewarps.org) organization uses Caesar to feed a sophisticated external data processing pipeline in its effort to identify gravitationally lensed galaxies.
+- **SWAP:** the Space Warps Analysis Pipeline run by the [Space Warps](https://spacewarps.org) organization uses Caesar to feed a sophisticated external data processing pipeline in its effort to identify gravitationally lensed galaxies.
 - **Kilonova Seekers:** the [Kilonova Seekers](https://www.zooniverse.org/projects/tkillestein/kilonova-seekers) project built a complementary backend infrastructure to enable real-time data upload of newly identified transient events as well as classification retreval and flagging of the most interesting targets.
 - **AWS Lambda Processing:** the [Planetary Response Network](https://www.zooniverse.org/organizations/vrooje/the-planetary-response-network) organization and its collaborators use Lambda serverless functions hosted on Amazon Web Services to perform computational tasks associated with data reduction and preparation of results, such as the identification of new geospatial features to add to result maps in realtime.

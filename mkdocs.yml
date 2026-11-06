@@ -29,6 +29,7 @@ plugins:
         'best-practices/4-resources.md': 'best-practices/resources.md'
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -51,7 +52,10 @@ nav:
     - best-practices/resources.md
   - 'Beyond the Basics':
     - next-steps/index.md
-    - next-steps/caesar.md
+    - 'Caesar':
+      - 'Overview': next-steps/caesar.md
+      - 'Question Aggregation Tutorial': next-steps/caesar-question-aggregation.md
+      - 'Subject Retirement Tutorial': next-steps/caesar-subject-retirement.md
     - next-steps/data-analysis.md
     - next-steps/data-exports.md
     - next-steps/experimental-features.md

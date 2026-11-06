@@ -88,7 +88,7 @@ If you'd like to see a definition that currently isn't on this page, [get in tou
 
 + **Sub-task** - Sometimes when you are asked to do a task, such as drag a circle around an element in a picture, you are then asked a further task and what is contained in the circle. This is a subtask. For example, you may be asked to circle penguins in an image, a sub-task would be identifying whether the penguin circled is an adult or chick.
 
-+ **Survey task** - A survey task is a task where you identify something by selection from many options and then are asked a variety of questions about what you’ve just identified, like behaviour, number or color.  For example, you could be asked to identify an animal in an image and then answer questions on how many legs you can see, which way it is facing and whether it is an adult or baby. An example of such a project is [Camera CATalog](https://www.zooniverse.org/projects/panthera-research/camera-catalogue).
++ **Survey task** - A survey task is a task where you identify something by selection from many options and then are asked a variety of questions about what you’ve just identified, like behaviour, number or color.  For example, you could be asked to identify an animal in an image and then answer questions on how many legs you can see, which way it is facing and whether it is an adult or baby. An example of such a project is [Snapshot Serengeti](https://www.zooniverse.org/projects/zooniverse/snapshot-serengeti).
 
 + **Tools** - tools enable volunteers draw or highlight a particular area of a subject image presented on the classification interface (e.g. draw a circle, draw a line, place a pointer). You can design your project such that a single task in the [Project Builder](https://zooniverse.org/lab) can have one or more tools available for volunteers to mark or identify different features found in your subject images.
 
@@ -102,5 +102,5 @@ If you'd like to see a definition that currently isn't on this page, [get in tou
 
 + **Inactive workflow** - Inactive workflows are ones that aren’t currently being shown to volunteers, but can be edited. You can make a workflow active and inactive by ticking the relevant box on the Visibility tab on the Project Builder page.
 
-+ **Zooniverse approved project** - this is a project that has undergone beta testing and been approved by the Zooniverse team. Details of this process can be found on the [Policy Page](lab-policies.md). Zooniverse approved projects that are currently live can be seen on the [Projects page](https://zooniverse.org/projects).
++ **Zooniverse approved project** - this is a project that has undergone beta testing and been approved by the Zooniverse team. Details of this process can be found on the [Policy Page](getting-started/lab-policies.md). Zooniverse approved projects that are currently live can be seen on the [Projects page](https://zooniverse.org/projects).
 

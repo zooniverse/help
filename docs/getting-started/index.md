@@ -28,7 +28,7 @@ On the left-hand side of the project builder you will see a number of tabs which
 - **Workflows** are sequences of tasks that volunteers are asked to do.
 - **Subject sets** are collections of data (typically images) that volunteers are asked to perform tasks on.
 
-For more Zooniverse definitions, check out the [Glossary page](glossary.md).
+For more Zooniverse definitions, check out the [Glossary page](../glossary.md).
 
 ### Project
 

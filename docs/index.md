@@ -23,7 +23,7 @@ If you would like your project promoted to the full Zooniverse community, you ca
 
 Millions of volunteers around the world contribute to Zooniverse projects, enabling research that would otherwise be impractical or impossible. Successful projects center participant engagement as an essential part of the research process.
 
-Project teams are expected to actively engage with participants throughout the project lifecycle, including through the Talk discussion forum and project newsletters. Before launching a project, teams should ensure they have the capacity to support and communicate with their participant community. For guidance, see the [Launch Rush](best-practices/2-launch-rush.nmd) and [Long Haul](best-practices/3-long-haul.md) best practice sections.
+Project teams are expected to actively engage with participants throughout the project lifecycle, including through the Talk discussion forum and project newsletters. Before launching a project, teams should ensure they have the capacity to support and communicate with their participant community. For guidance, see the [Launch Rush](best-practices/2-launch-rush.md) and [Long Haul](best-practices/3-long-haul.md) best practice sections.
 
 ## **Who is responsible for what?** 
 

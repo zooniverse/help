@@ -5,8 +5,10 @@ title: Overview
 
 This section highlights more advanced platform features and workflows to explore once you are comfortable with the fundamentals, including tools for improving classification efficiency, analyzing data, and integrating Zooniverse within broader research infrastructure.
 
-- [Caesar](caesar.md)
-- [Data Analysis](data-analysis.md)
+- [Caesar: Classification and Decision Engine](caesar.md) 
+    - [Question Aggregation Tutorial](caesar-question-aggregation.md)
+    - [Subject Retirement Tutorial](caesar-subject-retirement.md)
+- [Data Aggregation](data-analysis.md)
 - [Data Exports](data-exports.md)
 - [Experimental Features](experimental-features.md)
 - [Feedback](feedback.md)

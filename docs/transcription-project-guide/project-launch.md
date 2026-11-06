@@ -101,7 +101,7 @@ It is important to dedicate time to regularly review questions and comments on T
 
 Volunteers will often pose questions about Workflows, Tasks, and Subject Sets on Talk. Be prepared to answer these questions succinctly and in jargon-free language as much as possible. You should do your best to respond to technical questions before reaching out to the Zooniverse team for help (we’re a small team, so it will take us longer to respond). If a lot of volunteers are struggling with technical issues, you might consider whether your Tutorial or Help text needs to be edited for clarity. Some issues may be solved by a volunteer updating their web browser, clearing their internet cache or cookies, or even just refreshing the page. 
 
-If you are unable to resolve the issue, please send an email to [contact@zooniverse.org](contact@zooniverse.org) with the following information: 
+If you are unable to resolve the issue, please send an email to [contact@zooniverse.org](mailto:contact@zooniverse.org) with the following information:
 
 * The project ID number
 * A brief explanation of the problem
@@ -119,7 +119,7 @@ Talk is often a place where volunteers will post about things they find interest
 
 Part of ethically engaging with your volunteers is sharing regular updates on the project progress, both in terms of how the transcription project is progressing and how the larger project is using the data produced by those same volunteers. However, you should think carefully about when and how you share project updates – the last thing you want is for volunteers to get discouraged by what seems like a lack of progress. 
 
-Project updates can be shared on Zooniverse via Talk and through project-specific [newsletters](https://help.zooniverse.org/next-steps/newsletters/) (which are distinct from the Zooniverse-wide newsletter that announces new projects). These are emails that you can send to your registered volunteers after your project has launched. Newsletters should share your project progress and will often bring people back to your project. To send out a newsletter, email plain-text copy to [contact@zooniverse.org](contact@zooniverse.org) and we will send it out for you. 
+Project updates can be shared on Zooniverse via Talk and through project-specific [newsletters](https://help.zooniverse.org/next-steps/newsletters/) (which are distinct from the Zooniverse-wide newsletter that announces new projects). These are emails that you can send to your registered volunteers after your project has launched. Newsletters should share your project progress and will often bring people back to your project. To send out a newsletter, email plain-text copy to [contact@zooniverse.org](mailto:contact@zooniverse.org) and we will send it out for you.
 
 You can also share your project updates outside of the Zooniverse platform, through social media, a project website, listserv, etc. 
 
